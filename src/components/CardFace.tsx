@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Orientation } from "@/lib/types";
 import { getCard } from "@/lib/knowledge/cards";
 
@@ -50,6 +50,16 @@ export function CardFace({
   className?: string;
 }) {
   const [scanFailed, setScanFailed] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  // En una página renderizada en servidor, el escaneo puede fallar ANTES de que
+  // React monte y enganche onError; ese evento se pierde y quedaría el icono de
+  // imagen rota. Al montar comprobamos el estado real del elemento.
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img?.complete && img.naturalWidth === 0) setScanFailed(true);
+  }, []);
+
   const card = getCard(slug);
   if (!card) return null;
 
@@ -69,8 +79,9 @@ export function CardFace({
       >
         {!scanFailed && (
           <img
+            ref={imgRef}
             src={`/cards/${slug}.jpg`}
-            alt={card.name}
+            alt=""
             className="absolute inset-0 h-full w-full object-cover"
             onError={() => setScanFailed(true)}
           />
