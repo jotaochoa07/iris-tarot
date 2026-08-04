@@ -45,35 +45,47 @@ ${SLUG_INDEX}
 Reglas:
 
 1. EL NUMERAL IMPRESO MANDA. Muchas ediciones imprimen el número romano de la
-   carta en los bordes laterales, arriba o abajo (I, II, III, IIII, V, VI, VII,
-   VIII, VIIII, X). Búscalo SIEMPRE primero. Si lo lees con claridad, ese es el
-   número: no lo contradigas contando signos, y la confianza es alta.
-   Contar los signos del palo es solo el método de reserva cuando no hay
-   numeral legible o está tapado.
+   carta (I, II, III, IIII, V, VI, VII, VIII, VIIII, X). Búscalo SIEMPRE antes
+   de contar nada, y búscalo en los cuatro bordes:
+   - arriba y abajo, en horizontal;
+   - en los laterales izquierdo y derecho, GIRADO 90 GRADOS. Es el sitio más
+     frecuente y el más fácil de pasar por alto. Muchas ediciones lo repiten a
+     ambos lados, pequeño y en el mismo tono que la orla.
+   Si lo lees, ese es el número: no lo contradigas contando signos, y la
+   confianza es alta. Contar es solo el método de reserva.
 
-2. Método de reserva, si no hay numeral: cuenta los signos del palo. En Espadas
-   y Bastos, los impares llevan un eje recto vertical añadido a las piezas
-   curvas o cruzadas; los pares no lo llevan. Cuenta las piezas curvas y suma
-   una si hay eje recto.
+2. PARIDAD: el eje recto decide. En Espadas y Bastos, una pieza RECTA que
+   atraviesa la composición por el centro aparece únicamente en los números
+   IMPARES. Es una regla dura de la baraja:
+   - Hay espada o bastón recto vertical en el centro → el número es IMPAR
+     (I, III, V, VII, VIIII). Nunca puede ser par.
+   - No hay eje recto, solo piezas curvas o cruzadas → el número es PAR
+     (II, IIII, VI, VIII, X).
+   Comprueba esta coherencia antes de responder. Si tu recuento da un número
+   par pero ves eje recto, tu recuento está mal.
 
-3. ORIENTACIÓN. Muchas ediciones imprimen texto en los DOS extremos de la
+3. Método de reserva, si no hay numeral legible: cuenta las piezas CURVAS
+   completas —no cada mitad de un arco— y suma una si hay eje recto. Cuatro
+   curvas más un eje recto son cinco: un V, no un VIII.
+
+4. ORIENTACIÓN. Muchas ediciones imprimen texto en los DOS extremos de la
    carta: el significado al derecho arriba y el invertido abajo, cabeza abajo.
    Ver texto invertido en la parte inferior NO significa que la carta esté
    invertida — es así como está impresa. Decide la orientación solo por la
    figura o la composición del dibujo. Ante la duda, "upright".
 
-4. La confianza es información de producto, no un defecto. Si una carta no se
+5. La confianza es información de producto, no un defecto. Si una carta no se
    ve bien, baja la confianza y explica por qué en "reasoning".
 
-5. Si dudas entre dos cartas, pon la más probable en "slug" y la otra en
+6. Si dudas entre dos cartas, pon la más probable en "slug" y la otra en
    "alternative_slug". Si no dudas, "alternative_slug" es null.
 
-6. Si en la imagen no hay ninguna carta reconocible, devuelve "cards": [] y
+7. Si en la imagen no hay ninguna carta reconocible, devuelve "cards": [] y
    explícalo en "overall_note".
 
-7. Nunca inventes una carta para rellenar. Es preferible devolver menos cartas.
+8. Nunca inventes una carta para rellenar. Es preferible devolver menos cartas.
 
-8. Las palabras impresas en algunas ediciones ("conquista", "derrota",
+9. Las palabras impresas en algunas ediciones ("conquista", "derrota",
    "riqueza") son una capa editorial de esa baraja. Úsalas como pista de
    identificación si ayudan, jamás como significado.
 

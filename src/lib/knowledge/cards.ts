@@ -172,17 +172,71 @@ export function requireCard(slug: CardSlug): Card {
   return c;
 }
 
-/** Búsqueda tolerante para el selector manual y para normalizar la visión. */
+/**
+ * Búsqueda del selector manual.
+ *
+ * Por palabras sueltas y en cualquier orden: «2 bas», «bastos 2» y «dos de
+ * bastos» llegan a la misma carta. Acepta el número en árabe o en romano, y las
+ * abreviaturas naturales de quien escribe con prisa.
+ */
+
+const WORD_NUMBERS: Record<string, number> = {
+  as: 1,
+  uno: 1,
+  dos: 2,
+  tres: 3,
+  cuatro: 4,
+  cinco: 5,
+  seis: 6,
+  siete: 7,
+  ocho: 8,
+  nueve: 9,
+  diez: 10,
+  sota: 11,
+  caballero: 12,
+  caballo: 12,
+  reina: 13,
+  rey: 14,
+};
+
+function haystack(c: Card): string {
+  const parts = [
+    c.name,
+    c.slug.replace(/-/g, " "),
+    c.roman,
+    c.suit ?? "",
+    c.arcana === "major" ? "arcano mayor" : "arcano menor",
+    c.is_court ? "figura" : "",
+  ];
+
+  if (c.degree) {
+    // El grado, en árabe y con y sin cero delante: 2, 02.
+    parts.push(String(c.degree), String(c.degree).padStart(2, "0"));
+  }
+  if (c.arcana === "major") {
+    const m = MAJORS_BY_SLUG[c.slug];
+    if (m) {
+      parts.push(m.name_fr, m.number === null ? "0 sin numero" : String(m.number));
+    }
+  }
+
+  return normalize(parts.join(" "));
+}
+
 export function searchCards(query: string): Card[] {
-  const q = normalize(query);
-  if (!q) return CARDS;
+  const tokens = normalize(query).split(/\s+/).filter(Boolean);
+  if (tokens.length === 0) return CARDS;
+
   return CARDS.filter((c) => {
-    const hay = normalize(
-      `${c.name} ${c.slug} ${c.roman} ${c.suit ?? ""} ${
-        c.arcana === "major" ? MAJORS_BY_SLUG[c.slug]?.name_fr ?? "" : ""
-      }`,
-    );
-    return hay.includes(q);
+    // Por principio de palabra, no por subcadena suelta: «as» debe encontrar
+    // el As, no colarse dentro de «espadas».
+    const words = haystack(c).split(/\s+/);
+    return tokens.every((t) => {
+      if (words.some((w) => w.startsWith(t))) return true;
+      // «dos», «as», «rey»… equivalen a su grado.
+      const asWord = WORD_NUMBERS[t];
+      return asWord !== undefined && c.degree === asWord;
+    });
   });
 }
 

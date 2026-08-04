@@ -640,7 +640,9 @@ async function downscale(
   file: File,
 ): Promise<{ blob: Blob; dataUrl: string; base64: string }> {
   const bitmap = await createImageBitmap(file);
-  const max = 1600;
+  // 2000 px: los numerales romanos van pequeños y girados en los bordes, y a
+  // 1600 se perdían. Es el detalle que decide la identificación.
+  const max = 2000;
   const scale = Math.min(1, max / Math.max(bitmap.width, bitmap.height));
   const w = Math.round(bitmap.width * scale);
   const h = Math.round(bitmap.height * scale);
@@ -650,10 +652,10 @@ async function downscale(
   canvas.height = h;
   canvas.getContext("2d")!.drawImage(bitmap, 0, 0, w, h);
 
-  const dataUrl = canvas.toDataURL("image/jpeg", 0.85);
+  const dataUrl = canvas.toDataURL("image/jpeg", 0.92);
   const base64 = dataUrl.split(",")[1];
   const blob = await new Promise<Blob>((resolve) =>
-    canvas.toBlob((b) => resolve(b!), "image/jpeg", 0.85),
+    canvas.toBlob((b) => resolve(b!), "image/jpeg", 0.9),
   );
 
   return { blob, dataUrl, base64 };
