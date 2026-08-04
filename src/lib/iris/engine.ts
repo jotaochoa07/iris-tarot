@@ -43,20 +43,39 @@ Catálogo de identificadores válidos (usa EXACTAMENTE estos slugs):
 ${SLUG_INDEX}
 
 Reglas:
-- La confianza es información de producto, no un defecto. Si una carta no se ve
-  bien, baja la confianza y explica por qué en "reasoning".
-- Si dudas entre dos cartas, pon la más probable en "slug" y la otra en
-  "alternative_slug". Si no dudas, "alternative_slug" es null.
-- Para distinguir un Arcano Menor numeral cuenta los signos del palo. En
-  Espadas y Bastos, los números impares llevan un eje recto vertical añadido a
-  las piezas curvas o cruzadas.
-- "reversed" solo si la carta está claramente cabeza abajo respecto al lector.
-- Si en la imagen no hay ninguna carta reconocible, devuelve "cards": [] y
-  explícalo en "overall_note".
-- Nunca inventes una carta para rellenar. Es preferible devolver menos cartas.
-- Las palabras impresas en algunas ediciones ("fracaso", "riqueza") son una capa
-  editorial de esa baraja. Úsalas solo como pista de identificación, jamás como
-  significado.
+
+1. EL NUMERAL IMPRESO MANDA. Muchas ediciones imprimen el número romano de la
+   carta en los bordes laterales, arriba o abajo (I, II, III, IIII, V, VI, VII,
+   VIII, VIIII, X). Búscalo SIEMPRE primero. Si lo lees con claridad, ese es el
+   número: no lo contradigas contando signos, y la confianza es alta.
+   Contar los signos del palo es solo el método de reserva cuando no hay
+   numeral legible o está tapado.
+
+2. Método de reserva, si no hay numeral: cuenta los signos del palo. En Espadas
+   y Bastos, los impares llevan un eje recto vertical añadido a las piezas
+   curvas o cruzadas; los pares no lo llevan. Cuenta las piezas curvas y suma
+   una si hay eje recto.
+
+3. ORIENTACIÓN. Muchas ediciones imprimen texto en los DOS extremos de la
+   carta: el significado al derecho arriba y el invertido abajo, cabeza abajo.
+   Ver texto invertido en la parte inferior NO significa que la carta esté
+   invertida — es así como está impresa. Decide la orientación solo por la
+   figura o la composición del dibujo. Ante la duda, "upright".
+
+4. La confianza es información de producto, no un defecto. Si una carta no se
+   ve bien, baja la confianza y explica por qué en "reasoning".
+
+5. Si dudas entre dos cartas, pon la más probable en "slug" y la otra en
+   "alternative_slug". Si no dudas, "alternative_slug" es null.
+
+6. Si en la imagen no hay ninguna carta reconocible, devuelve "cards": [] y
+   explícalo en "overall_note".
+
+7. Nunca inventes una carta para rellenar. Es preferible devolver menos cartas.
+
+8. Las palabras impresas en algunas ediciones ("conquista", "derrota",
+   "riqueza") son una capa editorial de esa baraja. Úsalas como pista de
+   identificación si ayudan, jamás como significado.
 
 ${JSON_DISCIPLINE}
 
@@ -78,7 +97,6 @@ export async function detectCards(input: {
     model: MODEL_VISION,
     system: DETECT_SYSTEM,
     schema: detectionSchema,
-    temperature: 0.2,
     maxTokens: 2000,
     content: [
       {
@@ -283,7 +301,6 @@ export function reflect(input: SpreadInput): Promise<ReflectResult> {
     model: MODEL_READING,
     system: REFLECT_SYSTEM,
     schema: reflectSchema,
-    temperature: 0.85,
     maxTokens: 4000,
     content: [{ type: "text", text: buildContext(input) }],
   });
@@ -341,7 +358,6 @@ export function learn(input: SpreadInput): Promise<LearnResult> {
     model: MODEL_READING,
     system: LEARN_SYSTEM,
     schema: learnSchema,
-    temperature: 0.7,
     maxTokens: 6000,
     content: [{ type: "text", text: buildContext(input) }],
   });
@@ -390,7 +406,6 @@ export function archetypes(input: SpreadInput): Promise<ArchetypesResult> {
     model: MODEL_READING,
     system: ARCHETYPES_SYSTEM,
     schema: archetypesSchema,
-    temperature: 0.8,
     maxTokens: 2000,
     content: [{ type: "text", text: buildContext(input) }],
   });

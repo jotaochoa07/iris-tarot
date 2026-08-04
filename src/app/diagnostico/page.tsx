@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { requireSession } from "@/lib/auth";
+import { ANTHROPIC_BASE_URL } from "@/lib/iris/anthropic";
 import { Display, Notice, Rule, Screen, SectionTitle } from "@/components/ui";
 
 export const dynamic = "force-dynamic";
@@ -37,6 +38,19 @@ export default async function DiagnosticoPage() {
     detail: key
       ? `Presente, empieza por ${key.slice(0, 12)}…`
       : "Falta ANTHROPIC_API_KEY en .env.local",
+  });
+
+  // El SDK lee ANTHROPIC_BASE_URL del sistema si existe. IRIS la ignora, pero
+  // conviene ver aquí si hay una puesta, porque explica desvíos raros.
+  const envBaseUrl = process.env.ANTHROPIC_BASE_URL;
+  checks.push({
+    label: "Destino de la API",
+    ok: ANTHROPIC_BASE_URL === "https://api.anthropic.com",
+    detail:
+      `IRIS llama a ${ANTHROPIC_BASE_URL}` +
+      (envBaseUrl
+        ? ` · Tu sistema tiene ANTHROPIC_BASE_URL=${envBaseUrl}, ignorada a propósito.`
+        : ""),
   });
 
   checks.push({
