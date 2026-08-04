@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { createClient } from "@/lib/supabase/server";
+import { requireSession } from "@/lib/auth";
 import { buildReadout } from "@/lib/knowledge/readout";
 import type {
   ArchetypalAnalysis,
@@ -13,12 +13,7 @@ import type {
 } from "@/lib/types";
 
 async function ctx() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-  if (!user) throw new Error("Sesión no válida.");
-  return { supabase, user };
+  return requireSession();
 }
 
 export async function getOwnerPerson() {

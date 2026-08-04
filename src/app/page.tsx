@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
+import { requireSession } from "@/lib/auth";
 import { CardFace } from "@/components/CardFace";
 import { ButtonLink, Display, Screen } from "@/components/ui";
 import { CARDS } from "@/lib/knowledge/cards";
@@ -14,7 +14,7 @@ function formatDate(iso: string) {
 }
 
 export default async function Home() {
-  const supabase = await createClient();
+  const { supabase } = await requireSession();
 
   const [{ data: last }, { data: progress }, { count: personalCount }] =
     await Promise.all([

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
+import { requireSession } from "@/lib/auth";
 import { CardFace } from "@/components/CardFace";
 import { Display, Rule, Screen, SectionTitle } from "@/components/ui";
 
@@ -33,7 +33,7 @@ export default async function DiarioPage({
     ? (f as Filter)
     : "mias";
 
-  const supabase = await createClient();
+  const { supabase } = await requireSession();
 
   let query = supabase
     .from("readings")

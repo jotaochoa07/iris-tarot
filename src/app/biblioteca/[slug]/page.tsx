@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { requireSession } from "@/lib/auth";
 import { CardFace } from "@/components/CardFace";
 import { Display, Notice, Rule, Screen, SectionTitle } from "@/components/ui";
 import { getCard } from "@/lib/knowledge/cards";
@@ -27,7 +27,7 @@ export default async function FichaPage({
   const card = getCard(slug);
   if (!card) notFound();
 
-  const supabase = await createClient();
+  const { supabase } = await requireSession();
   const [{ data: progress }, { data: readings }] = await Promise.all([
     supabase
       .from("card_progress")

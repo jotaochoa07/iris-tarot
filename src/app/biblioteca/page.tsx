@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
+import { requireSession } from "@/lib/auth";
 import { CardFace } from "@/components/CardFace";
 import { Display, Rule, Screen, SectionTitle } from "@/components/ui";
 import { CARDS } from "@/lib/knowledge/cards";
@@ -8,7 +8,7 @@ import { SUITS, SUIT_ORDER } from "@/lib/knowledge/suits";
 export const dynamic = "force-dynamic";
 
 export default async function BibliotecaPage() {
-  const supabase = await createClient();
+  const { supabase } = await requireSession();
   const { data: progress } = await supabase
     .from("card_progress")
     .select("card_slug, studied_count, personal_count");

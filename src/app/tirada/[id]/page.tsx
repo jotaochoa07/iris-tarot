@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { requireSession } from "@/lib/auth";
 import { ReadingView } from "./ReadingView";
 import type { Reading } from "@/lib/types";
 
@@ -11,7 +11,7 @@ export default async function TiradaPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const supabase = await createClient();
+  const { supabase } = await requireSession();
 
   const { data } = await supabase
     .from("readings")
