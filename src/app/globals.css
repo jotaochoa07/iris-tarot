@@ -1,0 +1,222 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   IRIS — sistema de diseño
+   Biblioteca antigua + museo + libro de arte + producto digital contemporáneo.
+   La interfaz es casi monocromática. El color aparece cuando aparecen las cartas.
+   ========================================================================== */
+
+@theme {
+  /* --- Tinta y papel ------------------------------------------------------ */
+  --color-ink-900: #14110e; /* negro cálido */
+  --color-ink-800: #1f1b16;
+  --color-ink-700: #2c2620;
+  --color-ink-600: #3d362e;
+  --color-ink-500: #574e44;
+  --color-ink-400: #7b7167;
+  --color-ink-300: #a29889;
+  --color-ink-200: #c8bfb1;
+  --color-ink-100: #e2dace;
+  --color-paper: #f3ede2; /* marfil */
+  --color-paper-soft: #ebe3d5;
+  --color-paper-deep: #ddd3c1;
+
+  /* --- Pigmentos del Tarot de Marsella ------------------------------------
+     Estos son los únicos colores saturados del sistema. Pertenecen a las
+     cartas, no a la interfaz. */
+  --color-marseille-red: #b0392c;
+  --color-marseille-blue: #2f5a86;
+  --color-marseille-yellow: #d3a33c;
+  --color-marseille-green: #557a4c;
+  --color-marseille-flesh: #e6c6a4;
+  --color-marseille-line: #1a1613;
+
+  /* --- Tipografía --------------------------------------------------------- */
+  --font-serif: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* --- Ritmo -------------------------------------------------------------- */
+  --radius-card: 6px;
+  --ease-book: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* --- Base ------------------------------------------------------------------ */
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  background-color: var(--color-ink-900);
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink-800);
+  font-family: var(--font-sans);
+  font-feature-settings: "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior-y: none;
+}
+
+::selection {
+  background: var(--color-ink-800);
+  color: var(--color-paper);
+}
+
+/* --- Tipografía editorial -------------------------------------------------- */
+
+.font-display {
+  font-family: var(--font-serif);
+  font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 40;
+  letter-spacing: -0.018em;
+}
+
+.font-quote {
+  font-family: var(--font-serif);
+  font-variation-settings: "SOFT" 40, "WONK" 1, "opsz" 20;
+  font-style: italic;
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-ink-400);
+}
+
+.prose-iris p {
+  font-family: var(--font-serif);
+  font-variation-settings: "opsz" 14;
+  font-size: 1.0625rem;
+  line-height: 1.72;
+  color: var(--color-ink-700);
+}
+
+.prose-iris p + p {
+  margin-top: 1rem;
+}
+
+.prose-iris strong {
+  font-weight: 600;
+  color: var(--color-ink-900);
+}
+
+.prose-iris em {
+  font-style: italic;
+}
+
+/* --- Reglas y filetes ------------------------------------------------------ */
+
+.rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-ink-200) 12%,
+    var(--color-ink-200) 88%,
+    transparent
+  );
+}
+
+.rule-solid {
+  height: 1px;
+  background: var(--color-ink-100);
+}
+
+/* --- Grano de papel, muy sutil --------------------------------------------- */
+
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* --- Animación contenida: abrir un libro, no activar un hechizo ------------- */
+
+@keyframes iris-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes iris-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.rise {
+  animation: iris-rise 0.62s var(--ease-book) both;
+}
+
+.fade {
+  animation: iris-fade 0.9s var(--ease-book) both;
+}
+
+.d-1 { animation-delay: 0.08s; }
+.d-2 { animation-delay: 0.18s; }
+.d-3 { animation-delay: 0.3s; }
+.d-4 { animation-delay: 0.44s; }
+.d-5 { animation-delay: 0.6s; }
+.d-6 { animation-delay: 0.78s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .fade {
+    animation: none;
+  }
+}
+
+/* --- Controles ------------------------------------------------------------- */
+
+button,
+a {
+  transition:
+    background-color 0.22s var(--ease-book),
+    color 0.22s var(--ease-book),
+    border-color 0.22s var(--ease-book),
+    opacity 0.22s var(--ease-book);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 1.5px solid var(--color-ink-700);
+  outline-offset: 2px;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+textarea {
+  field-sizing: content;
+}
+
+/* --- Scroll ---------------------------------------------------------------- */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
