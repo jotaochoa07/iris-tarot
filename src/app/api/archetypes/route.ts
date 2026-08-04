@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { archetypes } from "@/lib/iris/engine";
 import {
   handleError,
+  readerNameFor,
   requireUser,
   spreadInputSchema,
   toSpreadInput,
@@ -17,7 +18,7 @@ export async function POST(req: Request) {
 
   try {
     const parsed = spreadInputSchema.parse(await req.json());
-    const result = await archetypes(toSpreadInput(parsed));
+    const result = await archetypes(toSpreadInput(parsed, await readerNameFor(user.id)));
     return NextResponse.json(result);
   } catch (err) {
     return handleError(err);

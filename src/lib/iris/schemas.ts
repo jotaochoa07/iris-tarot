@@ -13,6 +13,7 @@ const sourceRef = z.object({
     "ben-dov",
     "marteau",
     "pollack",
+    "nichols",
     "jung",
     "iris",
   ]),

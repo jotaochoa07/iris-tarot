@@ -3,6 +3,7 @@ import { requireCard } from "./cards";
 import { SUITS } from "./suits";
 import { DEGREES } from "./degrees";
 import { MAJORS_BY_SLUG } from "./majors";
+import { createClient } from "@/lib/supabase/server";
 
 /**
  * Recuperación de conocimiento.
@@ -10,9 +11,10 @@ import { MAJORS_BY_SLUG } from "./majors";
  * CAPA 1 — base estructurada (este archivo). Determinista, siempre disponible,
  * redacción original, atribución de escuela explícita.
  *
- * CAPA 2 — corpus privado (opcional, `IRIS_CORPUS_RAG_ENABLED`). Recuperación
- * semántica sobre los PDFs que el propietario haya cargado en su instalación.
- * Devuelve fragmentos con localizador verificable. Nunca se distribuye.
+ * CAPA 2 — corpus privado. Búsqueda de texto completo en español sobre los
+ * libros que el propietario ha cargado en su instalación. Devuelve pasajes con
+ * el capítulo real del libro, tomado de su índice. Si un fragmento no tiene
+ * localizador fiable, viaja con locator null y la interfaz lo dice.
  *
  * El motor nunca mezcla ambas capas sin marcar el origen: cada dato lleva su
  * `SourceRef.via`, y el prompt obliga al modelo a conservarlo.
@@ -66,7 +68,14 @@ const STRUCTURAL_SOURCE: SourceRef = {
   note: "Propiedad estructural verificable de la baraja. No requiere atribución de autor.",
 };
 
-export function retrieveForSpread(cards: DrawnCard[]): RetrievedContext {
+export function corpusEnabled(): boolean {
+  return process.env.IRIS_CORPUS_RAG_ENABLED === "true";
+}
+
+export async function retrieveForSpread(
+  cards: DrawnCard[],
+  options: { schools?: string[]; perCard?: number } = {},
+): Promise<RetrievedContext> {
   const ordered = [...cards].sort((a, b) => a.order - b.order);
 
   const cardContexts: CardContext[] = ordered.map((d) => {
@@ -88,11 +97,12 @@ export function retrieveForSpread(cards: DrawnCard[]): RetrievedContext {
       visual: c.visual,
       major_axis: major?.axis ?? null,
       major_observe: major?.observe ?? null,
-      source: c.arcana === "major" || suit || degree
-        ? KB_SOURCE(
-            "Sistema atribuido a Jodorowsky/Costa. Redacción original de IRIS; localizador no verificado.",
-          )
-        : STRUCTURAL_SOURCE,
+      source:
+        c.arcana === "major" || suit || degree
+          ? KB_SOURCE(
+              "Sistema atribuido a Jodorowsky/Costa. Redacción original de IRIS; localizador no verificado.",
+            )
+          : STRUCTURAL_SOURCE,
     };
   });
 
@@ -113,29 +123,98 @@ export function retrieveForSpread(cards: DrawnCard[]): RetrievedContext {
       const e = SUITS[s as keyof typeof SUITS];
       return `${e.label} — ${e.territory} Cuando domina: ${e.when_dominant} Cuando falta: ${e.when_absent}`;
     }),
-    corpus_passages: retrieveFromCorpus(),
+    corpus_passages: await retrieveFromCorpus(ordered, options),
     corpus_enabled: corpusEnabled(),
   };
 }
 
-export function corpusEnabled(): boolean {
-  return process.env.IRIS_CORPUS_RAG_ENABLED === "true";
-}
+/* ---------------------------------------------------------------------------
+ * Capa 2
+ * ------------------------------------------------------------------------- */
+
+const AUTHOR_BY_SCHOOL: Record<string, string> = {
+  "jodorowsky-costa": "Alejandro Jodorowsky y Marianne Costa",
+  nichols: "Sallie Nichols",
+  jung: "Carl G. Jung",
+  "ben-dov": "Yoav Ben-Dov",
+  marteau: "Paul Marteau",
+  pollack: "Rachel Pollack",
+};
 
 /**
- * CAPA 2 — punto de extensión.
- *
- * Contrato previsto para la implementación real:
- *   1. Ingesta local: PDF → texto → chunks de ~800 tokens con solape.
- *   2. Embeddings → tabla `corpus_chunks` en Supabase con pgvector.
- *   3. Consulta: embedding de la tirada + filtro por `school`.
- *   4. Devolver pasajes con `locator` REAL. Si no hay localizador fiable, se
- *      deja en null y la interfaz muestra «página no disponible».
- *
- * Mientras esté deshabilitado devuelve vacío, y el motor trabaja solo con la
- * capa 1. Nunca simula pasajes.
+ * Una consulta por carta. Cada una busca el nombre exacto, el grado en letra y
+ * el palo, unidos por OR para que el índice pondere lo que más coincide.
  */
-function retrieveFromCorpus(): CorpusPassage[] {
-  if (!corpusEnabled()) return [];
-  return [];
+function queriesFor(cards: DrawnCard[]): string[] {
+  const out: string[] = [];
+  for (const d of cards) {
+    const c = requireCard(d.slug);
+    const terms = [`"${c.name}"`];
+    if (c.degree && DEGREES[c.degree]) terms.push(DEGREES[c.degree].label);
+    if (c.suit) terms.push(SUITS[c.suit].label);
+    if (c.arcana === "major") {
+      const m = MAJORS_BY_SLUG[c.slug];
+      if (m?.name_fr && m.name_fr !== "—") terms.push(`"${m.name_fr}"`);
+    }
+    out.push(terms.join(" OR "));
+  }
+  return out;
+}
+
+async function retrieveFromCorpus(
+  cards: DrawnCard[],
+  { schools, perCard = 2 }: { schools?: string[]; perCard?: number },
+): Promise<CorpusPassage[]> {
+  if (!corpusEnabled() || cards.length === 0) return [];
+
+  try {
+    const supabase = await createClient();
+    const queries = queriesFor(cards);
+
+    const results = await Promise.all(
+      queries.map((q) =>
+        supabase.rpc("search_corpus", {
+          q,
+          schools: schools ?? null,
+          k: perCard,
+        }),
+      ),
+    );
+
+    const seen = new Set<string>();
+    const passages: CorpusPassage[] = [];
+
+    for (const { data, error } of results) {
+      if (error) {
+        console.error("[IRIS] búsqueda en corpus:", error.message);
+        continue;
+      }
+      for (const row of data ?? []) {
+        const key = row.content.slice(0, 120);
+        if (seen.has(key)) continue;
+        seen.add(key);
+        passages.push({
+          text: row.content,
+          score: row.rank ?? 0,
+          source: {
+            school: row.school,
+            author: row.authors ?? AUTHOR_BY_SCHOOL[row.school] ?? "—",
+            work: row.title,
+            locator: row.locator,
+            via: "corpus-retrieval",
+            note: null,
+          },
+        });
+      }
+    }
+
+    passages.sort((a, b) => b.score - a.score);
+    const top = passages.slice(0, 10);
+    console.log(`[IRIS] corpus: ${top.length} pasajes recuperados`);
+    return top;
+  } catch (e) {
+    // Un fallo del corpus nunca debe impedir una lectura: se cae a la capa 1.
+    console.error("[IRIS] corpus no disponible:", e);
+    return [];
+  }
 }

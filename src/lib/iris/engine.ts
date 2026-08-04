@@ -171,6 +171,8 @@ export interface SpreadInput {
   positions: SpreadPosition[];
   personLabel: string;
   isGuest: boolean;
+  /** Cómo quiere que la llamen quien está leyendo. null si aún no lo ha dicho. */
+  readerName?: string | null;
 }
 
 const SPREAD_LABELS: Record<SpreadType, string> = {
@@ -181,9 +183,9 @@ const SPREAD_LABELS: Record<SpreadType, string> = {
   custom: "Posiciones personalizadas",
 };
 
-function buildContext(input: SpreadInput): string {
+async function buildContext(input: SpreadInput): Promise<string> {
   const readout = buildReadout(input.cards);
-  const ctx = retrieveForSpread(input.cards);
+  const ctx = await retrieveForSpread(input.cards);
   const ordered = [...input.cards].sort((a, b) => a.order - b.order);
 
   const cardBlocks = ctx.cards
@@ -213,18 +215,37 @@ function buildContext(input: SpreadInput): string {
 
   const corpus = ctx.corpus_enabled
     ? ctx.corpus_passages.length
-      ? ctx.corpus_passages
-          .map(
-            (p) =>
-              `- «${p.text}» — ${p.source.author}, ${p.source.work ?? "s/t"}${
-                p.source.locator ? `, ${p.source.locator}` : ", localizador no disponible"
+      ? [
+          "Estos son pasajes literales de los libros que has leído. Son tuyos: los",
+          "conoces, no los estás consultando delante de la persona. Úsalos para que",
+          "lo que dices tenga peso, con tus palabras, y cita el libro solo cuando",
+          "estés usando algo específico de él. Si un pasaje no aporta nada a esta",
+          "tirada, ignóralo: no hay obligación de usarlos todos.",
+          "",
+          "Cuando uses uno, la afirmación lleva provenance \"source\" y un objeto de",
+          "fuente con via \"corpus-retrieval\", el work y el locator EXACTOS que",
+          "aparecen aquí. No inventes páginas ni cambies el capítulo.",
+          "",
+          ...ctx.corpus_passages.map(
+            (p, i) =>
+              `[${i + 1}] «${p.text}»\n    → school: ${p.source.school} · author: ${p.source.author} · work: ${p.source.work ?? "s/t"} · locator: ${
+                p.source.locator ? `«${p.source.locator}»` : "null (no disponible)"
               }`,
-          )
-          .join("\n")
-      : "La capa 2 está activa pero no ha devuelto pasajes relevantes. No atribuyas nada a una fuente por este motivo."
+          ),
+        ].join("\n")
+      : "La capa 2 está activa pero no ha devuelto pasajes relevantes para estas cartas. No atribuyas nada a una fuente por este motivo."
     : "La capa 2 (corpus privado) está desactivada. Solo dispones de la base estructurada. Ninguna afirmación puede llevar via='corpus-retrieval'.";
 
-  return `## Pregunta de la persona
+  const name = input.readerName?.trim();
+
+  return `## A quién le hablas
+${
+  name
+    ? `Quien está leyendo se llama ${name}. Le hablas a ${name}, no a un usuario. Usa su nombre donde caiga natural —al abrir, al entrar en lo que de verdad importa, al cerrar— y no más de dos o tres veces en toda la lectura. Un nombre repetido en cada párrafo suena a vendedor, no a alguien que te conoce.`
+    : "Aún no sabes cómo se llama. No inventes un nombre ni uses fórmulas de relleno del tipo «querido consultante»."
+}
+
+## Pregunta de la persona
 ${input.question ? `«${input.question}»` : "No formuló una pregunta específica. Trata la tirada como una lectura abierta."}
 
 ## A quién pertenece esta tirada
@@ -316,13 +337,13 @@ Esquema:
 Un objeto de fuente tiene esta forma:
 {"school":"jodorowsky-costa","author":"Alejandro Jodorowsky y Marianne Costa","work":"La vía del Tarot","locator":null,"via":"structured-kb","note":null}`;
 
-export function reflect(input: SpreadInput): Promise<ReflectResult> {
+export async function reflect(input: SpreadInput): Promise<ReflectResult> {
   return jsonCall({
     model: MODEL_READING,
     system: REFLECT_SYSTEM,
     schema: reflectSchema,
     maxTokens: 6000,
-    content: [{ type: "text", text: buildContext(input) }],
+    content: [{ type: "text", text: await buildContext(input) }],
   });
 }
 
@@ -373,13 +394,13 @@ Esquema:
 
 claim = {"text":"...","provenance":"source|structural|interpretation","sources":[]}`;
 
-export function learn(input: SpreadInput): Promise<LearnResult> {
+export async function learn(input: SpreadInput): Promise<LearnResult> {
   return jsonCall({
     model: MODEL_READING,
     system: LEARN_SYSTEM,
     schema: learnSchema,
     maxTokens: 6000,
-    content: [{ type: "text", text: buildContext(input) }],
+    content: [{ type: "text", text: await buildContext(input) }],
   });
 }
 
@@ -421,13 +442,13 @@ Esquema:
   "disclaimer": "..."
 }`;
 
-export function archetypes(input: SpreadInput): Promise<ArchetypesResult> {
+export async function archetypes(input: SpreadInput): Promise<ArchetypesResult> {
   return jsonCall({
     model: MODEL_READING,
     system: ARCHETYPES_SYSTEM,
     schema: archetypesSchema,
     maxTokens: 2000,
-    content: [{ type: "text", text: buildContext(input) }],
+    content: [{ type: "text", text: await buildContext(input) }],
   });
 }
 

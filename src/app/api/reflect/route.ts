@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { reflect, buildReadout } from "@/lib/iris/engine";
 import {
   handleError,
+  readerNameFor,
   requireUser,
   spreadInputSchema,
   toSpreadInput,
@@ -17,7 +18,7 @@ export async function POST(req: Request) {
 
   try {
     const parsed = spreadInputSchema.parse(await req.json());
-    const input = toSpreadInput(parsed);
+    const input = toSpreadInput(parsed, await readerNameFor(user.id));
     const [analysis] = await Promise.all([reflect(input)]);
     return NextResponse.json({
       ...analysis,

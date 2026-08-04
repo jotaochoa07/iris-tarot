@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { requireSession } from "@/lib/auth";
+import { getOwnerIdentity } from "@/lib/actions/identity";
 import { CardFace } from "@/components/CardFace";
 import { ButtonLink, Display, Screen } from "@/components/ui";
 import { CARDS } from "@/lib/knowledge/cards";
@@ -15,6 +17,10 @@ function formatDate(iso: string) {
 
 export default async function Home() {
   const { supabase } = await requireSession();
+
+  // Antes de leer nada, IRIS quiere saber cómo llamar a quien tiene delante.
+  const identity = await getOwnerIdentity();
+  if (!identity.onboarded) redirect("/bienvenida");
 
   const [{ data: last }, { data: progress }, { count: personalCount }] =
     await Promise.all([
@@ -44,6 +50,14 @@ export default async function Home() {
       </header>
 
       <div className="rise mt-20">
+        {identity.name && (
+          <Link
+            href="/bienvenida?cambiar=1"
+            className="eyebrow mb-4 block hover:text-ink-700"
+          >
+            {identity.name}
+          </Link>
+        )}
         <Display className="text-[2.5rem] leading-[1.06] tracking-[-0.03em]">
           ¿Qué muestran
           <br />

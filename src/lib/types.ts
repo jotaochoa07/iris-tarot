@@ -89,6 +89,8 @@ export type SchoolId =
   | "ben-dov"
   | "marteau"
   | "pollack"
+  /** Sallie Nichols: el Tarot leído con herramientas junguianas. */
+  | "nichols"
   | "jung"
   | "iris";
 

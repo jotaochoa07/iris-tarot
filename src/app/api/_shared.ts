@@ -37,8 +37,31 @@ export const spreadInputSchema = z.object({
 
 export function toSpreadInput(
   parsed: z.infer<typeof spreadInputSchema>,
+  readerName: string | null = null,
 ): SpreadInput {
-  return parsed as SpreadInput;
+  return { ...parsed, readerName } as SpreadInput;
+}
+
+/**
+ * Cómo se llama quien está leyendo.
+ *
+ * No viaja en el cuerpo de la petición a propósito: es un dato de la cuenta, y
+ * el cliente no debería poder decidir cómo se dirige IRIS a nadie. Si el perfil
+ * de propietario todavía no existe, devuelve null y IRIS no usa nombre.
+ */
+export async function readerNameFor(userId: string): Promise<string | null> {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from("persons")
+    .select("display_name, onboarded_at")
+    .eq("user_id", userId)
+    .eq("type", "owner")
+    .maybeSingle();
+
+  // "Yo" es el marcador con el que nace el perfil, no un nombre.
+  const name = data?.display_name?.trim() ?? "";
+  if (!data?.onboarded_at || !name || name.toLowerCase() === "yo") return null;
+  return name;
 }
 
 export async function requireUser() {
