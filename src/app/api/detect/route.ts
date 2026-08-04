@@ -20,6 +20,7 @@ export async function POST(req: Request) {
     const result = await detectCards(body);
     return NextResponse.json(result);
   } catch (err) {
+    console.error("[IRIS] fallo en /api/detect:", err);
     return handleError(err);
   }
 }

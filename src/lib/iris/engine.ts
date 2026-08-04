@@ -97,16 +97,37 @@ export async function detectCards(input: {
   });
 
   // Descartamos cualquier slug que el modelo se haya inventado.
+  const invalid: string[] = [];
   const valid = result.cards.filter((c) => {
     try {
       requireCard(c.slug);
       return true;
     } catch {
+      invalid.push(c.slug);
       return false;
     }
   });
 
-  return { ...result, cards: valid.map((c, i) => ({ ...c, order: i + 1 })) };
+  console.log(
+    `[IRIS] visión (${MODEL_VISION}): ${result.cards.length} propuestas, ` +
+      `${valid.length} válidas` +
+      (invalid.length ? `, descartadas: ${invalid.join(", ")}` : "") +
+      (result.overall_note ? ` · nota: ${result.overall_note}` : ""),
+  );
+
+  const note =
+    valid.length === 0
+      ? result.overall_note ??
+        (invalid.length
+          ? `El modelo propuso cartas que no existen en el catálogo (${invalid.join(", ")}). Elige las cartas a mano.`
+          : "No he identificado ninguna carta en la fotografía. Puede ser el encuadre, la luz o el ángulo. Añádelas a mano y seguimos.")
+      : result.overall_note;
+
+  return {
+    ...result,
+    overall_note: note,
+    cards: valid.map((c, i) => ({ ...c, order: i + 1 })),
+  };
 }
 
 /* ===========================================================================

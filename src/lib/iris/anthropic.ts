@@ -87,6 +87,7 @@ export async function jsonCall<T>({
 
   const result = schema.safeParse(parsed);
   if (!result.success) {
+    console.error("[IRIS] respuesta fuera de esquema:", cleaned.slice(0, 1200));
     throw new IrisModelError(
       `La respuesta no cumple el esquema esperado: ${result.error.issues
         .slice(0, 3)

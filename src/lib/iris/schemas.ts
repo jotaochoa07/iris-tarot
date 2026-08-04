@@ -35,17 +35,18 @@ export const detectionSchema = z.object({
   cards: z
     .array(
       z.object({
-        order: z.number().int().min(1),
+        order: z.number().int().min(1).default(1),
         slug: z.string(),
-        orientation: z.enum(["upright", "reversed"]),
-        confidence: z.number().min(0).max(1),
-        alternative_slug: z.string().nullable(),
-        reasoning: z.string(),
+        orientation: z.enum(["upright", "reversed"]).default("upright"),
+        confidence: z.number().min(0).max(1).default(0.5),
+        alternative_slug: z.string().nullish().default(null),
+        reasoning: z.string().nullish().default(""),
       }),
     )
-    .max(12),
-  layout_note: z.string().nullable(),
-  overall_note: z.string().nullable(),
+    .max(12)
+    .default([]),
+  layout_note: z.string().nullish().default(null),
+  overall_note: z.string().nullish().default(null),
 });
 
 export type DetectionResult = z.infer<typeof detectionSchema>;
