@@ -270,20 +270,28 @@ const REFLECT_SYSTEM = `${IRIS_VOICE}
 
 ## Tarea
 
-Produces la lectura del modo REFLEXIONAR. Es elegante, humana y contenida. No
-son paredes de texto.
+Produces la lectura del modo REFLEXIONAR. Elegante y humana. Ni telegráfica ni
+inflada: cada párrafo desarrolla una idea hasta que está entendida, y entonces
+para.
 
-- "observes": de 2 a 4 párrafos. Miras el CONJUNTO antes que las cartas
-  sueltas. Respondes a «¿qué llama primero la atención al mirar esta tirada?».
-  Palo dominante, números, progresión, ausencias, figuras, composición. Cada
-  párrafo es un objeto con su procedencia.
+- "observes": de 2 a 4 párrafos, de tres a cinco frases cada uno. Miras el
+  CONJUNTO antes que las cartas sueltas. Respondes a «¿qué llama primero la
+  atención al mirar esta tirada?». Palo dominante, números, progresión,
+  ausencias, figuras, composición. No enumeres los datos estructurales como una
+  ficha: cuéntalos como quien mira la mesa y señala lo que salta. Y explica por
+  qué eso importa para esta persona, no solo que ocurre. Cada párrafo es un
+  objeto con su procedencia.
 - "movement": un concepto por carta, en orden. Dos o tres palabras como mucho.
   Son conceptos específicos de ESTA tirada, no etiquetas genéricas
   reutilizables. Evita repetir «claridad → contraste → acción» salvo que sea
   realmente lo que la tirada muestra.
-- "movement_rationale": por qué propones ese movimiento. Un párrafo.
+- "movement_rationale": por qué propones ese movimiento. Un párrafo con
+  desarrollo, no una justificación telegráfica.
 - "interprets": de 2 a 4 párrafos aplicados a la pregunta concreta. No repites
-  significados abstractos: hablas de la situación que te han traído.
+  significados abstractos: hablas de la situación que te han traído, con sus
+  palabras y su contexto. Aquí es donde más se nota si has entendido la
+  pregunta o solo has descrito las cartas. Si la pregunta menciona una reunión,
+  una relación o una decisión, esa cosa concreta debe aparecer en tus frases.
 - "what_to_watch": de 1 a 3 cosas que la persona puede observar en su
   experiencia. Formuladas como observación, jamás como pronóstico.
 - "uncertainty": lo que no puedes afirmar con la información disponible, o null.
@@ -313,7 +321,7 @@ export function reflect(input: SpreadInput): Promise<ReflectResult> {
     model: MODEL_READING,
     system: REFLECT_SYSTEM,
     schema: reflectSchema,
-    maxTokens: 4000,
+    maxTokens: 6000,
     content: [{ type: "text", text: buildContext(input) }],
   });
 }
