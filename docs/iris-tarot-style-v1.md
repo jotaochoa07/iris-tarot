@@ -1,88 +1,134 @@
 # IRIS Tarot Style v1 — dirección de arte de los Arcanos Mayores
 
+> **La maestra manda.**
+>
+> La imagen aprobada de El Emperador —`docs/master/MASTER_REFERENCE.png`— es la
+> verdad visual de esta baraja. Este documento la describe; no la gobierna.
+> Donde documento e imagen se contradigan, se corrige el documento.
+>
+> La maestra está **congelada**. No se regenera, no se mejora, no se retoca.
+
 Documento de encargo. Sirve igual si las ilustraciones las genera un modelo de
 imagen o las dibuja una persona.
 
-El reparto es: la dirección de arte y el sistema visual viven aquí, la
-ilustración se produce fuera, y la composición final —orla, numeral, cartela—
-la hace la aplicación. Los 56 Arcanos Menores seguirán generándose en SVG. No
-hay ninguna razón para que todo el mazo comparta técnica de producción; sí la
-hay para que comparta lenguaje.
+El reparto es: la dirección de arte vive aquí, la ilustración se produce fuera,
+y los 56 Arcanos Menores se siguen generando en SVG dentro de la aplicación —
+adaptados a la orla de la maestra. No hay ninguna razón para que todo el mazo
+comparta técnica de producción; sí la hay para que comparta lenguaje.
 
 ---
 
-## Las dos decisiones que lo condicionan todo
+## Dos canon, y hay que cumplir los dos
 
-### 1. El marco viaja DENTRO de la imagen, y el SVG se adapta a él
+Toda carta futura tiene que satisfacer a la vez:
 
-> Revisado tras la carta maestra. La decisión previa era la contraria —marco
-> compuesto por fuera— y era la correcta *en abstracto*: los modelos de imagen
-> escriben mal, y veintidós marcos generados serían veintidós marcos distintos.
->
-> La maestra de El Emperador salió con la orla, los acantos, los numerales
-> laterales y la cartela integrados y **bien escritos**, con el suelo tramado
-> muriendo contra el filete. Compuesto por fuera nunca habría quedado así de
-> cosido. Cuando la evidencia contradice al plan, manda la evidencia.
+### CANON SEMÁNTICO — qué debe representar
 
-La carta se genera entera: orla de tres filetes, acantos en las cuatro
-esquinas, numeral romano en el canto izquierdo y en el derecho, doble regla y
-cartela con el nombre al pie.
+Es lo innegociable, y es innegociable por una razón concreta: **IRIS enseña a
+observar estas cosas**. Si el dibujo las contradice, la lección queda desmentida
+por la propia imagen.
 
-El precio hay que pagarlo en dos sitios:
+- **Numeral marsellés correcto.** `IIII` y no `IV`. `VIIII` y no `IX`. `XIIII`,
+  `XVIIII`. Igual en las tres posiciones. El Loco no lleva ninguno.
+- **Nombre** correcto y acentuado en la cartela. El XIII va sin nombre: la
+  cartela queda vacía, y eso es un dato de la carta.
+- **Dirección de la mirada.** Izquierda, derecha o al frente.
+- **Postura.** Sentado, de pie, caminando, suspendido.
+- **Qué sostiene cada mano**, y en cuál de las dos.
+- **Número de personajes.**
+- **Elementos simbólicos** que la ficha declara.
+- **Relaciones espaciales** que significan: qué hay bajo los pies, qué hay
+  encima, quién está más alto, quién da la espalda.
 
-- **El numeral es un dato, no un adorno.** Un `IV` donde debe ir `IIII`, o un
-  `IX` donde debe ir `VIIII`, no es un defecto estético: contradice lo que IRIS
-  enseña sobre el grado. Se revisa carta por carta y no se retoca: se rehace.
-- **Los 56 Menores en SVG tienen que adoptar ESTA orla.** Es trabajo del lado
-  del código, no del ilustrador: mismos filetes, mismos acantos, misma posición
-  de los numerales laterales, misma cartela y misma tipografía al pie. La carta
-  maestra pasa a ser la referencia de marco de toda la baraja.
+La fuente de estos datos es `src/lib/knowledge/major-attributes.ts`, y los
+prompts salen de ahí con `node scripts/prompts-mayores.mjs`.
 
-Numerales correctos, para tenerlos a mano al revisar:
+### CANON VISUAL — cómo debe verse
 
-`I · II · III · IIII · V · VI · VII · VIII · VIIII · X · XI · XII · XIII ·
-XIIII · XV · XVI · XVII · XVIII · XVIIII · XX · XXI`
+Lo define la maestra. Todo lo de este apartado se lee de la imagen, no de una
+especificación previa: técnica, textura, densidad de trama, tratamiento del
+papel, riqueza cromática, línea, volumen, marco, cartela y acabado.
 
-El Loco no lleva número: la cartela va sola.
+La instrucción operativa es una sola y va en todos los prompts:
 
-### 2. Fase 1 en Iluminación. El Nocturno se deriva después
+```
+Match the reference image of THE EMPEROR exactly: same border, same corner
+leaves, same cartouche, same lettering, same line weight, same palette, same
+paper, same level of hatching detail. Same world, same hand, same printing.
+```
 
-El mazo tiene dos tiradas de imprenta. Generar las 22 dos veces multiplica el
-riesgo de que las dos familias no se parezcan entre sí.
-
-El orden correcto es: cerrar las 22 en **Iluminación** (pergamino cálido), y
-solo cuando estén las 22 aprobadas, pasarlas por edición de imagen para
-obtener la variante **Nocturno** conservando la composición. Editar preserva el
-dibujo; regenerar, no.
-
-Hasta que exista la variante nocturna, los Mayores se muestran en Iluminación
-aunque el mazo esté en Nocturno. Es una incoherencia pequeña y temporal, y es
-mucho menos grave que veintidós cartas que no se parecen entre sí.
+La referencia es **siempre la maestra**, nunca la carta anterior. Encadenando
+cada carta a la previa, la familia deriva: para la diecisiete ya no se parece a
+la cuatro.
 
 ---
 
-## Especificación técnica
+## Paleta maestra
+
+No es una paleta cerrada de siete hexadecimales. Perseguir la exactitud
+matemática destruiría justo lo que hace que la maestra parezca impresa y no
+renderizada: la tinta carga desigual, el papel tiene tono, las sombras
+enriquecen el color.
+
+Lo que se hereda es el **carácter**, no el valor:
+
+| Familia | Carácter |
+|---|---|
+| Rojo | ladrillo, terroso, nada de bermellón chillón |
+| Azul | profundo, apagado, azul de tinta |
+| Oro | mostaza, sin brillo metálico |
+| Tinta | negro amarronado, nunca negro puro |
+| Papel | pergamino cálido, con tono, no blanco |
+| Carnaciones | naturales y sobrias |
+
+Se admiten **pequeños acentos** propios de cada carta —una gema, un ave, un
+fruto— siempre dentro de la saturación de la maestra. Lo que no se admite es
+subir el brillo, meter un color que grite más que los suyos, o dejar el fondo
+blanco.
+
+El criterio de aceptación es de ojo, no de cuentagotas: puesta al lado de la
+maestra, ¿parecen salidas de la misma prensa?
+
+---
+
+## Lo que la maestra fija y antes no estaba escrito
+
+Cosas que la especificación previa decía de otra manera, o no decía. Manda la
+imagen:
+
+- **El suelo lleva enlosado con líneas de fuga** en las escenas de interior o
+  arquitectónicas. La especificación anterior pedía perspectiva plana sin punto
+  de fuga; la maestra hace otra cosa y funciona. En escenas de exterior —El
+  Loco, La Estrella, La Luna— el suelo se resuelve con el mismo lenguaje de
+  trama, adaptado al terreno.
+- **La regla inferior es doble y la segunda es verdosa**, no oscura.
+- **El papel tiene textura y tono propios**, no es un plano liso.
+- **El volumen se resuelve con trama densa y variada**, con más carga en los
+  valles del paño y en los laterales en sombra. Es trama de verdad, no una
+  insinuación.
+- **La corona lleva gemas de color**, alternando azul y rojo.
+- **Las esquinas llevan hoja dorada**, pequeña, inclinada hacia dentro.
+- **El numeral aparece tres veces**: arriba al centro y en los dos cantos,
+  girado. No es redundancia decorativa: el grado es la mitad de la lectura y la
+  carta tiene que poder leerse desde cualquier lado de la mesa.
+
+---
 
 ## La orla, al detalle
 
-Tomada de la maestra. Los 56 Menores en SVG ya la reproducen —`Border`,
-`Numerals` y `Cartouche` en `src/components/deck/IrisCard.tsx`— sobre un lienzo
-de 400 × 600. Las medidas van en proporción del ancho de la carta, para que
-sirvan a cualquier resolución.
+Los 56 Menores en SVG ya la reproducen —`Border`, `Numerals` y `Cartouche` en
+`src/components/deck/IrisCard.tsx`— sobre un lienzo de 400 × 600. Las medidas
+van en proporción, para que sirvan a cualquier resolución.
 
 | Elemento | Posición |
 |---|---|
 | Filete exterior | oscuro, fino, a 1,75% del borde, esquinas apenas redondeadas |
 | Filete interior | rojo, a 3,75% del borde |
-| Hojas de esquina | doradas, en las cuatro esquinas, inclinadas hacia dentro |
-| Numeral superior | centrado, a 9,3% de la altura desde arriba |
+| Hojas de esquina | doradas, en las cuatro, inclinadas hacia dentro |
+| Numeral superior | centrado, a 9,3% de la altura |
 | Numerales laterales | girados 90°, a 9,5% de cada canto, centrados en vertical |
-| Doble regla | a 87,3% de la altura: una línea oscura y otra verde justo debajo |
+| Doble regla | a 87,3% de la altura: línea oscura y línea verdosa debajo |
 | Cartela | centrada, a 93,7% de la altura, versales con espaciado amplio |
-
-El numeral aparece **tres veces**: arriba y en los dos cantos. No es redundancia
-decorativa — el grado es la mitad de la lectura, y la carta tiene que poder
-leerse desde cualquier lado de la mesa.
 
 ---
 
@@ -90,152 +136,86 @@ leerse desde cualquier lado de la mesa.
 
 | | |
 |---|---|
-| Proporción | 2:3 vertical, exacta. La aplicación dibuja los 56 Menores a 400 × 600 |
+| Proporción | 2:3 vertical, exacta. Los Menores se dibujan a 400 × 600 |
 | Resolución | 1024 × 1536 mínimo |
 | Formato | PNG |
-| Fondo | Plano, `#F1E7D2`. Sin viñeta, sin degradado, sin textura de papel, sin sombra proyectada |
 | Nombre de archivo | `arcano-00.png` … `arcano-21.png` |
-| Dónde va | `public/cards/` — esa carpeta está ignorada por git |
-| Zona segura | Toda la figura dentro del 88% central. La aplicación recorta un poco al encajar la imagen dentro de la orla |
-
-El grano de papel lo añade la aplicación sobre toda la interfaz. Si la imagen
-ya trae textura, se duplica y se ensucia.
+| Dónde va | `public/cards/` — ignorada por git, no sale del disco |
+| La maestra | además, copia congelada en `docs/master/MASTER_REFERENCE.png` |
 
 ---
 
-## Lenguaje visual
+## Prompt maestro
 
-**Técnica.** Grabado contemporáneo. Relleno plano con contorno, y volumen
-resuelto con **trama de líneas paralelas**, nunca con degradado ni con
-aerógrafo. Debe parecer estampado, no pintado.
+El bloque `SUBJECT` de cada carta sale generado de los atributos:
 
-**Jerarquía de línea.** Tres grosores, siempre los tres presentes:
+```
+node scripts/prompts-mayores.mjs            # los 22 → docs/prompts-mayores.md
+node scripts/prompts-mayores.mjs arcano-03  # uno solo, por pantalla
+```
 
-- contorno exterior de la figura, el más grueso
-- líneas interiores: pliegues, separación de piezas, rasgos
-- trama: la más fina, solo en los valles del paño, bajo el mentón, en las caras
-  en sombra de los volúmenes arquitectónicos y en el suelo
-
-**Paleta cerrada.** Estos siete y ningún otro. Nada de colores intermedios ni
-mezclas:
-
-| Uso | Color |
-|---|---|
-| Línea | `#241C14` |
-| Campo | `#F1E7D2` |
-| Rojo | `#B0392C` |
-| Azul | `#2F5A86` |
-| Oro | `#C9A23C` |
-| Verde | `#557A4C` |
-| Carnación | `#E6C6A4` |
-| Violeta (secundario) | `#3B2D4A` |
-
-**Perspectiva.** Frontal y plana, medieval. Nada de punto de fuga, nada de
-escorzo dramático, nada de profundidad atmosférica.
-
-**Rostros.** Serenos y sin expresión teatral. Ni sonrisas, ni ceños, ni ojos
-brillantes. Las figuras del Tarot de Marsella no actúan: están.
-
-**Prohibido.** Fotorrealismo. Sombreado suave. Brillos, resplandores, partículas,
-destellos. Texturas de fantasía digital. Estética *new age*, aura, humo,
-estrellas de purpurina. Firmas o marcas de agua. Cualquier texto.
-
----
-
-## Prompt maestro — El Emperador
-
-Se elige El Emperador como carta patrón porque concentra todos los problemas a
-la vez: rostro de perfil, manos, objeto largo, postura sentada, mueble,
-vestuario con pliegues y símbolo heráldico. Si esta funciona, las otras
-veintiuna son variaciones.
+Y se monta debajo de este cuerpo, que es común a las 22:
 
 ```
 Original tarot card illustration in the style of a contemporary woodcut
 engraving, reinterpreting the Tarot de Marseille tradition. Editorial, austere,
-hand-cut feel.
+hand-cut feel. Printed, not painted.
 
-SUBJECT — The Emperor. A bearded king seated in profile, facing LEFT. He wears
-a four-pointed crown with jewels. In his raised hand he holds a long sceptre
-topped with an orb and cross. His other hand rests on the arm of a cubic
-throne. His legs are crossed so that they form the shape of a number four. A
-shield bearing a black eagle stands on the ground at his feet.
+[ SUBJECT — generado desde los atributos ]
 
-TECHNIQUE — Flat colour fills with a dark outline. Volume rendered ONLY with
-parallel hatching lines in the shadow areas: the folds of the robe, under the
-jaw, the shaded face of the throne, the ground. Three distinct line weights:
-heavy outer contour, medium interior lines, fine hatching. Printed, not
-painted.
+TECHNIQUE — Flat colour fills with a dark outline. Volume rendered with dense
+parallel hatching in the shadow areas: the folds of cloth, under the jaw, the
+shaded faces of architecture, the ground. Distinct line weights: heavy outer
+contour, medium interior lines, fine hatching. Warm textured paper, never flat
+white.
 
-PALETTE — Strictly limited to: line #241C14, background #F1E7D2, red #B0392C,
-blue #2F5A86, gold #C9A23C, green #557A4C, skin #E6C6A4. No other colours, no
-blends, no gradients.
+PALETTE — Brick red, deep muted blue, mustard gold, brown-black ink, warm
+parchment, natural skin tones. Small card-specific accents allowed within the
+same saturation. Nothing brighter or more saturated than the reference.
 
-COMPOSITION — Frontal, flat, medieval perspective. No vanishing point, no
-dramatic foreshortening. Figure centred, occupying the central 88% of a 2:3
-vertical frame. Flat #F1E7D2 background with no vignette, no texture, no
-shadow. Serene, neutral facial expression.
+COMPOSITION — Figure occupying the central portion of a 2:3 vertical frame.
+Serene, neutral facial expression.
 
-FRAME — Triple rule border (dark outer, thin red inner), a small gold acanthus
-leaf in each of the four corners, the roman numeral rotated 90° on the left and
-right edges, and the card name in serif capitals inside a cartouche at the foot,
-above a double rule.
+FRAME — Triple rule border with a red inner line, a small gold leaf in each of
+the four corners, the roman numeral at top centre and rotated 90° on both side
+edges, and the card name in serif capitals at the foot, below a double rule
+whose lower line is greenish.
 
-STRICTLY EXCLUDE — Photorealism. Soft shading. Glows, sparkles, light rays,
-particles. New-age or mystical fantasy aesthetics. Drop shadows. Signatures or
-watermarks.
+STRICTLY EXCLUDE — Photorealism. Soft airbrushed shading. Glows, sparkles,
+light rays, particles. New-age or mystical fantasy aesthetics. Drop shadows.
+Signatures or watermarks.
+
+Match the reference image of THE EMPEROR exactly: same border, same corner
+leaves, same cartouche, same lettering, same line weight, same palette, same
+paper, same level of hatching detail. Same world, same hand, same printing.
 ```
-
-Cuando la maestra esté aprobada, el prompt de las otras veintiuna es este mismo
-con el bloque `SUBJECT` sustituido, el numeral y el nombre cambiados, y esto al
-final:
-
-```
-Match the reference image exactly: same border, same corner leaves, same
-cartouche, same lettering, same line weight, same palette, same background,
-same level of hatching detail. Same world, same hand, same printing.
-```
-
-La referencia es siempre **la maestra**, no la carta anterior. Encadenar cada
-carta a la anterior hace que la familia derive: para la diecisiete ya no se
-parecerá a la uno.
-
----
-
-## Lo que no se puede cambiar entre cartas
-
-Estos atributos no son decisiones de dibujo: son el contenido de la carta y lo
-que IRIS explica en el análisis. Si el dibujo los contradice, la enseñanza queda
-desmentida por la propia imagen.
-
-- **Hacia dónde mira** la figura. Izquierda, derecha o al frente.
-- **Qué sostiene cada mano**, y en cuál.
-- **De pie o sentada.**
-- **Qué hay bajo los pies** y qué hay encima.
-- **Cuántas figuras** aparecen, y cómo se relacionan.
-
-Van a vivir como datos estructurados en `src/lib/knowledge/majors.ts`, de modo
-que el motor pueda razonar sobre ellos —«dos cartas seguidas mirando en
-direcciones opuestas» pasa a ser una observación calculada, con procedencia
-estructural, y no algo que el modelo se invente.
 
 ---
 
 ## Revisión de cada carta
 
-Antes de dar una por buena:
+Semántico primero, porque es lo que no se puede negociar:
 
-1. ¿El numeral está bien escrito, a la manera del Tarot de Marsella —`IIII` y
-   no `IV`, `VIIII` y no `IX`— y es el mismo en los dos cantos? ¿El nombre de
-   la cartela está bien escrito y acentuado? Si falla, se rehace. No se retoca.
-2. ¿Los siete colores son exactamente los de la paleta?
-3. ¿El volumen está hecho con trama, o se ha colado un degradado?
-4. ¿Se distinguen los tres grosores de línea?
-5. ¿El fondo es plano y del color exacto?
-6. ¿La figura mira hacia donde dice su ficha de atributos?
-7. ¿Cada mano sostiene lo que le corresponde, en la mano que le corresponde?
-8. ¿Cabe entera en el 88% central, sin que el recorte de la orla le coma nada?
-9. Puesta al lado de la maestra y de tres menores en SVG, ¿parecen la misma
-   baraja?
+1. ¿El numeral está a la marsellesa y es el mismo en las tres posiciones?
+2. ¿El nombre está bien escrito y acentuado? ¿El XIII va sin nombre?
+3. ¿Mira hacia donde dice su ficha?
+4. ¿La postura es la que dice su ficha?
+5. ¿Cada mano sostiene lo que le corresponde, en la mano que le corresponde?
+6. ¿Está el número de personajes correcto?
+7. ¿Aparecen todos los símbolos declarados?
+8. ¿Se respetan las relaciones espaciales: quién está encima, quién debajo,
+   quién de espaldas?
 
-La novena es la única que importa de verdad. Las ocho primeras existen para que
-la novena salga bien.
+Visual después, siempre contra la maestra y a ojo:
+
+9. ¿El volumen está hecho con trama, o se ha colado un degradado?
+10. ¿El papel tiene tono y textura?
+11. ¿La saturación se mantiene dentro de la de la maestra?
+12. ¿La orla, las hojas de esquina y la cartela coinciden?
+
+Y la única que decide de verdad:
+
+13. Puesta al lado de la maestra y de tres Menores en SVG, ¿parecen la misma
+    baraja?
+
+Las doce primeras existen para que la trece salga bien.

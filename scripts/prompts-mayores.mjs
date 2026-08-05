@@ -109,7 +109,9 @@ const ES_EN = {
   cascabeles: "bells",
   cetro: "a sceptre",
   "cetro rematado en globo y cruz, en alto": "a long sceptre topped with an orb and cross, held upright",
-  "cetro rematado en un globo": "a sceptre topped with an orb, no cross",
+  "cetro rematado en globo y cruz, apoyado en el hombro": "a long sceptre topped with an orb and cross, resting against her shoulder",
+  "escudo con águila, apoyado en el regazo": "a shield bearing a black eagle, resting on her lap",
+  collar: "a chain collar",
   columnas: "columns",
   copa: "a cup",
   corona: "a crown",
@@ -249,7 +251,7 @@ function subject(a) {
 
   l.push(
     "Match the reference image of THE EMPEROR exactly: same border, same corner leaves, " +
-      "same cartouche, same lettering, same line weight, same palette, same flat background, " +
+      "same cartouche, same lettering, same line weight, same palette, same paper, " +
       "same level of hatching detail. Same world, same hand, same printing.",
   );
 

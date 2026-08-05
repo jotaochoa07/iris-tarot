@@ -231,24 +231,27 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     mirada: "izquierda",
     tocado: "corona",
     manos: {
-      derecha: "cetro rematado en un globo",
-      izquierda: "escudo con águila, apoyado",
+      derecha: "cetro rematado en globo y cruz, apoyado en el hombro",
+      izquierda: "escudo con águila, apoyado en el regazo",
     },
     bajo_los_pies: null,
     encima: null,
-    simbolos: ["cetro", "águila", "corona", "trono", "alas del respaldo"],
+    simbolos: ["cetro", "águila", "corona", "trono", "collar"],
     observaciones: [
-      "Está sentada pero el cuerpo va de frente, no de perfil.",
-      "El águila aparece en el escudo, igual que en el Emperador.",
-      "El cetro remata en un globo, sin cruz.",
-      "El respaldo del trono tiene alas.",
+      "Está sentada y el cuerpo va de frente, no de perfil como el Emperador.",
+      "El águila del escudo es la misma que la del Emperador, y aquí la sostiene ella.",
+      "Sujeta el cetro con una mano y el escudo con la otra: las dos manos ocupadas.",
+      "El cetro no está en alto: descansa contra el hombro.",
     ],
     lecturas: [
       jc("Fecundidad y expansión: lo que el dos guardaba, el tres lo produce."),
-      iris("Comparte el águila con el Emperador. Cuando salen juntas, el eco no es casual."),
+      iris(
+        "Emperatriz y Emperador comparten corona, cetro y águila. Lo que cambia es el cuerpo: ella de frente y con el escudo en el regazo, él de perfil y con el escudo en el suelo. Cuando salen juntas, ahí está la lectura.",
+      ),
     ],
     verify: true,
-    verify_note: "Confirmar la dirección de la mirada y si el cetro lleva cruz.",
+    verify_note:
+      "Confirmar la dirección de la mirada contra la baraja física: de frente o ligeramente a la izquierda.",
   },
 
   "arcano-04": {

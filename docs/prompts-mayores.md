@@ -16,7 +16,7 @@ In the figure's LEFT hand: a second stick, planted on the ground.
 Below / at the feet: open ground with nothing blocking the way.
 Must include: a bundle, a staff, a small animal, bells.
 This card carries NO roman numeral at all. Cartouche at the foot reads exactly: EL LOCO.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -31,7 +31,7 @@ In the figure's LEFT hand: a tiny object held between thumb and forefinger.
 Below / at the feet: ground with small plants.
 Must include: a table with three visible legs, a wand, a cup, a knife, coins.
 Cartouche at the foot reads exactly: EL MAGO. Roman numeral on both side edges reads exactly: I.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -44,21 +44,21 @@ In the figure's RIGHT hand: holding the book by its edge.
 In the figure's LEFT hand: an open book resting on the lap.
 Must include: a book, a tiara, a veil, a wimple.
 Cartouche at the foot reads exactly: LA PAPISA. Roman numeral on both side edges reads exactly: II.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
 
 ## III · LA EMPERATRIZ
-> Comprobar antes de generar: Confirmar la dirección de la mirada y si el cetro lleva cruz.
+> Comprobar antes de generar: Confirmar la dirección de la mirada contra la baraja física: de frente o ligeramente a la izquierda.
 ```
 SUBJECT — LA EMPERATRIZ. A single figure, seated, facing the viewer, looking toward the LEFT of the card.
 Headwear: a crown.
-In the figure's RIGHT hand: a sceptre topped with an orb, no cross.
-In the figure's LEFT hand: a shield bearing an eagle, propped up.
-Must include: a sceptre, an eagle, a crown, a cubic throne, wings on the back of the throne.
+In the figure's RIGHT hand: a long sceptre topped with an orb and cross, resting against her shoulder.
+In the figure's LEFT hand: a shield bearing a black eagle, resting on her lap.
+Must include: a sceptre, an eagle, a crown, a cubic throne, a chain collar.
 Cartouche at the foot reads exactly: LA EMPERATRIZ. Roman numeral on both side edges reads exactly: III.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -72,7 +72,7 @@ In the figure's LEFT hand: resting on the arm of the throne.
 Below / at the feet: a shield bearing a black eagle, standing on the ground.
 Must include: an eagle, a cubic throne, a sceptre, a shield, a crown.
 Cartouche at the foot reads exactly: EL EMPERADOR. Roman numeral on both side edges reads exactly: IIII.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -86,7 +86,7 @@ In the figure's LEFT hand: a crozier with three crossbars.
 Below / at the feet: two smaller figures seen from behind.
 Must include: a crozier, a tiara, two tonsured heads, columns.
 Cartouche at the foot reads exactly: EL PAPA. Roman numeral on both side edges reads exactly: V.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -101,7 +101,7 @@ Below / at the feet: ground with small plants.
 Above: a winged figure inside a sun, drawing a bow, arrow not yet loosed.
 Must include: a sun, an arrow, a bow, three human figures.
 Cartouche at the foot reads exactly: EL ENAMORADO. Roman numeral on both side edges reads exactly: VI.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -115,7 +115,7 @@ Below / at the feet: a chariot drawn by two horses facing opposite ways, with no
 Above: a canopy held up by four columns.
 Must include: a chariot, two horses, a canopy, a sceptre, a crown.
 Cartouche at the foot reads exactly: EL CARRO. Roman numeral on both side edges reads exactly: VII.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -128,7 +128,7 @@ In the figure's RIGHT hand: a sword held straight up, vertical.
 In the figure's LEFT hand: a two-pan balance scale, level.
 Must include: a sword, a balance scale, a cubic throne, a crown.
 Cartouche at the foot reads exactly: LA JUSTICIA. Roman numeral on both side edges reads exactly: VIII.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -142,7 +142,7 @@ In the figure's LEFT hand: a long staff touching the ground.
 Below / at the feet: bare ground.
 Must include: a lantern, a staff, a cloak covering everything but face and hands, a hood.
 Cartouche at the foot reads exactly: EL ERMITAÑO. Roman numeral on both side edges reads exactly: VIIII.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -154,7 +154,7 @@ Below / at the feet: an axle on two supports.
 Above: a crowned creature seated on top of the wheel, not gripping it.
 Must include: a wheel, a crank handle, three creatures, one rising, one falling, one still.
 Cartouche at the foot reads exactly: LA RUEDA DE LA FORTUNA. Roman numeral on both side edges reads exactly: X.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -169,7 +169,7 @@ In the figure's LEFT hand: opening the animal's jaws with bare hands, without st
 Below / at the feet: ground with small plants.
 Must include: a lion, a lemniscate-shaped hat.
 Cartouche at the foot reads exactly: LA FUERZA. Roman numeral on both side edges reads exactly: XI.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -182,7 +182,7 @@ In the figure's LEFT hand: hidden behind the back.
 Above: a crossbeam he hangs from, held by two pruned trunks.
 Must include: a gallows, a rope, two pruned tree trunks, twelve pruned branch stumps, six on each trunk.
 Cartouche at the foot reads exactly: EL COLGADO. Roman numeral on both side edges reads exactly: XII.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -194,7 +194,7 @@ In the figure's RIGHT hand: a scythe.
 Below / at the feet: black earth with heads, hands and feet emerging from it.
 Must include: a scythe, a bone, crowned heads, earth.
 This card carries NO name in the cartouche — leave it empty. Roman numeral on both side edges reads exactly: XIII.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -209,7 +209,7 @@ In the figure's LEFT hand: a jug receiving the flow.
 Below / at the feet: ground.
 Must include: two jugs, wings, a flower on the forehead.
 Cartouche at the foot reads exactly: TEMPLANZA. Roman numeral on both side edges reads exactly: XIIII.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -224,7 +224,7 @@ In the figure's LEFT hand: raised with the palm open.
 Below / at the feet: a pedestal with two smaller figures tethered to it.
 Must include: horns, wings, a pedestal, two smaller figures loosely tethered by the neck, hands free, ropes.
 Cartouche at the foot reads exactly: EL DIABLO. Roman numeral on both side edges reads exactly: XV.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -236,7 +236,7 @@ Below / at the feet: ground, with two figures falling toward it.
 Above: the tower's crown, broken loose and falling.
 Must include: a tower, still standing, a crown, a rain of coloured dots, two figures falling in opposite directions.
 Cartouche at the foot reads exactly: LA TORRE. Roman numeral on both side edges reads exactly: XVI.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -250,7 +250,7 @@ Below / at the feet: one knee on the ground at the water's edge.
 Above: one large star and seven smaller ones.
 Must include: eight stars, one large and seven smaller, two jugs, a bird perched on a bush, water.
 Cartouche at the foot reads exactly: LA ESTRELLA. Roman numeral on both side edges reads exactly: XVII.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -262,7 +262,7 @@ Below / at the feet: a pool with a crayfish in it.
 Above: a moon in profile inside a disc, shedding droplets.
 Must include: a moon, two towers, two animals howling upward, a crayfish, falling droplets.
 Cartouche at the foot reads exactly: LA LUNA. Roman numeral on both side edges reads exactly: XVIII.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -277,7 +277,7 @@ Below / at the feet: ground, in front of a low wall.
 Above: a sun with a face, looking down, shedding droplets.
 Must include: a sun with a face, two figures, a low wall, falling droplets.
 Cartouche at the foot reads exactly: EL SOL. Roman numeral on both side edges reads exactly: XVIIII.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -291,7 +291,7 @@ Below / at the feet: opened earth, a figure rising out of it, seen from behind.
 Above: a winged figure in a halo blowing a trumpet.
 Must include: a trumpet, wings, a banner, three human figures.
 Cartouche at the foot reads exactly: EL JUICIO. Roman numeral on both side edges reads exactly: XX.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
 ---
@@ -303,5 +303,5 @@ In the figure's RIGHT hand: a wand.
 In the figure's LEFT hand: a wand.
 Must include: an oval wreath of leaves, four different creatures, one in each corner, all facing inward, a veil, wands.
 Cartouche at the foot reads exactly: EL MUNDO. Roman numeral on both side edges reads exactly: XXI.
-Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same flat background, same level of hatching detail. Same world, same hand, same printing.
+Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
