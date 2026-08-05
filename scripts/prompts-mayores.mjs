@@ -31,6 +31,47 @@ const iris = (t) => ({ text: t, source: null });
 const jc = (t) => ({ text: t, source: "jc" });
 const ATTRS = eval(`(${objeto.replace(/;$/, "")})`);
 
+/* El grafo de relaciones, del mismo modo. */
+const gsrc = readFileSync(
+  resolve(process.cwd(), "src/lib/knowledge/major-graph.ts"),
+  "utf8",
+);
+const gbody = gsrc.slice(
+  gsrc.indexOf("export const MAJOR_GRAPH"),
+  gsrc.indexOf("export function graphFor"),
+);
+const GRAPH = eval(`(${gbody.slice(gbody.indexOf("{"), gbody.lastIndexOf("};") + 1)})`);
+
+/**
+ * Verbos del grafo, en inglés.
+ *
+ * Se traducen aquí y no en el grafo por la misma razón que el resto: una sola
+ * fuente, en el idioma en que IRIS piensa.
+ */
+const VERBOS = {
+  sostiene: "HOLDS",
+  cuelga_de: "HANGS FROM",
+  se_apoya_en: "RESTS AGAINST",
+  toca: "TOUCHES",
+  atraviesa: "CROSSES OVER",
+  rodea: "ENCIRCLES",
+  tira_de: "TUGS AT",
+  "está_detrás_de": "BEHIND",
+  "está_delante_de": "IN FRONT OF",
+  "está_encima_de": "ABOVE",
+  "está_debajo_de": "BELOW",
+  "está_entre": "BETWEEN",
+  "está_atado_a": "TETHERED TO",
+  mira_a: "LOOKS AT",
+  da_la_espalda_a: "BACK TURNED TO",
+  se_desplaza_hacia: "MOVES TOWARD",
+  sale_de: "EMERGES FROM",
+  cae_de: "FALLS FROM",
+  vierte_sobre: "POURS ONTO",
+  apunta_a: "POINTS AT",
+  reposa_sobre: "RESTS ON",
+};
+
 const NOMBRES = {
   "arcano-00": "EL LOCO",
   "arcano-01": "EL MAGO",
@@ -153,6 +194,19 @@ const ES_EN = {
   "gorro con cascabeles": "a cap with bells",
   gotas: "falling droplets",
   guadaña: "a scythe",
+  "hatillo colgando del bastón, por detrás de él":
+    "a bundle hanging from the staff, BEHIND him",
+  "un animal que le tira de la ropa por detrás, a la altura de las piernas":
+    "a small animal BEHIND him, tearing at his clothes at leg height",
+  "un segundo bastón más corto, sostenido en la mano y apoyado en el suelo por delante":
+    "a second, shorter stick HELD IN HIS HAND, its tip resting on the ground ahead of him",
+  "dos caballos que miran cada uno hacia un lado distinto":
+    "two horses, each facing a different way",
+  "la pierna libre cruzada por detrás, formando un cuatro invertido":
+    "the free leg crossed behind the other, forming an upside-down number four",
+  "guadaña segando en horizontal, hacia un lado, no hacia abajo":
+    "a scythe sweeping horizontally to one side, not downward",
+  "dos figuras juntas que se tocan": "two figures standing together, touching",
   hatillo: "a bundle",
   horca: "a gallows",
   hueso: "a bone",
@@ -228,7 +282,155 @@ const ES_EN = {
   "águila": "an eagle",
 };
 
-const t = (v) => EN[v] ?? ES_EN[v] ?? v;
+
+/** Sustantivos del grafo. Mismo criterio: una sola fuente, traducida aquí. */
+const GRAFO_ES_EN = {
+  "abajo, por el otro lado": "downward, on the other side",
+  "arriba, por un lado de la rueda": "upward, on one side of the wheel",
+  "dos columnas": "two columns",
+  "dos troncos podados": "two pruned trunks",
+  "el agua del estanque": "the water of the pool",
+  "el agua, con una jarra": "the water, from one jug",
+  "el animal": "the animal",
+  "el ave": "the bird",
+  "el bastón": "the staff",
+  "el borde derecho de la carta": "the RIGHT edge of the card",
+  "el borde izquierdo de la carta": "the LEFT edge of the card",
+  "el brazo del trono": "the arm of the throne",
+  "el cangrejo": "the crayfish",
+  "el carro": "the chariot",
+  "el cetro": "the sceptre",
+  "el colgado": "the hanged man",
+  "el conductor": "the charioteer",
+  "el diablo": "the devil",
+  "el eje, hacia fuera de la rueda": "the axle, sticking out of the wheel",
+  "el emperador": "the emperor",
+  "el ermitaño": "the hermit",
+  "el escudo del águila": "the eagle shield",
+  "el estandarte": "the banner",
+  "el farol": "the lantern",
+  "el hatillo": "the bundle",
+  "el lado, en horizontal, no hacia abajo": "sideways, horizontally, NOT downward",
+  "el libro": "the book",
+  "el loco": "the fool",
+  "el líquido": "the liquid",
+  "el mago": "the magician",
+  "el manto": "the cloak",
+  "el mismo nivel": "the same level as each other",
+  "el mismo suelo del que brotan": "the same ground they emerge from",
+  "el muro": "the wall",
+  "el palio": "the canopy",
+  "el papa": "the pope",
+  "el segundo bastón": "the second stick",
+  "el sol": "the sun",
+  "el suelo": "the ground",
+  "el suelo, a sus pies": "the ground, at his feet",
+  "el suelo, junto a la orilla": "the ground, at the water's edge",
+  "el suelo, por delante de él": "the ground, AHEAD of him",
+  "el suelo, todavía en pie": "the ground, still standing",
+  "el travesaño": "the crossbeam",
+  "el velo": "the veil",
+  ella: "her",
+  "ese bastón, por detrás de su cabeza": "that staff, BEHIND his head",
+  "ese pedestal, por el cuello": "that pedestal, by the neck",
+  "la corona de la torre": "the crown of the tower",
+  "la corona vegetal": "the wreath",
+  "la criatura coronada": "the crowned creature",
+  "la cuerda": "the rope",
+  "la emperatriz": "the empress",
+  "la escena, sin haber salido aún del arco": "the scene, still not loosed from the bow",
+  "la estrella mayor": "the largest star",
+  "la figura": "the figure",
+  "la figura alada": "the winged figure",
+  "la figura central": "the central figure",
+  "la figura central, desde las esquinas": "the central figure, from the corners",
+  "la flecha": "the arrow",
+  "la guadaña": "the scythe",
+  "la justicia": "justice",
+  "la luna": "the moon",
+  "la luna, hacia arriba": "the moon, upward",
+  "la manivela": "the crank",
+  "la mesa": "the table",
+  "la mujer": "the woman",
+  "la otra por detrás, formando un cuatro invertido":
+    "the other leg from behind, forming an upside-down number four",
+  "la otra, formando un cuatro": "the other leg, forming a number four",
+  "la papisa": "the popess",
+  "la rueda, quieta y sin agarrarse": "the wheel, still and not holding on",
+  "la tierra abierta": "the opened earth",
+  "la tierra negra": "the black earth",
+  "la tierra, con la otra jarra": "the earth, from the other jug",
+  "la torre": "the tower",
+  "la torre, hacia lados opuestos": "the tower, in opposite directions",
+  "la trompeta": "the trumpet",
+  "la una a la otra": "one another",
+  "lados distintos": "different directions from each other",
+  "las alas": "the wings",
+  "las cabezas, manos y pies": "the heads, hands and feet",
+  "las cuatro criaturas": "the four creatures",
+  "las dos columnas": "the two columns",
+  "las dos figuras": "the two figures",
+  "las dos figuras menores": "the two smaller figures",
+  "las dos figuras que la flanquean": "the two figures flanking it",
+  "las dos figuras, desde arriba": "the two figures, from above",
+  "las dos torres": "the two towers",
+  "las fauces del animal, con las dos manos":
+    "the animal's jaws, with both hands",
+  "las gotas": "the droplets",
+  "las otras dos": "the other two",
+  "las otras dos figuras": "the other two figures",
+  "las que flanquean a la que emerge": "the ones flanking the emerging figure",
+  "las tres": "the three of them",
+  "lo alto del edificio": "the top of the building",
+  "los cuatro palos": "the four suits",
+  "los dos animales": "the two animals",
+  "los dos caballos": "the two horses",
+  "los dos platos": "the two pans",
+  "nada: está suspendida": "nothing at all: it is suspended in mid-air",
+  "su ropa, a la altura de las piernas": "his clothes, at leg height",
+  "su espalda": "its back",
+  "su espalda, ocultas": "his back, hidden from view",
+  "su hombro": "her shoulder",
+  "su regazo": "her lap",
+  "sus cuellos, floja": "their necks, loosely",
+  "sus manos": "his hands",
+  "un arbusto, al fondo": "a bush in the background",
+  "un báculo de tres travesaños": "a crozier with three crossbars",
+  "un bastón apoyado en el hombro": "a staff resting on his shoulder",
+  "un cetro con globo y cruz": "a sceptre with orb and cross",
+  "un cetro con globo y cruz, en alto": "a sceptre with orb and cross, held up",
+  "un farol encendido": "a lit lantern",
+  "un objeto diminuto entre dos dedos": "a tiny object between two fingers",
+  "un pedestal": "a pedestal",
+  "un pie, cabeza abajo": "one foot, head downward",
+  "un segundo bastón, más corto": "a second, shorter stick",
+  "una balanza, colgando": "a pair of scales, hanging",
+  "una espada recta y vertical": "a straight, vertical sword",
+  "una jarra, desde la otra": "one jug, from the other",
+  "una varita en alto": "a wand held up",
+  "una jarra": "a jug",
+  "un único libro abierto, por los dos bordes":
+    "ONE single open book, by both its edges",
+  "el mismo libro": "the same book",
+  "el libro abierto": "the open book",
+  "todo su cuerpo salvo el rostro y las manos":
+    "his whole body except face and hands",
+  "quien mira la carta": "the person looking at the card",
+  "quien tiene la carta delante": "the person holding the card",
+  "sus manos": "his hands",
+  "los dos platos": "the two pans of the scales",
+  "una mesa": "a table",
+  "su mano izquierda": "his left hand",
+  "su pierna": "his leg",
+  "su pierna libre": "his free leg",
+  "su rodilla": "her knee",
+  "él, en la dirección en que camina": "him, in the direction he is walking",
+  "una criatura": "one creature",
+  "otra criatura": "another creature",
+  "un lado, en horizontal": "one side, horizontally",
+};
+
+const t = (v) => EN[v] ?? ES_EN[v] ?? GRAFO_ES_EN[v] ?? v;
 
 function subject(a) {
   const nombre = NOMBRES[a.slug];
@@ -248,6 +450,17 @@ function subject(a) {
   if (a.encima) l.push(`Above: ${t(a.encima)}.`);
   if (a.detras) l.push(`Behind the figure: ${t(a.detras)}.`);
   if (a.simbolos.length) l.push(`Must include: ${a.simbolos.map(t).join(", ")}.`);
+
+  const rels = GRAPH[a.slug] ?? [];
+  if (rels.length) {
+    l.push(
+      "SPATIAL RELATIONS — these are not optional details, they are what the card " +
+        "means. Every one of them must be visible in the drawing:",
+    );
+    for (const r of rels) {
+      l.push(`  · ${t(r.de)} —${VERBOS[r.verbo] ?? r.verbo}→ ${t(r.a)}`);
+    }
+  }
 
   l.push(
     nombre

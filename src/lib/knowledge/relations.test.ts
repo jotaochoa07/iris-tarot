@@ -168,3 +168,40 @@ test("las frases están bien construidas en castellano", () => {
     }
   }
 });
+
+/* ---------------------------------------------------------------------------
+ * El grafo
+ * ------------------------------------------------------------------------- */
+
+test("las 22 cartas tienen relaciones escritas", async () => {
+  const { MAJOR_GRAPH } = await import("./major-graph");
+  const { MAJOR_ATTRIBUTES } = await import("./major-attributes");
+  for (const slug of Object.keys(MAJOR_ATTRIBUTES)) {
+    assert.ok(
+      (MAJOR_GRAPH[slug] ?? []).length > 0,
+      `${slug} no tiene ninguna relación en el grafo`,
+    );
+  }
+});
+
+test("el grafo tampoco interpreta", async () => {
+  const { MAJOR_GRAPH } = await import("./major-graph");
+  for (const [slug, rels] of Object.entries(MAJOR_GRAPH)) {
+    for (const r of rels) {
+      const frase = `${r.de} ${r.a}`.toLowerCase();
+      for (const palabra of PROHIBIDAS) {
+        assert.ok(!frase.includes(palabra), `${slug}: interpretación en «${frase}»`);
+      }
+    }
+  }
+});
+
+test("los verbos del grafo salen del vocabulario cerrado", async () => {
+  const { MAJOR_GRAPH, RELATION_VERBS } = await import("./major-graph");
+  const permitidos = new Set<string>(RELATION_VERBS);
+  for (const [slug, rels] of Object.entries(MAJOR_GRAPH)) {
+    for (const r of rels) {
+      assert.ok(permitidos.has(r.verbo), `${slug}: verbo desconocido «${r.verbo}»`);
+    }
+  }
+});

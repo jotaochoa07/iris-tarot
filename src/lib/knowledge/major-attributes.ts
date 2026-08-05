@@ -153,12 +153,16 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     tocado: "gorro con cascabeles",
     manos: {
       derecha: "bastón al hombro del que cuelga un hatillo",
-      izquierda: "segundo bastón, apoyado en el suelo",
+      izquierda: "un segundo bastón más corto, sostenido en la mano y apoyado en el suelo por delante",
     },
     bajo_los_pies: "terreno abierto, sin marco que lo detenga",
     encima: null,
     detras: null,
-    simbolos: ["hatillo", "bastón", "animal", "cascabeles"],
+    simbolos: [
+      "hatillo colgando del bastón, por detrás de él",
+      "un animal que le tira de la ropa por detrás, a la altura de las piernas",
+      "cascabeles",
+    ],
     observaciones: [
       "Es la única carta sin numeral.",
       "Un animal le tira de la ropa por detrás, a la altura de las piernas.",
@@ -376,7 +380,13 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     bajo_los_pies: "carro tirado por dos caballos",
     encima: "palio sostenido por cuatro columnas",
     detras: null,
-    simbolos: ["carro", "dos caballos", "palio", "cetro", "corona"],
+    simbolos: [
+      "carro",
+      "dos caballos que miran cada uno hacia un lado distinto",
+      "palio",
+      "cetro",
+      "corona",
+    ],
     observaciones: [
       "Los dos caballos miran cada uno hacia un lado distinto.",
       "No hay riendas.",
@@ -519,7 +529,13 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     bajo_los_pies: null,
     encima: "travesaño del que cuelga, sostenido por dos troncos podados",
     detras: null,
-    simbolos: ["horca", "cuerda", "dos troncos", "doce muñones"],
+    simbolos: [
+      "horca",
+      "cuerda",
+      "dos troncos",
+      "doce muñones",
+      "la pierna libre cruzada por detrás, formando un cuatro invertido",
+    ],
     observaciones: [
       "Cuelga de un pie, cabeza abajo.",
       "La pierna libre se cruza por detrás y dibuja un cuatro invertido.",
@@ -542,7 +558,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     orientacion: "perfil",
     mirada: "izquierda",
     tocado: null,
-    manos: { derecha: "guadaña", izquierda: null },
+    manos: { derecha: "guadaña segando en horizontal, hacia un lado, no hacia abajo", izquierda: null },
     bajo_los_pies: "tierra negra de la que asoman cabezas, manos y pies",
     encima: null,
     detras: null,
@@ -715,7 +731,12 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     bajo_los_pies: "suelo, delante de un muro bajo",
     encima: "sol con rostro, del que caen gotas",
     detras: "un muro bajo por el que se ve el fondo",
-    simbolos: ["sol con rostro", "dos figuras", "muro", "gotas"],
+    simbolos: [
+      "sol con rostro",
+      "dos figuras juntas que se tocan",
+      "muro",
+      "gotas",
+    ],
     observaciones: [
       "Dos figuras juntas, tocándose, delante de un muro.",
       "El sol tiene cara y mira hacia abajo, hacia ellas.",
