@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { CardFace } from "@/components/CardFace";
+import { DictationField } from "@/components/DictationField";
 import {
   Button,
   Display,
@@ -46,6 +47,8 @@ export function ReadingView({ reading }: { reading: Reading }) {
   );
   const [busy, setBusy] = useState<"learn" | "arch" | null>(null);
   const [error, setError] = useState<string | null>(null);
+
+  const ordered = [...reading.cards].sort((a, b) => a.order - b.order);
 
   const [notes, setNotes] = useState(reading.user_notes ?? "");
   const [outcome, setOutcome] = useState(reading.outcome ?? "");
@@ -115,24 +118,47 @@ export function ReadingView({ reading }: { reading: Reading }) {
       {/* --- TU TIRADA --------------------------------------------------- */}
       <section className="rise">
         <SectionTitle>Tu tirada</SectionTitle>
-        <div className="no-scrollbar -mx-6 flex gap-3 overflow-x-auto px-6">
-          {reading.cards
-            .slice()
-            .sort((a, b) => a.order - b.order)
-            .map((c, i) => {
-              const position = reading.positions.find((p) => p.order === c.order);
-              return (
-                <div key={i} className="flex flex-col gap-2">
-                  <CardFace slug={c.slug} orientation={c.orientation} size="md" />
-                  <p className="w-[104px] text-[0.6875rem] leading-tight text-ink-500">
-                    {getCard(c.slug)?.name}
-                    {position && (
-                      <span className="block text-ink-300">{position.label}</span>
-                    )}
-                  </p>
-                </div>
-              );
-            })}
+        {/*
+          Hasta tres cartas reparten el ancho de la pantalla y se ven grandes en
+          el móvil. A partir de ahí se desliza en horizontal: encogerlas más
+          sería mostrarlas sin dejarlas mirar. Se posan una detrás de otra.
+        */}
+        <div
+          className={
+            ordered.length <= 3
+              ? "stagger grid gap-3"
+              : "no-scrollbar stagger -mx-6 flex gap-3 overflow-x-auto px-6"
+          }
+          style={
+            ordered.length <= 3
+              ? { gridTemplateColumns: `repeat(${ordered.length}, minmax(0,1fr))` }
+              : undefined
+          }
+        >
+          {ordered.map((c, i) => {
+            const position = reading.positions.find((p) => p.order === c.order);
+            const fluid = ordered.length <= 3;
+            return (
+              <div key={i} className={`flex flex-col gap-2 ${fluid ? "min-w-0" : ""}`}>
+                <CardFace
+                  slug={c.slug}
+                  orientation={c.orientation}
+                  size="md"
+                  fluid={fluid}
+                />
+                <p
+                  className={`text-[0.6875rem] leading-tight text-ink-500 ${
+                    fluid ? "" : "w-[104px]"
+                  }`}
+                >
+                  {getCard(c.slug)?.name}
+                  {position && (
+                    <span className="block text-ink-300">{position.label}</span>
+                  )}
+                </p>
+              </div>
+            );
+          })}
         </div>
         {reading.question && (
           <p className="mt-6 font-quote text-[1.1875rem] leading-snug text-ink-700">
@@ -146,7 +172,7 @@ export function ReadingView({ reading }: { reading: Reading }) {
       {/* --- IRIS OBSERVA ------------------------------------------------ */}
       <section className="rise d-1">
         <SectionTitle>Iris observa</SectionTitle>
-        <div className="prose-iris">
+        <div className="prose-iris stagger">
           {t.observes.map((c, i) => (
             <ClaimParagraph key={i} claim={c} />
           ))}
@@ -161,7 +187,7 @@ export function ReadingView({ reading }: { reading: Reading }) {
         <div className="flex flex-wrap items-center gap-x-2 gap-y-2">
           {t.movement.map((m, i) => (
             <span key={i} className="flex items-center gap-2">
-              <span className="font-display text-[1.0625rem] uppercase tracking-[0.04em] text-ink-900">
+              <span className="font-display text-[1.0625rem] uppercase tracking-[0.04em] text-ochre-800">
                 {m.concept}
               </span>
               {i < t.movement.length - 1 && (
@@ -170,7 +196,7 @@ export function ReadingView({ reading }: { reading: Reading }) {
             </span>
           ))}
         </div>
-        <div className="prose-iris mt-5">
+        <div className="prose-iris stagger mt-5">
           <ClaimParagraph claim={t.movement_rationale} />
         </div>
       </section>
@@ -180,7 +206,7 @@ export function ReadingView({ reading }: { reading: Reading }) {
       {/* --- IRIS INTERPRETA --------------------------------------------- */}
       <section className="rise d-3">
         <SectionTitle>Iris interpreta</SectionTitle>
-        <div className="prose-iris">
+        <div className="prose-iris stagger">
           {t.interprets.map((c, i) => (
             <ClaimParagraph key={i} claim={c} />
           ))}
@@ -214,7 +240,7 @@ export function ReadingView({ reading }: { reading: Reading }) {
       {/* --- IRIS PREGUNTA ----------------------------------------------- */}
       <section className="rise d-5">
         <SectionTitle>Iris pregunta</SectionTitle>
-        <p className="font-quote text-[1.375rem] leading-snug text-ink-900">
+        <p className="font-quote text-[1.375rem] leading-snug text-ochre-900">
           {reading.reflection_question}
         </p>
       </section>
@@ -273,7 +299,7 @@ export function ReadingView({ reading }: { reading: Reading }) {
                     ))}
                   </div>
                 )}
-                <div className="prose-iris">
+                <div className="prose-iris stagger">
                   {arch.body.map((c, i) => (
                     <ClaimParagraph key={i} claim={c} />
                   ))}
@@ -298,12 +324,11 @@ export function ReadingView({ reading }: { reading: Reading }) {
       {/* --- DIARIO ------------------------------------------------------ */}
       <section>
         <SectionTitle>Mis notas</SectionTitle>
-        <textarea
+        <DictationField
           rows={3}
           value={notes}
-          onChange={(e) => setNotes(e.target.value)}
+          onChange={setNotes}
           placeholder="Lo que pensaste al mirar la tirada."
-          className="w-full resize-none border-b border-ink-200 bg-transparent pb-3 font-serif text-[1.0625rem] leading-relaxed outline-none placeholder:text-ink-300 focus:border-ink-700"
         />
         <Button
           size="sm"
@@ -327,12 +352,11 @@ export function ReadingView({ reading }: { reading: Reading }) {
           la lectura resultaron útiles y cuáles no. Las coincidencias no prueban
           nada; lo que enseña es la revisión.
         </p>
-        <textarea
-          rows={3}
+        <DictationField
+          rows={4}
           value={outcome}
-          onChange={(e) => setOutcome(e.target.value)}
+          onChange={setOutcome}
           placeholder="Lo que ocurrió después."
-          className="w-full resize-none border-b border-ink-200 bg-transparent pb-3 font-serif text-[1.0625rem] leading-relaxed outline-none placeholder:text-ink-300 focus:border-ink-700"
         />
         <Button
           size="sm"
@@ -417,7 +441,7 @@ function LearnPanel({
       <Display as="h2" className="text-[1.375rem] leading-snug">
         {learn.key_lesson.title}
       </Display>
-      <div className="prose-iris mt-3">
+      <div className="prose-iris stagger mt-3">
         <p>{learn.key_lesson.body}</p>
       </div>
       {learn.key_lesson.concept_tags.length > 0 && (
@@ -439,7 +463,7 @@ function LearnPanel({
           className="mt-8 border-l-2 border-marseille-yellow bg-paper-soft py-4 pl-4 pr-3"
         >
           <p className="eyebrow mb-2">Mira esto</p>
-          <p className="font-display text-[1.0625rem] leading-snug text-ink-900">
+          <p className="font-display text-[1.0625rem] leading-snug text-ochre-900">
             {l.title}
           </p>
           <p className="mt-2 font-serif text-[0.9375rem] leading-relaxed text-ink-700">
@@ -465,7 +489,7 @@ function LearnPanel({
               >
                 <CardFace slug={c.card_slug} size="sm" />
                 <span className="flex-1">
-                  <span className="block font-display text-[1.0625rem] text-ink-900">
+                  <span className="block font-display text-[1.0625rem] text-ochre-900">
                     {card?.name}
                   </span>
                   <span className="block text-[0.75rem] text-ink-400">

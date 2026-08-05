@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { requireSession } from "@/lib/auth";
 import { getOwnerIdentity } from "@/lib/actions/identity";
 import { CardFace } from "@/components/CardFace";
+import { DeckSwitch } from "@/components/deck/DeckSwitch";
 import { ButtonLink, Display, Screen } from "@/components/ui";
 import { CARDS } from "@/lib/knowledge/cards";
 
@@ -116,7 +117,7 @@ export default async function Home() {
           />
           <Stat value={`${personalCount ?? 0}`} label="tiradas propias" />
         </div>
-        <nav className="mt-8 flex gap-6">
+        <nav className="mt-8 flex flex-wrap gap-6">
           <Link href="/diario" className="eyebrow hover:text-ink-700">
             Diario
           </Link>
@@ -127,6 +128,11 @@ export default async function Home() {
             Exportar
           </a>
         </nav>
+
+        <div className="mt-8 flex items-baseline gap-4">
+          <span className="eyebrow text-ink-300">Mazo</span>
+          <DeckSwitch />
+        </div>
       </section>
     </Screen>
   );
@@ -143,7 +149,7 @@ function Stat({
 }) {
   return (
     <p className="text-ink-500">
-      <span className="font-display text-[1.5rem] text-ink-900">{value}</span>
+      <span className="font-display text-[1.5rem] text-ochre-800">{value}</span>
       {total && <span className="font-display text-[1.1rem] text-ink-300"> / {total}</span>}
       <span className="ml-2 text-[0.8125rem]">{label}</span>
     </p>

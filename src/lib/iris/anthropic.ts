@@ -1,5 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
-import type { z } from "zod";
+import { z } from "zod";
 
 let cached: Anthropic | null = null;
 
@@ -83,12 +83,40 @@ interface JsonCallOptions<T> {
   maxTokens?: number;
 }
 
+const TOOL_NAME = "responder";
+
+/**
+ * Traduce el esquema de zod al que espera la API para una herramienta.
+ *
+ * Devuelve null si zod no puede convertirlo, y en ese caso la llamada vuelve al
+ * modo texto. Vale la pena intentarlo siempre: cuando el esquema viaja en la
+ * definición de la herramienta, la API garantiza la forma de la respuesta y
+ * desaparece toda una familia de fallos.
+ */
+function toolSchemaFor(schema: z.ZodType): Record<string, unknown> | null {
+  try {
+    const json = z.toJSONSchema(schema, { io: "input" }) as Record<
+      string,
+      unknown
+    >;
+    delete json.$schema;
+    return json.type === "object" ? json : null;
+  } catch (e) {
+    console.warn("[IRIS] esquema no convertible a JSON Schema:", e);
+    return null;
+  }
+}
+
 /**
  * Llamada al modelo con salida JSON validada.
  *
- * Prellenamos la respuesta con «{» para forzar JSON puro, y validamos con zod.
- * Si el esquema no se cumple, fallamos de forma explícita: es preferible un
- * error visible a una lectura malformada mostrada como si fuera correcta.
+ * El JSON no se pide por escrito: se declara como herramienta y se obliga al
+ * modelo a usarla. Así la estructura la impone la API y no la buena voluntad
+ * del modelo, que era de donde venía el «no devolvió JSON interpretable».
+ *
+ * Queda una vía de reserva en texto por si un modelo no admite herramientas.
+ * En ambos casos zod tiene la última palabra: es preferible un error visible a
+ * una lectura malformada presentada como si estuviera bien.
  */
 export async function jsonCall<T>({
   model,
@@ -97,40 +125,72 @@ export async function jsonCall<T>({
   schema,
   maxTokens = 4000,
 }: JsonCallOptions<T>): Promise<T> {
+  const toolSchema = toolSchemaFor(schema as unknown as z.ZodType);
+
   // Ni `temperature` ni prefill de asistente: los modelos actuales rechazan
-  // ambos. La disciplina de JSON queda enteramente en el prompt, y aquí
-  // extraemos el objeto de la respuesta sea cual sea el envoltorio.
+  // ambos.
   const res = await anthropic().messages.create({
     model,
     max_tokens: maxTokens,
     system,
     messages: [{ role: "user", content }],
+    ...(toolSchema
+      ? {
+          tools: [
+            {
+              name: TOOL_NAME,
+              description:
+                "Entrega tu respuesta con esta estructura. Es la única forma de responder.",
+              input_schema: toolSchema as Anthropic.Messages.Tool["input_schema"],
+            },
+          ],
+          tool_choice: { type: "tool" as const, name: TOOL_NAME },
+        }
+      : {}),
   });
 
-  const text = res.content
-    .map((b) => (b.type === "text" ? b.text : ""))
-    .join("")
-    .trim();
+  const truncated = res.stop_reason === "max_tokens";
 
-  const cleaned = text
-    .replace(/^```(?:json)?/i, "")
-    .replace(/```$/, "")
-    .trim();
+  const toolBlock = res.content.find((b) => b.type === "tool_use");
+  let parsed: unknown = toolBlock?.type === "tool_use" ? toolBlock.input : undefined;
+  let raw = "";
 
-  const parsed = extractJson(cleaned);
   if (parsed === undefined) {
-    console.error("[IRIS] sin JSON en la respuesta:", cleaned.slice(0, 1200));
-    throw new IrisModelError("El modelo no devolvió JSON interpretable.");
+    raw = res.content
+      .map((b) => (b.type === "text" ? b.text : ""))
+      .join("")
+      .trim()
+      .replace(/^```(?:json)?/i, "")
+      .replace(/```$/, "")
+      .trim();
+    parsed = extractJson(raw);
+  }
+
+  if (parsed === undefined) {
+    console.error(
+      `[IRIS] sin JSON en la respuesta (stop_reason=${res.stop_reason}, ` +
+        `herramienta=${toolSchema ? "sí" : "no"}):`,
+      raw.slice(0, 1200) || "(respuesta vacía)",
+    );
+    throw new IrisModelError(
+      truncated
+        ? "La respuesta se cortó por longitud antes de completarse. Prueba con una tirada más corta o sube el límite de tokens."
+        : "El modelo no devolvió JSON interpretable.",
+    );
   }
 
   const result = schema.safeParse(parsed);
   if (!result.success) {
-    console.error("[IRIS] respuesta fuera de esquema:", cleaned.slice(0, 1200));
+    console.error(
+      `[IRIS] respuesta fuera de esquema (stop_reason=${res.stop_reason}):`,
+      JSON.stringify(parsed).slice(0, 1200),
+    );
     throw new IrisModelError(
-      `La respuesta no cumple el esquema esperado: ${result.error.issues
-        .slice(0, 3)
-        .map((i) => `${i.path.join(".")}: ${i.message}`)
-        .join("; ")}`,
+      (truncated ? "La respuesta se cortó por longitud. " : "") +
+        `La respuesta no cumple el esquema esperado: ${result.error.issues
+          .slice(0, 3)
+          .map((i) => `${i.path.join(".")}: ${i.message}`)
+          .join("; ")}`,
     );
   }
   return result.data;

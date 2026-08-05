@@ -77,7 +77,7 @@ export default async function DiarioPage({
             href={`/diario?f=${x.id}`}
             className={`rounded-full border px-3.5 py-1.5 text-[0.8125rem] ${
               filter === x.id
-                ? "border-ink-800 bg-ink-900 text-paper"
+                ? "border-ochre-800 bg-ochre-800 text-paper"
                 : "border-ink-200 text-ink-600"
             }`}
           >

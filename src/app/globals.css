@@ -31,8 +31,36 @@
   --color-marseille-flesh: #e6c6a4;
   --color-marseille-line: #1a1613;
 
-  /* --- Tipografía --------------------------------------------------------- */
-  --font-serif: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  /* --- Ocre ----------------------------------------------------------------
+     El negro puro sobre marfil es correcto y frío. Este bronce viene del mismo
+     sitio que el amarillo de las cartas, así que la interfaz deja de ser
+     neutra y pasa a estar teñida por la baraja, que es lo que debe ser.
+
+     Los tonos 800 y 700 mantienen contraste suficiente sobre papel para leer
+     titulares y para llevar texto claro encima en los botones. Del 500 hacia
+     arriba son decorativos: no se usan para texto largo.
+     ---------------------------------------------------------------------- */
+  --color-ochre-900: #3f2d10;
+  --color-ochre-800: #553d16;
+  --color-ochre-700: #6d4f1d;
+  --color-ochre-600: #856127;
+  --color-ochre-500: #a17a33;
+  --color-ochre-400: #bf9744;
+  --color-ochre-300: #d9b566;
+
+  /* --- Tipografía ---------------------------------------------------------
+     Dos serifs con oficios distintos, no por adorno:
+
+     EB Garamond en los titulares. Es una Garamond del XVI, francesa,
+     contemporánea del propio Tarot de Marsella. Tiene gesto y aguanta el
+     tamaño grande sin volverse decorativa.
+
+     Literata en el cuerpo. Está dibujada para lectura prolongada en pantalla:
+     ojo medio más alto, trazos más abiertos, menos contraste. Es la que
+     sostiene tres párrafos seguidos en un móvil sin cansar.
+     ---------------------------------------------------------------------- */
+  --font-display: var(--font-garamond), "Iowan Old Style", Georgia, serif;
+  --font-serif: var(--font-literata), Charter, Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   /* --- Ritmo -------------------------------------------------------------- */
@@ -68,15 +96,17 @@ body {
 /* --- Tipografía editorial -------------------------------------------------- */
 
 .font-display {
-  font-family: var(--font-serif);
-  font-variation-settings: "SOFT" 0, "WONK" 0, "opsz" 40;
-  letter-spacing: -0.018em;
+  font-family: var(--font-display);
+  /* Garamond tiene el ojo pequeño: en grande pide menos aire entre letras del
+     que pediría una serif moderna. */
+  letter-spacing: -0.012em;
+  font-weight: 500;
 }
 
 .font-quote {
-  font-family: var(--font-serif);
-  font-variation-settings: "SOFT" 40, "WONK" 1, "opsz" 20;
+  font-family: var(--font-display);
   font-style: italic;
+  letter-spacing: 0;
 }
 
 .eyebrow {
@@ -90,9 +120,11 @@ body {
 
 .prose-iris p {
   font-family: var(--font-serif);
+  /* Literata tiene eje óptico: a 14 engorda ligeramente el trazo, que es lo
+     que hace falta en cuerpo pequeño sobre papel claro. */
   font-variation-settings: "opsz" 14;
   font-size: 1.0625rem;
-  line-height: 1.72;
+  line-height: 1.7;
   color: var(--color-ink-700);
 }
 
@@ -176,9 +208,112 @@ body {
 .d-5 { animation-delay: 0.6s; }
 .d-6 { animation-delay: 0.78s; }
 
+/* --- El naipe -------------------------------------------------------------
+   La regla es la del brief: abrir un libro, no activar un hechizo. Nada
+   rebota, nada brilla, nada gira sobre sí mismo más de lo que giraría una
+   carta de cartón sobre una mesa.
+   ------------------------------------------------------------------------ */
+
+/* Sale del mazo: entra desde arriba, se posa y asienta. */
+@keyframes iris-deal {
+  from {
+    opacity: 0;
+    transform: translateY(-14px) rotate(-2.5deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(1px) rotate(0.4deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Se voltea sobre su eje vertical, como se voltea con el pulgar. */
+@keyframes iris-turn {
+  from {
+    transform: rotateY(-92deg);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* Los renglones aparecen como aparece la tinta al pasar la hoja. */
+@keyframes iris-ink {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+    filter: blur(2px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+.deal {
+  animation: iris-deal 0.66s var(--ease-book) both;
+}
+
+.turn {
+  animation: iris-turn 0.58s var(--ease-book) both;
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+}
+
+.ink {
+  animation: iris-ink 0.7s var(--ease-book) both;
+}
+
+/**
+ * Escalonado sin clases por hijo.
+ *
+ * Cada elemento directo entra un poco después del anterior. Se para en el
+ * décimo a propósito: más allá, esperar deja de ser ritmo y pasa a ser espera.
+ */
+.stagger > * {
+  animation: iris-rise 0.6s var(--ease-book) both;
+}
+.stagger > *:nth-child(1) { animation-delay: 0.04s; }
+.stagger > *:nth-child(2) { animation-delay: 0.13s; }
+.stagger > *:nth-child(3) { animation-delay: 0.22s; }
+.stagger > *:nth-child(4) { animation-delay: 0.31s; }
+.stagger > *:nth-child(5) { animation-delay: 0.4s; }
+.stagger > *:nth-child(6) { animation-delay: 0.49s; }
+.stagger > *:nth-child(7) { animation-delay: 0.58s; }
+.stagger > *:nth-child(8) { animation-delay: 0.67s; }
+.stagger > *:nth-child(9) { animation-delay: 0.76s; }
+.stagger > *:nth-child(n + 10) { animation-delay: 0.85s; }
+
+/* La respiración de la espera: mientras IRIS piensa. */
+@keyframes iris-breathe {
+  0%,
+  100% {
+    opacity: 0.28;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.breathe {
+  animation: iris-breathe 2.4s var(--ease-book) infinite;
+}
+
+/* Quien pide menos movimiento, no recibe ninguno. */
 @media (prefers-reduced-motion: reduce) {
   .rise,
-  .fade {
+  .fade,
+  .deal,
+  .turn,
+  .ink,
+  .breathe,
+  .stagger > * {
     animation: none;
   }
 }

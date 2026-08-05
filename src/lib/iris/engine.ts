@@ -2,6 +2,7 @@ import type { DrawnCard, SpreadPosition, SpreadType } from "@/lib/types";
 import { CARDS, requireCard } from "@/lib/knowledge/cards";
 import { buildReadout } from "@/lib/knowledge/readout";
 import { retrieveForSpread } from "@/lib/knowledge/retrieval";
+import { deckBlock } from "@/lib/knowledge/deck";
 import {
   IRIS_VOICE,
   JSON_DISCIPLINE,
@@ -109,7 +110,9 @@ export async function detectCards(input: {
     model: MODEL_VISION,
     system: DETECT_SYSTEM,
     schema: detectionSchema,
-    maxTokens: 2000,
+    // El campo "reasoning" de cada carta se alarga: con 2000 la respuesta se
+    // cortaba a media estructura en tiradas de tres o más cartas.
+    maxTokens: 4000,
     content: [
       {
         type: "image",
@@ -264,6 +267,9 @@ ${input.positions.length ? input.positions.map((p) => `${p.order}. ${p.label}`).
 - Grados repetidos: ${readout.repeated_numbers.join(", ") || "ninguno"}
 - Dirección numérica: ${readout.numeric_direction}
 - Observaciones: ${readout.notes.join(" ")}
+
+## La baraja que tiene delante
+${deckBlock()}
 
 ## Base de conocimiento estructurada (capa 1)
 Escuela: Jodorowsky/Costa. Redacción original de IRIS, sin localizador

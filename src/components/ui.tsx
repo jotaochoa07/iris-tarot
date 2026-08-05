@@ -16,10 +16,11 @@ const SIZES = {
 type Variant = "solid" | "outline" | "ghost";
 
 const VARIANTS: Record<Variant, string> = {
-  solid: "bg-ink-900 text-paper active:bg-ink-700",
+  // El sólido va en bronce, no en negro: es el mismo pigmento de las cartas.
+  solid: "bg-ochre-800 text-paper hover:bg-ochre-700 active:bg-ochre-900",
   outline:
-    "border border-ink-200 text-ink-800 active:bg-paper-soft",
-  ghost: "text-ink-500 active:bg-paper-soft",
+    "border border-ochre-300 text-ochre-800 hover:border-ochre-500 active:bg-paper-soft",
+  ghost: "text-ochre-700 active:bg-paper-soft",
 };
 
 export function Button({
@@ -85,7 +86,7 @@ export function Display({
   as?: "h1" | "h2" | "h3";
 }) {
   return (
-    <Tag className={`font-display text-ink-900 ${className}`}>
+    <Tag className={`font-display text-ochre-900 ${className}`}>
       {children}
     </Tag>
   );

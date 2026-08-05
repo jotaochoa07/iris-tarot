@@ -1,14 +1,23 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { EB_Garamond, Inter, Literata } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+/** Titulares y citas. */
+const garamond = EB_Garamond({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-garamond",
   display: "swap",
-  axes: ["SOFT", "WONK"],
 });
 
+/** Cuerpo y todo el texto largo. */
+const literata = Literata({
+  subsets: ["latin"],
+  variable: "--font-literata",
+  display: "swap",
+  axes: ["opsz"],
+});
+
+/** Etiquetas, cifras de interfaz, todo lo que no se lee sino que se consulta. */
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -34,7 +43,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${fraunces.variable} ${inter.variable}`}>
+    <html
+      lang="es"
+      className={`${garamond.variable} ${literata.variable} ${inter.variable}`}
+    >
       <body className="grain min-h-dvh antialiased">
         <div className="relative z-10 mx-auto min-h-dvh w-full max-w-[430px] md:max-w-[720px]">
           {children}

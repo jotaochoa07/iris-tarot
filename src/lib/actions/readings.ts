@@ -97,6 +97,8 @@ export interface SaveReadingInput {
   imageReference: string | null;
   tarotAnalysis: TarotAnalysis;
   reflectionQuestion: string;
+  /** true si las cartas salieron de un reparto aleatorio, no de una baraja. */
+  simulated?: boolean;
 }
 
 export async function saveReading(input: SaveReadingInput) {
@@ -124,6 +126,7 @@ export async function saveReading(input: SaveReadingInput) {
       card_order: ordered.map((c) => c.slug),
       orientation,
       image_reference: input.imageReference,
+      simulated: input.simulated ?? false,
       structural_readout: buildReadout(ordered),
       tarot_analysis: input.tarotAnalysis,
       reflection_question: input.reflectionQuestion,

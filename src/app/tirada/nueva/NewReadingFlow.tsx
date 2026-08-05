@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
 import { CardFace } from "@/components/CardFace";
 import { CardPicker } from "@/components/CardPicker";
+import { SimulateStep } from "./SimulateStep";
 import { Button, Display, Notice, Screen } from "@/components/ui";
 import { getCard } from "@/lib/knowledge/cards";
 import { createClient } from "@/lib/supabase/client";
@@ -17,18 +18,13 @@ import type { DrawnCard, SpreadPosition, SpreadType } from "@/lib/types";
 
 type Step =
   | "photo"
+  | "simulate"
   | "whose"
   | "detecting"
   | "confirm"
   | "question"
   | "structure"
   | "reading";
-
-const DEMO: DrawnCard[] = [
-  { slug: "espadas-01", order: 1, orientation: "upright", confidence: null, alternative_slug: null, confirmed_by_user: true },
-  { slug: "espadas-05", order: 2, orientation: "upright", confidence: null, alternative_slug: null, confirmed_by_user: true },
-  { slug: "bastos-02", order: 3, orientation: "upright", confidence: null, alternative_slug: null, confirmed_by_user: true },
-];
 
 const SPREADS: { id: SpreadType; label: string; positions: string[] }[] = [
   { id: "open", label: "Sin posiciones predefinidas", positions: [] },
@@ -59,6 +55,8 @@ export function NewReadingFlow({
   const [saveRecurring, setSaveRecurring] = useState(false);
 
   const [cards, setCards] = useState<DrawnCard[]>([]);
+  // Una tirada sacada al azar no es una tirada echada. Se marca y se guarda así.
+  const [simulated, setSimulated] = useState(false);
   const [detectNote, setDetectNote] = useState<string | null>(null);
   const [picking, setPicking] = useState<number | "add" | null>(null);
 
@@ -245,6 +243,7 @@ export function NewReadingFlow({
           uncertainty: analysis.uncertainty ?? null,
         },
         reflectionQuestion: analysis.reflection_question,
+        simulated,
       });
 
       router.push(`/tirada/${id}`);
@@ -295,16 +294,24 @@ export function NewReadingFlow({
           </Button>
 
           <button
-            onClick={() => {
-              setCards(DEMO);
-              setForGuest(false);
-              setStep("confirm");
-            }}
+            onClick={() => setStep("simulate")}
             className="mt-6 block w-full text-center text-[0.8125rem] text-ink-400 underline underline-offset-4"
           >
-            Usar la tirada de ejemplo
+            No tengo baraja: sacar cartas al azar
           </button>
         </section>
+      )}
+
+      {step === "simulate" && (
+        <SimulateStep
+          onDraw={(drawn) => {
+            setCards(drawn);
+            setSimulated(true);
+            setForGuest(false);
+            setStep("confirm");
+          }}
+          onBack={() => setStep("photo")}
+        />
       )}
 
       {step === "whose" && (
@@ -355,7 +362,7 @@ export function NewReadingFlow({
                       }}
                       className={`rounded-full border px-3.5 py-1.5 text-[0.8125rem] ${
                         guestPersonId === g.id
-                          ? "border-ink-800 bg-ink-900 text-paper"
+                          ? "border-ochre-800 bg-ochre-800 text-paper"
                           : "border-ink-200 text-ink-600"
                       }`}
                     >
@@ -381,7 +388,7 @@ export function NewReadingFlow({
                     type="checkbox"
                     checked={saveRecurring}
                     onChange={(e) => setSaveRecurring(e.target.checked)}
-                    className="h-4 w-4 accent-[#14110e]"
+                    className="h-4 w-4 accent-[#553d16]"
                   />
                   Guardar como invitado frecuente
                 </label>
@@ -406,7 +413,7 @@ export function NewReadingFlow({
 
       {step === "detecting" && (
         <section className="fade flex min-h-[50dvh] flex-col justify-center">
-          <p className="font-quote text-[1.375rem] text-ink-700">
+          <p className="font-quote breathe text-[1.375rem] text-ink-700">
             Mirando la fotografía…
           </p>
           <p className="mt-3 text-[0.875rem] text-ink-400">
@@ -438,7 +445,7 @@ export function NewReadingFlow({
                   </span>
                   <CardFace slug={c.slug} orientation={c.orientation} size="sm" />
                   <div className="min-w-0 flex-1">
-                    <p className="font-display text-[1.0625rem] leading-tight text-ink-900">
+                    <p className="font-display text-[1.0625rem] leading-tight text-ochre-900">
                       {card?.name}
                       {c.orientation === "reversed" && (
                         <span className="ml-2 text-[0.75rem] text-ink-400">invertida</span>
@@ -515,7 +522,7 @@ export function NewReadingFlow({
               type="checkbox"
               checked={noQuestion}
               onChange={(e) => setNoQuestion(e.target.checked)}
-              className="h-4 w-4 accent-[#14110e]"
+              className="h-4 w-4 accent-[#553d16]"
             />
             No hice una pregunta específica
           </label>
@@ -542,7 +549,7 @@ export function NewReadingFlow({
                 onClick={() => setSpreadType(s.id)}
                 className={`rounded-[4px] border px-4 py-3.5 text-left text-[0.9375rem] ${
                   spreadType === s.id
-                    ? "border-ink-800 bg-ink-900 text-paper"
+                    ? "border-ochre-800 bg-ochre-800 text-paper"
                     : "border-ink-200 text-ink-700"
                 }`}
               >
@@ -581,12 +588,23 @@ export function NewReadingFlow({
 
       {step === "reading" && (
         <section className="fade flex min-h-[60dvh] flex-col justify-center">
-          <div className="mb-9 flex gap-2">
+          <div
+            className="stagger mb-9 grid gap-3"
+            style={{
+              gridTemplateColumns: `repeat(${Math.min(cards.length, 3)}, minmax(0,1fr))`,
+            }}
+          >
             {cards.map((c, i) => (
-              <CardFace key={i} slug={c.slug} orientation={c.orientation} size="sm" />
+              <CardFace
+                key={i}
+                slug={c.slug}
+                orientation={c.orientation}
+                fluid={cards.length <= 3}
+                size="sm"
+              />
             ))}
           </div>
-          <p className="font-quote text-[1.375rem] leading-snug text-ink-700">
+          <p className="font-quote breathe text-[1.375rem] leading-snug text-ink-700">
             Miro el conjunto antes de mirar cada carta.
           </p>
           <p className="mt-3 text-[0.875rem] text-ink-400">
@@ -606,6 +624,8 @@ export function NewReadingFlow({
 
 const STEP_INDEX: Record<Step, number> = {
   photo: 1,
+  // Barajar sustituye a la fotografía: ocupa su mismo lugar en el recorrido.
+  simulate: 1,
   whose: 2,
   detecting: 3,
   confirm: 3,
