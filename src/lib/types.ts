@@ -145,11 +145,28 @@ export interface TarotAnalysis {
   uncertainty: string | null; // lo que IRIS no puede afirmar
 }
 
+/**
+ * 👁 MIRA ESTO — tres capas, en este orden y sin mezclarse.
+ *
+ * Es el corazón pedagógico del producto: primero se aprende a VER, después se
+ * interpreta. Invertir el orden es lo que hace que alguien memorice significados
+ * sin llegar a mirar nunca una carta.
+ *
+ *   fact            hecho calculado. Procedencia "structural". No opina.
+ *   question        invita a observar. Abierta, sin respuesta correcta escondida.
+ *   interpretation  qué PODRÍA implicar. Opcional, y jamás disfrazada de hecho.
+ */
 export interface LookAtThis {
   title: string;
-  body: string;
-  /** Pregunta abierta que se le devuelve al lector. */
-  prompt: string | null;
+  /** El hecho, tal y como lo calculó el motor estructural. */
+  fact: Claim;
+  /** La pregunta que devuelve la mirada a la carta. */
+  question: string;
+  /** Lectura posible. null cuando basta con mirar. */
+  interpretation: Claim | null;
+  /** Forma antigua, solo para tiradas guardadas antes de esta separación. */
+  body?: string;
+  prompt?: string | null;
 }
 
 export interface CardLesson {

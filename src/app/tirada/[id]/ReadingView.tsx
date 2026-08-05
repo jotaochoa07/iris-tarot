@@ -25,6 +25,7 @@ import type {
   ArchetypalAnalysis,
   Claim,
   LearnAnalysis,
+  LookAtThis,
   Reading,
 } from "@/lib/types";
 
@@ -387,6 +388,66 @@ export function ReadingView({ reading }: { reading: Reading }) {
 
 /* --- Párrafo con procedencia ---------------------------------------------- */
 
+/**
+ * 👁 MIRA ESTO.
+ *
+ * Las tres capas se ven separadas porque SON separadas: primero el hecho, luego
+ * la pregunta que devuelve la mirada a la carta, y solo al final —y solo si
+ * aporta— una lectura posible. Si se pintaran como un bloque de texto seguido,
+ * la persona leería la interpretación como si fuera un dato, que es justo lo
+ * que este producto existe para no hacer.
+ */
+function LookAtThisBlock({ block }: { block: LookAtThis }) {
+  // Tiradas guardadas antes de la separación en tres capas.
+  if (!block.fact) {
+    return (
+      <div className="mt-8 border-l-2 border-marseille-yellow bg-paper-soft py-4 pl-4 pr-3">
+        <p className="eyebrow mb-2">Mira esto</p>
+        <p className="font-display text-[1.0625rem] leading-snug text-ochre-900">
+          {block.title}
+        </p>
+        {block.body && (
+          <p className="mt-2 font-serif text-[0.9375rem] leading-relaxed text-ink-700">
+            {block.body}
+          </p>
+        )}
+        {block.prompt && (
+          <p className="mt-3 font-quote text-[1rem] text-ink-800">{block.prompt}</p>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="mt-8 border-l-2 border-marseille-yellow bg-paper-soft py-4 pl-4 pr-3">
+      <p className="eyebrow mb-2">Mira esto</p>
+      <p className="font-display text-[1.0625rem] leading-snug text-ochre-900">
+        {block.title}
+      </p>
+
+      <p className="mt-3 font-serif text-[0.9375rem] leading-relaxed text-ink-700">
+        <ProvenanceMark provenance={block.fact.provenance} />
+        {block.fact.text}
+      </p>
+
+      <p className="mt-4 font-quote text-[1.0625rem] leading-snug text-ochre-900">
+        {block.question}
+      </p>
+
+      {block.interpretation && (
+        <>
+          <div className="my-4 h-px bg-ink-200" />
+          <p className="eyebrow mb-1.5 text-ink-300">Una lectura posible</p>
+          <p className="font-serif text-[0.9375rem] leading-relaxed text-ink-600">
+            <ProvenanceMark provenance={block.interpretation.provenance} />
+            {block.interpretation.text}
+          </p>
+        </>
+      )}
+    </div>
+  );
+}
+
 function ClaimParagraph({ claim }: { claim: Claim }) {
   const [open, setOpen] = useState(false);
   const hasSource = claim.provenance === "source" && claim.sources.length > 0;
@@ -458,21 +519,7 @@ function LearnPanel({
       )}
 
       {learn.look_at_this.map((l, i) => (
-        <div
-          key={i}
-          className="mt-8 border-l-2 border-marseille-yellow bg-paper-soft py-4 pl-4 pr-3"
-        >
-          <p className="eyebrow mb-2">Mira esto</p>
-          <p className="font-display text-[1.0625rem] leading-snug text-ochre-900">
-            {l.title}
-          </p>
-          <p className="mt-2 font-serif text-[0.9375rem] leading-relaxed text-ink-700">
-            {l.body}
-          </p>
-          {l.prompt && (
-            <p className="mt-3 font-quote text-[1rem] text-ink-800">{l.prompt}</p>
-          )}
-        </div>
+        <LookAtThisBlock key={i} block={l} />
       ))}
 
       <Rule />

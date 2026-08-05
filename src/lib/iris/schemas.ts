@@ -95,9 +95,12 @@ export const learnSchema = z.object({
   look_at_this: z
     .array(
       z.object({
-        title: z.string(),
-        body: z.string(),
-        prompt: z.string().nullable(),
+        title: z.string().min(1),
+        // El hecho va primero y lleva procedencia estructural.
+        fact: claimSchema,
+        question: z.string().min(1),
+        // Puede no haber interpretación: a veces basta con mirar.
+        interpretation: claimSchema.nullish().default(null),
       }),
     )
     .max(3)

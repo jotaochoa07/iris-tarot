@@ -10,8 +10,18 @@ import { requireCard } from "./cards";
  * mirando las cartas: quién mira a quién, qué objeto se repite, cuántas figuras
  * están sentadas. Procedencia `structural`, nunca `interpretation`.
  *
- * IRIS puede construir sobre esto, pero no puede contradecirlo. Y no necesita
- * inventarlo: se lo damos calculado.
+ * ---------------------------------------------------------------------------
+ * REGLA DURA DE REDACCIÓN
+ *
+ * Este módulo NUNCA dice lo que algo significa, ni lo insinúa. Nada de «esto
+ * quiere decir», «no es casualidad», «llama la atención», «conviven la quietud
+ * y el movimiento». Todo eso son lecturas, y aquí solo se cuenta y se señala.
+ *
+ * La prueba es simple: si dos personas mirando las mismas cartas pudieran
+ * discrepar de la frase, la frase no pertenece a este archivo.
+ *
+ * Interpretar viene después, en otra capa, y se presenta como lo que es.
+ * ---------------------------------------------------------------------------
  */
 
 export type RelationKind =
@@ -99,13 +109,13 @@ export function majorRelations(cards: DrawnCard[]): StructuralNote[] {
     if (a.gaze === "derecha" && b.gaze === "izquierda") {
       notes.push({
         kind: "mirada",
-        text: `${a.name} y ${b.name} se miran: una mira hacia la derecha y la otra hacia la izquierda, y están una al lado de la otra.`,
+        text: `${a.name} mira hacia la derecha y ${b.name}, que está a su lado, mira hacia la izquierda: las dos miradas se cruzan.`,
         cards: [a.slug, b.slug],
       });
     } else if (a.gaze === "izquierda" && b.gaze === "derecha") {
       notes.push({
         kind: "mirada",
-        text: `${a.name} y ${b.name} se dan la espalda: cada una mira hacia el borde contrario de la tirada.`,
+        text: `${a.name} mira hacia la izquierda y ${b.name}, que está a su lado, mira hacia la derecha: las dos miradas se alejan.`,
         cards: [a.slug, b.slug],
       });
     } else if (
@@ -125,7 +135,7 @@ export function majorRelations(cards: DrawnCard[]): StructuralNote[] {
   if (frontales.length > 0 && frontales.length === majors.length && majors.length > 1) {
     notes.push({
       kind: "mirada",
-      text: `Las ${majors.length} figuras miran al frente: ninguna se relaciona con las otras, todas se dirigen a quien tiene la tirada delante.`,
+      text: `Las ${majors.length} figuras miran al frente, hacia quien tiene la tirada delante. Ninguna mira a otra carta.`,
       cards: frontales.map((m) => m.slug),
     });
   } else if (frontales.length === 1 && majors.length > 1) {
@@ -137,8 +147,7 @@ export function majorRelations(cards: DrawnCard[]): StructuralNote[] {
   }
 
   /* --- Objetos que se repiten -------------------------------------------
-   * Un símbolo que aparece dos veces en la misma tirada es un dato, no una
-   * casualidad: la baraja repite muy pocas cosas. */
+   * Se cuenta la repetición y se nombra. Qué implique, aquí no se dice. */
   const porSimbolo = new Map<string, Present[]>();
   for (const m of majors) {
     for (const s of m.attrs.simbolos) {
@@ -173,7 +182,7 @@ export function majorRelations(cards: DrawnCard[]): StructuralNote[] {
     if (lista.length < 2 || yaDicho.has(clave)) continue;
     notes.push({
       kind: "tocado",
-      text: `${capitalizar(clave)}: lo mismo en la cabeza de ${listar(lista.map((m) => m.name))}.`,
+      text: `${capitalizar(clave)}: el mismo tocado en ${listar(lista.map((m) => m.name))}.`,
       cards: lista.map((m) => m.slug),
     });
   }
@@ -186,7 +195,7 @@ export function majorRelations(cards: DrawnCard[]): StructuralNote[] {
       if (p !== "sin figura") {
         notes.push({
           kind: "postura",
-          text: `Las ${majors.length} figuras están ${p === "sentado" ? "sentadas" : p === "de pie" ? "de pie" : p}: ninguna cambia de posición.`,
+          text: `Las ${majors.length} figuras están ${p === "sentado" ? "sentadas" : p === "de pie" ? "de pie" : p}.`,
           cards: majors.map((m) => m.slug),
         });
       }
@@ -197,9 +206,8 @@ export function majorRelations(cards: DrawnCard[]): StructuralNote[] {
         notes.push({
           kind: "postura",
           text:
-            "Conviven la quietud y el movimiento: en " +
-            `${listar(sentadas.map((m) => m.name))} la figura está sentada, y en ` +
-            `${listar(enMarcha.map((m) => m.name))} camina.`,
+            `En ${listar(sentadas.map((m) => m.name))} la figura está sentada; ` +
+            `en ${listar(enMarcha.map((m) => m.name))} camina.`,
           cards: [...sentadas, ...enMarcha].map((m) => m.slug),
         });
       }
@@ -230,13 +238,13 @@ export function majorRelations(cards: DrawnCard[]): StructuralNote[] {
     if (sube) {
       notes.push({
         kind: "orientacion",
-        text: "Las figuras se van apartando de quien mira: de frente, luego de tres cuartos, luego de perfil.",
+        text: "De la primera a la última, cada figura está más girada respecto a quien mira: de frente, luego de tres cuartos, luego de perfil.",
         cards: validas.map((m) => m.slug),
       });
     } else if (baja) {
       notes.push({
         kind: "orientacion",
-        text: "Las figuras se van girando hacia quien mira: de perfil, luego de tres cuartos, luego de frente.",
+        text: "De la primera a la última, cada figura está menos girada respecto a quien mira: de perfil, luego de tres cuartos, luego de frente.",
         cards: validas.map((m) => m.slug),
       });
     }
@@ -260,7 +268,7 @@ export function majorRelations(cards: DrawnCard[]): StructuralNote[] {
   if (deEspaldas.length) {
     notes.push({
       kind: "presencia",
-      text: `En ${listar(deEspaldas.map((m) => m.name))} hay figuras de espaldas a quien mira la carta.`,
+      text: `En ${listar(deEspaldas.map((m) => m.name))} hay figuras dibujadas de espaldas a quien mira la carta.`,
       cards: deEspaldas.map((m) => m.slug),
     });
   }

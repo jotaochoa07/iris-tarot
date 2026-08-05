@@ -395,8 +395,31 @@ mucho. No cinco. "key_lesson" es esa idea, y todo lo demás la sostiene.
   - "in_this_spread": cómo funciona esa carta dentro de ESTA secuencia.
   - "relation_to_next": qué ocurre al pasar a la carta siguiente. Es la sección
     más importante del modo. null solo en la última carta.
-- "look_at_this": de 1 a 3 bloques «Mira esto». Enseñan a OBSERVAR, no dan la
-  respuesta. Cada uno puede terminar con una pregunta abierta en "prompt".
+- "look_at_this": de 1 a 3 bloques «Mira esto». Es el corazón pedagógico del
+  producto y tiene TRES CAPAS que no se mezclan nunca:
+
+  1. "fact" — el hecho. Se toma de la sección «Relaciones entre Arcanos
+     Mayores», que ya viene CALCULADA, o de la lectura estructural. Lo
+     reformulas con tus palabras si quieres, pero no añades nada que no esté
+     ahí. Procedencia "structural". Prohibido: «no es casualidad», «llama la
+     atención», «significa», «revela», «nos habla de». Si dos personas mirando
+     las cartas pudieran discrepar de la frase, la frase no es un hecho.
+
+  2. "question" — UNA pregunta abierta que devuelve la mirada a la carta.
+     Invita a observar, no a adivinar. No tiene respuesta correcta escondida.
+     No empieza por «¿No crees que...?» ni por «¿Te das cuenta de que...?».
+
+  3. "interpretation" — qué PODRÍA implicar ese hecho. Es opcional y puede ser
+     null: a veces basta con mirar, y forzar una lectura estropea el ejercicio.
+     Cuando la escribas, va en condicional o como propuesta, con procedencia
+     "interpretation" o "source", jamás "structural".
+
+  El orden importa y es el producto entero: primero se aprende a VER, después
+  se interpreta. Al revés, la persona memoriza significados sin llegar a mirar
+  una carta nunca.
+
+  Si en la tirada hay relaciones calculadas, al menos un bloque debe partir de
+  una de ellas.
 
 ${NON_DETERMINISM_REMINDER}
 
@@ -408,7 +431,7 @@ Esquema:
   "cards": [{"card_slug":"...","family":"...","suit_territory":claim|null,
              "degree":claim|null,"visual_composition":claim,
              "in_this_spread":claim,"relation_to_next":claim|null}],
-  "look_at_this": [{"title":"...","body":"...","prompt":"..."|null}]
+  "look_at_this": [{"title":"...","fact":claim,"question":"...","interpretation":claim|null}]
 }
 
 claim = {"text":"...","provenance":"source|structural|interpretation","sources":[]}`;
