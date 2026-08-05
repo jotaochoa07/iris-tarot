@@ -192,8 +192,12 @@ Serene, neutral facial expression.
 
 FRAME — Triple rule border with a red inner line, a small gold leaf in each of
 the four corners, the roman numeral at top centre and rotated 90° on both side
-edges, and the card name in serif capitals at the foot, below a double rule
-whose lower line is greenish.
+edges.
+
+The card name sits in serif capitals at the very foot of the card, directly
+below a DOUBLE HORIZONTAL RULE whose lower line is greenish. The name is NOT
+enclosed in a box, panel, plaque or cartouche outline of any kind. There is no
+border around the name. Two rules above it, nothing else.
 
 STRICTLY EXCLUDE — Photorealism. Soft airbrushed shading. Glows, sparkles,
 light rays, particles. New-age or mystical fantasy aesthetics. Drop shadows.
@@ -224,6 +228,16 @@ Cartas con ficha cerrada, listas para generar cuando toque:
 Cartas que hay que comprobar primero:
 
 `01 · 03 · 06 · 11 · 14 · 15 · 19`
+
+---
+
+## Derivas observadas
+
+Se apuntan aquí en cuanto aparecen. Una deriva que no se escribe vuelve.
+
+| Carta | Qué se fue | Resuelto |
+|---|---|---|
+| El Papa (V) | Metió el nombre en un recuadro y quitó la regla verdosa | Instrucción endurecida: la cartela no lleva caja, solo doble regla encima |
 
 ---
 

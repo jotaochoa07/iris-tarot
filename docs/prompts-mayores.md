@@ -15,7 +15,7 @@ In the figure's RIGHT hand: a staff over the shoulder with a bundle hanging from
 In the figure's LEFT hand: a second stick, planted on the ground.
 Below / at the feet: open ground with nothing blocking the way.
 Must include: a bundle, a staff, a small animal, bells.
-This card carries NO roman numeral at all. Cartouche at the foot reads exactly: EL LOCO.
+This card carries NO roman numeral at all, in any position. The name at the foot reads exactly: EL LOCO — in serif capitals, directly below the double rule, with NO box or panel around it.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -30,7 +30,7 @@ In the figure's RIGHT hand: a short wand held up.
 In the figure's LEFT hand: a tiny object held between thumb and forefinger.
 Below / at the feet: ground with small plants.
 Must include: a table with three visible legs, a wand, a cup, a knife, coins.
-Cartouche at the foot reads exactly: EL MAGO. Roman numeral on both side edges reads exactly: I.
+The name at the foot reads exactly: EL MAGO — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: I.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -44,7 +44,7 @@ In the figure's RIGHT hand: holding the right edge of the book.
 In the figure's LEFT hand: holding the left edge of the same book.
 Behind the figure: a veil stretched between two columns behind her, hiding whatever is beyond.
 Must include: ONE single open book resting on her lap, held with both hands — not two books, a tiara, a veil, a wimple, two columns.
-Cartouche at the foot reads exactly: LA PAPISA. Roman numeral on both side edges reads exactly: II.
+The name at the foot reads exactly: LA PAPISA — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: II.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -58,7 +58,7 @@ Headwear: a crown.
 In the figure's RIGHT hand: a long sceptre topped with an orb and cross, resting against her shoulder.
 In the figure's LEFT hand: a shield bearing a black eagle, resting on her lap.
 Must include: a sceptre, an eagle, a crown, a cubic throne, a chain collar.
-Cartouche at the foot reads exactly: LA EMPERATRIZ. Roman numeral on both side edges reads exactly: III.
+The name at the foot reads exactly: LA EMPERATRIZ — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: III.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -72,7 +72,7 @@ In the figure's RIGHT hand: a long sceptre topped with an orb and cross, held up
 In the figure's LEFT hand: resting on the arm of the throne.
 Below / at the feet: a shield bearing a black eagle, standing on the ground.
 Must include: an eagle, a cubic throne, a sceptre, a shield, a crown.
-Cartouche at the foot reads exactly: EL EMPERADOR. Roman numeral on both side edges reads exactly: IIII.
+The name at the foot reads exactly: EL EMPERADOR — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: IIII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -87,7 +87,7 @@ In the figure's LEFT hand: a crozier with three crossbars.
 Below / at the feet: two smaller figures seen from behind.
 Behind the figure: two columns.
 Must include: a crozier, a tiara, two tonsured heads, columns.
-Cartouche at the foot reads exactly: EL PAPA. Roman numeral on both side edges reads exactly: V.
+The name at the foot reads exactly: EL PAPA — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: V.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -102,7 +102,7 @@ In the figure's LEFT hand: touching the other figure.
 Below / at the feet: ground with small plants.
 Above: a winged figure inside a sun, drawing a bow, arrow not yet loosed.
 Must include: a sun, an arrow, a bow, three human figures.
-Cartouche at the foot reads exactly: EL ENAMORADO. Roman numeral on both side edges reads exactly: VI.
+The name at the foot reads exactly: EL ENAMORADO — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: VI.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -116,7 +116,7 @@ In the figure's RIGHT hand: a sceptre.
 Below / at the feet: a chariot drawn by two horses facing opposite ways, with no reins.
 Above: a canopy held up by four columns.
 Must include: a chariot, two horses, a canopy, a sceptre, a crown.
-Cartouche at the foot reads exactly: EL CARRO. Roman numeral on both side edges reads exactly: VII.
+The name at the foot reads exactly: EL CARRO — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: VII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -129,7 +129,7 @@ Headwear: a crown.
 In the figure's RIGHT hand: a sword held straight up, vertical.
 In the figure's LEFT hand: a two-pan balance scale, level.
 Must include: a sword, a balance scale, a cubic throne, a crown.
-Cartouche at the foot reads exactly: LA JUSTICIA. Roman numeral on both side edges reads exactly: VIII.
+The name at the foot reads exactly: LA JUSTICIA — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: VIII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -143,7 +143,7 @@ In the figure's RIGHT hand: a lit lantern held up and forward.
 In the figure's LEFT hand: a long staff touching the ground.
 Below / at the feet: bare ground.
 Must include: a lantern, a staff, a cloak covering everything but face and hands, a hood.
-Cartouche at the foot reads exactly: EL ERMITAÑO. Roman numeral on both side edges reads exactly: VIIII.
+The name at the foot reads exactly: EL ERMITAÑO — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: VIIII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -155,7 +155,7 @@ SUBJECT — LA RUEDA DE LA FORTUNA. No human figure.
 Below / at the feet: an axle on two supports.
 Above: a crowned creature seated on top of the wheel, not gripping it.
 Must include: a wheel, a crank handle, three creatures, one rising, one falling, one still.
-Cartouche at the foot reads exactly: LA RUEDA DE LA FORTUNA. Roman numeral on both side edges reads exactly: X.
+The name at the foot reads exactly: LA RUEDA DE LA FORTUNA — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: X.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -170,7 +170,7 @@ In the figure's RIGHT hand: opening the animal's jaws with bare hands, without s
 In the figure's LEFT hand: opening the animal's jaws with bare hands, without strain.
 Below / at the feet: ground with small plants.
 Must include: a lion, a lemniscate-shaped hat.
-Cartouche at the foot reads exactly: LA FUERZA. Roman numeral on both side edges reads exactly: XI.
+The name at the foot reads exactly: LA FUERZA — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: XI.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -183,7 +183,7 @@ In the figure's RIGHT hand: hidden behind the back.
 In the figure's LEFT hand: hidden behind the back.
 Above: a crossbeam he hangs from, held by two pruned trunks.
 Must include: a gallows, a rope, two pruned tree trunks, twelve pruned branch stumps, six on each trunk.
-Cartouche at the foot reads exactly: EL COLGADO. Roman numeral on both side edges reads exactly: XII.
+The name at the foot reads exactly: EL COLGADO — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: XII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -195,7 +195,7 @@ SUBJECT — the unnamed thirteenth arcanum. A single figure, standing, in profil
 In the figure's RIGHT hand: a scythe.
 Below / at the feet: black earth with heads, hands and feet emerging from it.
 Must include: a scythe, a bone, crowned heads, earth.
-This card carries NO name in the cartouche — leave it empty. Roman numeral on both side edges reads exactly: XIII.
+This card carries NO name at the foot — leave that space empty below the double rule. Roman numeral at top centre and on both side edges reads exactly: XIII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -210,7 +210,7 @@ In the figure's RIGHT hand: a jug pouring.
 In the figure's LEFT hand: a jug receiving the flow.
 Below / at the feet: ground.
 Must include: two jugs, wings, a flower on the forehead.
-Cartouche at the foot reads exactly: TEMPLANZA. Roman numeral on both side edges reads exactly: XIIII.
+The name at the foot reads exactly: TEMPLANZA — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: XIIII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -225,7 +225,7 @@ In the figure's RIGHT hand: a short sword held up.
 In the figure's LEFT hand: raised with the palm open.
 Below / at the feet: a pedestal with two smaller figures tethered to it.
 Must include: horns, wings, a pedestal, two smaller figures loosely tethered by the neck, hands free, ropes.
-Cartouche at the foot reads exactly: EL DIABLO. Roman numeral on both side edges reads exactly: XV.
+The name at the foot reads exactly: EL DIABLO — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: XV.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -237,7 +237,7 @@ SUBJECT — LA TORRE. No human figure.
 Below / at the feet: ground, with two figures falling toward it.
 Above: the tower's crown, broken loose and falling.
 Must include: a tower, still standing, a crown, a rain of coloured dots, two figures falling in opposite directions.
-Cartouche at the foot reads exactly: LA TORRE. Roman numeral on both side edges reads exactly: XVI.
+The name at the foot reads exactly: LA TORRE — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: XVI.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -251,7 +251,7 @@ In the figure's LEFT hand: a jug pouring onto the earth.
 Below / at the feet: one knee on the ground at the water's edge.
 Above: one large star and seven smaller ones.
 Must include: eight stars, one large and seven smaller, two jugs, a bird perched on a bush, water.
-Cartouche at the foot reads exactly: LA ESTRELLA. Roman numeral on both side edges reads exactly: XVII.
+The name at the foot reads exactly: LA ESTRELLA — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: XVII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -264,7 +264,7 @@ Below / at the feet: a pool with a crayfish in it.
 Above: a moon in profile inside a disc, shedding droplets.
 Behind the figure: two towers, one on each side.
 Must include: a moon, two towers, two animals howling upward, a crayfish, falling droplets.
-Cartouche at the foot reads exactly: LA LUNA. Roman numeral on both side edges reads exactly: XVIII.
+The name at the foot reads exactly: LA LUNA — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: XVIII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -280,7 +280,7 @@ Below / at the feet: ground, in front of a low wall.
 Above: a sun with a face, looking down, shedding droplets.
 Behind the figure: a low wall with the background visible above it.
 Must include: a sun with a face, two figures, a low wall, falling droplets.
-Cartouche at the foot reads exactly: EL SOL. Roman numeral on both side edges reads exactly: XVIIII.
+The name at the foot reads exactly: EL SOL — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: XVIIII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -294,7 +294,7 @@ In the figure's LEFT hand: both raised.
 Below / at the feet: opened earth, a figure rising out of it, seen from behind.
 Above: a winged figure in a halo blowing a trumpet.
 Must include: a trumpet, wings, a banner, three human figures.
-Cartouche at the foot reads exactly: EL JUICIO. Roman numeral on both side edges reads exactly: XX.
+The name at the foot reads exactly: EL JUICIO — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: XX.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -307,6 +307,6 @@ In the figure's RIGHT hand: a wand.
 In the figure's LEFT hand: a wand.
 Behind the figure: nothing — the figure floats inside the wreath.
 Must include: an oval wreath of leaves, four different creatures, one in each corner, all facing inward, a veil, wands.
-Cartouche at the foot reads exactly: EL MUNDO. Roman numeral on both side edges reads exactly: XXI.
+The name at the foot reads exactly: EL MUNDO — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: XXI.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```

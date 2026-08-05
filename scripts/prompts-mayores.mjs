@@ -251,13 +251,13 @@ function subject(a) {
 
   l.push(
     nombre
-      ? `Cartouche at the foot reads exactly: ${nombre}. Roman numeral on both side edges reads exactly: ${a.numeral}.`
-      : `This card carries NO name in the cartouche — leave it empty. Roman numeral on both side edges reads exactly: ${a.numeral}.`,
+      ? `The name at the foot reads exactly: ${nombre} — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: ${a.numeral}.`
+      : `This card carries NO name at the foot — leave that space empty below the double rule. Roman numeral at top centre and on both side edges reads exactly: ${a.numeral}.`,
   );
 
   if (a.numeral === "—") {
     l[l.length - 1] =
-      "This card carries NO roman numeral at all. Cartouche at the foot reads exactly: EL LOCO.";
+      "This card carries NO roman numeral at all, in any position. The name at the foot reads exactly: EL LOCO — in serif capitals, directly below the double rule, with NO box or panel around it.";
   }
 
   l.push(
