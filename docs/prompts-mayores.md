@@ -40,9 +40,10 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ```
 SUBJECT — LA PAPISA. A single figure, seated, facing the viewer, looking straight at the viewer.
 Headwear: a three-tiered tiara.
-In the figure's RIGHT hand: holding the book by its edge.
-In the figure's LEFT hand: an open book resting on the lap.
-Must include: a book, a tiara, a veil, a wimple.
+In the figure's RIGHT hand: holding the right edge of the book.
+In the figure's LEFT hand: holding the left edge of the same book.
+Behind the figure: a veil or curtain stretched behind her, hiding whatever is beyond.
+Must include: ONE single open book resting on her lap, held with both hands — not two books, a tiara, a veil, a wimple.
 Cartouche at the foot reads exactly: LA PAPISA. Roman numeral on both side edges reads exactly: II.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
@@ -84,6 +85,7 @@ Headwear: a three-tiered tiara.
 In the figure's RIGHT hand: raised, two fingers extended, holding nothing.
 In the figure's LEFT hand: a crozier with three crossbars.
 Below / at the feet: two smaller figures seen from behind.
+Behind the figure: two columns.
 Must include: a crozier, a tiara, two tonsured heads, columns.
 Cartouche at the foot reads exactly: EL PAPA. Roman numeral on both side edges reads exactly: V.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
@@ -260,6 +262,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 SUBJECT — LA LUNA. No human figure.
 Below / at the feet: a pool with a crayfish in it.
 Above: a moon in profile inside a disc, shedding droplets.
+Behind the figure: two towers, one on each side.
 Must include: a moon, two towers, two animals howling upward, a crayfish, falling droplets.
 Cartouche at the foot reads exactly: LA LUNA. Roman numeral on both side edges reads exactly: XVIII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
@@ -275,6 +278,7 @@ In the figure's RIGHT hand: touching the other figure.
 In the figure's LEFT hand: touching the other figure.
 Below / at the feet: ground, in front of a low wall.
 Above: a sun with a face, looking down, shedding droplets.
+Behind the figure: a low wall with the background visible above it.
 Must include: a sun with a face, two figures, a low wall, falling droplets.
 Cartouche at the foot reads exactly: EL SOL. Roman numeral on both side edges reads exactly: XVIIII.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
@@ -301,6 +305,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 SUBJECT — EL MUNDO. 5 figures. The main figure is standing, facing the viewer, looking straight at the viewer.
 In the figure's RIGHT hand: a wand.
 In the figure's LEFT hand: a wand.
+Behind the figure: nothing — the figure floats inside the wreath.
 Must include: an oval wreath of leaves, four different creatures, one in each corner, all facing inward, a veil, wands.
 Cartouche at the foot reads exactly: EL MUNDO. Roman numeral on both side edges reads exactly: XXI.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.

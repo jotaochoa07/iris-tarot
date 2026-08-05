@@ -184,7 +184,17 @@ const ES_EN = {
   "sol con rostro, del que caen gotas": "a sun with a face, looking down, shedding droplets",
   "sombrero de ala ancha en forma de lemniscata": "a wide brimmed hat shaped like a lemniscate",
   "sombrero de lemniscata": "a lemniscate-shaped hat",
-  "sostiene el libro por el canto": "holding the book by its edge",
+  "sujeta el borde derecho del libro": "holding the right edge of the book",
+  "sujeta el borde izquierdo del libro": "holding the left edge of the same book",
+  "un único libro abierto sobre el regazo":
+    "ONE single open book resting on her lap, held with both hands \u2014 not two books",
+  "velo tendido que oculta lo que hay al fondo":
+    "a veil or curtain stretched behind her, hiding whatever is beyond",
+  "dos columnas": "two columns",
+  "dos torres, una a cada lado": "two towers, one on each side",
+  "un muro bajo por el que se ve el fondo": "a low wall with the background visible above it",
+  "nada: la figura flota dentro de la corona vegetal":
+    "nothing \u2014 the figure floats inside the wreath",
   suelo: "ground",
   "suelo desnudo": "bare ground",
   "suelo vegetal": "ground with small plants",
@@ -236,6 +246,7 @@ function subject(a) {
   if (a.manos.izquierda) l.push(`In the figure's LEFT hand: ${t(a.manos.izquierda)}.`);
   if (a.bajo_los_pies) l.push(`Below / at the feet: ${t(a.bajo_los_pies)}.`);
   if (a.encima) l.push(`Above: ${t(a.encima)}.`);
+  if (a.detras) l.push(`Behind the figure: ${t(a.detras)}.`);
   if (a.simbolos.length) l.push(`Must include: ${a.simbolos.map(t).join(", ")}.`);
 
   l.push(

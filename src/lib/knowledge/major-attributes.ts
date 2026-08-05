@@ -88,6 +88,15 @@ export interface MajorAttributes {
   manos: Hands;
   bajo_los_pies: string | null;
   encima: string | null;
+  /**
+   * Qué hay al fondo.
+   *
+   * Existe porque se nos escapó en La Papisa. El velo tendido detrás de ella no
+   * es decorado: es lo que significa la carta —hay algo y decide no enseñarlo—
+   * y estaba escrito en la capa de observación visual, que no viaja al encargo.
+   * Las relaciones espaciales son canon semántico y tienen que estar aquí.
+   */
+  detras: string | null;
   simbolos: string[];
 
   /* --- visual: lo que se ve, sin decir qué significa --------------------- */
@@ -148,6 +157,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: "terreno abierto, sin marco que lo detenga",
     encima: null,
+    detras: null,
     simbolos: ["hatillo", "bastón", "animal", "cascabeles"],
     observaciones: [
       "Es la única carta sin numeral.",
@@ -178,6 +188,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: "suelo vegetal",
     encima: null,
+    detras: null,
     simbolos: ["mesa de tres patas", "varita", "copa", "cuchillo", "monedas"],
     observaciones: [
       "Sobre la mesa están los cuatro palos a la vez: algo de copas, algo de espadas, algo de oros, y el bastón lo lleva él.",
@@ -203,12 +214,13 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     mirada: "al frente",
     tocado: "tiara de tres pisos",
     manos: {
-      derecha: "sostiene el libro por el canto",
-      izquierda: "libro abierto sobre el regazo",
+      derecha: "sujeta el borde derecho del libro",
+      izquierda: "sujeta el borde izquierdo del libro",
     },
     bajo_los_pies: null,
     encima: null,
-    simbolos: ["libro", "tiara", "velo", "toca"],
+    detras: "velo tendido que oculta lo que hay al fondo",
+    simbolos: ["un único libro abierto sobre el regazo", "tiara", "velo", "toca"],
     observaciones: [
       "Un velo cae detrás de ella y tapa lo que hay al fondo.",
       "El libro está abierto, pero no lo está leyendo: mira al frente.",
@@ -236,6 +248,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: null,
     encima: null,
+    detras: null,
     simbolos: ["cetro", "águila", "corona", "trono", "collar"],
     observaciones: [
       "Está sentada y el cuerpo va de frente, no de perfil como el Emperador.",
@@ -268,6 +281,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: "escudo con águila, en el suelo",
     encima: null,
+    detras: null,
     simbolos: ["águila", "trono", "cetro", "escudo", "corona"],
     observaciones: [
       "Las piernas cruzadas dibujan un cuatro con el cuerpo.",
@@ -299,6 +313,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: "dos figuras menores, de espaldas al observador",
     encima: null,
+    detras: "dos columnas",
     simbolos: ["báculo", "tiara", "dos tonsuras", "columnas"],
     observaciones: [
       "Hay tres figuras: una sentada y elevada, dos de pie y más pequeñas.",
@@ -327,6 +342,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: "suelo vegetal",
     encima: "figura alada con arco tendido, dentro de un sol",
+    detras: null,
     simbolos: ["sol", "flecha", "arco", "tres figuras humanas"],
     observaciones: [
       "Una figura central entre otras dos, una a cada lado.",
@@ -353,6 +369,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     manos: { derecha: "cetro", izquierda: null },
     bajo_los_pies: "carro tirado por dos caballos",
     encima: "palio sostenido por cuatro columnas",
+    detras: null,
     simbolos: ["carro", "dos caballos", "palio", "cetro", "corona"],
     observaciones: [
       "Los dos caballos miran cada uno hacia un lado distinto.",
@@ -381,6 +398,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: null,
     encima: null,
+    detras: null,
     simbolos: ["espada", "balanza", "trono", "corona"],
     observaciones: [
       "La espada está recta y vertical; la balanza cuelga.",
@@ -409,6 +427,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: "suelo desnudo",
     encima: null,
+    detras: null,
     simbolos: ["farol", "bastón", "manto", "capucha"],
     observaciones: [
       "El farol va delante de él, en la dirección en que camina.",
@@ -434,6 +453,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     manos: { derecha: null, izquierda: null },
     bajo_los_pies: "eje sobre dos soportes",
     encima: "figura coronada, sentada sobre la rueda",
+    detras: null,
     simbolos: ["rueda", "manivela", "tres animales"],
     observaciones: [
       "Tres criaturas: una sube, otra baja, una tercera está arriba y quieta.",
@@ -462,6 +482,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: "suelo vegetal",
     encima: null,
+    detras: null,
     simbolos: ["león", "sombrero de lemniscata"],
     observaciones: [
       "Usa las dos manos para lo mismo, cosa rara en la serie.",
@@ -491,6 +512,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: null,
     encima: "travesaño del que cuelga, sostenido por dos troncos podados",
+    detras: null,
     simbolos: ["horca", "cuerda", "dos troncos", "doce muñones"],
     observaciones: [
       "Cuelga de un pie, cabeza abajo.",
@@ -517,6 +539,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     manos: { derecha: "guadaña", izquierda: null },
     bajo_los_pies: "tierra negra de la que asoman cabezas, manos y pies",
     encima: null,
+    detras: null,
     simbolos: ["guadaña", "hueso", "cabezas coronadas", "tierra"],
     observaciones: [
       "Es la única carta de la serie que no lleva nombre escrito.",
@@ -545,6 +568,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: "suelo",
     encima: null,
+    detras: null,
     simbolos: ["dos jarras", "alas", "flor frontal"],
     observaciones: [
       "Tiene alas y está de pie, sin volar.",
@@ -574,6 +598,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: "pedestal al que están atadas dos figuras menores",
     encima: null,
+    detras: null,
     simbolos: ["astas", "alas", "pedestal", "dos figuras atadas", "cuerdas"],
     observaciones: [
       "Las dos figuras pequeñas llevan el cuello atado con una cuerda floja.",
@@ -600,6 +625,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     manos: { derecha: null, izquierda: null },
     bajo_los_pies: "suelo, con dos figuras cayendo hacia él",
     encima: "corona de la torre, desprendida",
+    detras: null,
     simbolos: ["torre", "corona", "lluvia de puntos de color", "dos figuras cayendo"],
     observaciones: [
       "Lo que se desprende es la parte de arriba, no el edificio.",
@@ -628,6 +654,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     },
     bajo_los_pies: "una rodilla en tierra, junto a la orilla",
     encima: "una estrella grande y siete menores",
+    detras: null,
     simbolos: ["ocho estrellas", "dos jarras", "ave sobre un arbusto", "agua"],
     observaciones: [
       "Está desnuda y arrodillada, no de pie del todo.",
@@ -655,6 +682,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     manos: { derecha: null, izquierda: null },
     bajo_los_pies: "estanque en el que hay un cangrejo",
     encima: "luna de perfil dentro de un disco, con gotas cayendo",
+    detras: "dos torres, una a cada lado",
     simbolos: ["luna", "dos torres", "dos animales", "cangrejo", "gotas"],
     observaciones: [
       "No hay ninguna figura humana.",
@@ -680,6 +708,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     manos: { derecha: "tocando al otro", izquierda: "tocando al otro" },
     bajo_los_pies: "suelo, delante de un muro bajo",
     encima: "sol con rostro, del que caen gotas",
+    detras: "un muro bajo por el que se ve el fondo",
     simbolos: ["sol con rostro", "dos figuras", "muro", "gotas"],
     observaciones: [
       "Dos figuras juntas, tocándose, delante de un muro.",
@@ -706,6 +735,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     manos: { derecha: "alzadas", izquierda: "alzadas" },
     bajo_los_pies: "tierra abierta, de la que emerge una figura",
     encima: "figura alada tocando una trompeta, dentro de un halo",
+    detras: null,
     simbolos: ["trompeta", "alas", "estandarte", "tres figuras humanas"],
     observaciones: [
       "Una figura sale de la tierra, entre otras dos que están de pie.",
@@ -731,6 +761,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     manos: { derecha: "una varita", izquierda: "una varita" },
     bajo_los_pies: null,
     encima: null,
+    detras: "nada: la figura flota dentro de la corona vegetal",
     simbolos: ["corona vegetal", "cuatro criaturas en las esquinas", "velo", "varitas"],
     observaciones: [
       "Una figura dentro de una corona vegetal ovalada.",
