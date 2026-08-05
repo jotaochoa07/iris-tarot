@@ -42,8 +42,8 @@ SUBJECT — LA PAPISA. A single figure, seated, facing the viewer, looking strai
 Headwear: a three-tiered tiara.
 In the figure's RIGHT hand: holding the right edge of the book.
 In the figure's LEFT hand: holding the left edge of the same book.
-Behind the figure: a veil or curtain stretched behind her, hiding whatever is beyond.
-Must include: ONE single open book resting on her lap, held with both hands — not two books, a tiara, a veil, a wimple.
+Behind the figure: a veil stretched between two columns behind her, hiding whatever is beyond.
+Must include: ONE single open book resting on her lap, held with both hands — not two books, a tiara, a veil, a wimple, two columns.
 Cartouche at the foot reads exactly: LA PAPISA. Roman numeral on both side edges reads exactly: II.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```

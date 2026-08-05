@@ -188,8 +188,8 @@ const ES_EN = {
   "sujeta el borde izquierdo del libro": "holding the left edge of the same book",
   "un único libro abierto sobre el regazo":
     "ONE single open book resting on her lap, held with both hands \u2014 not two books",
-  "velo tendido que oculta lo que hay al fondo":
-    "a veil or curtain stretched behind her, hiding whatever is beyond",
+  "velo tendido entre dos columnas, que oculta lo que hay al fondo":
+    "a veil stretched between two columns behind her, hiding whatever is beyond",
   "dos columnas": "two columns",
   "dos torres, una a cada lado": "two towers, one on each side",
   "un muro bajo por el que se ve el fondo": "a low wall with the background visible above it",
