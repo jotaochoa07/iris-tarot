@@ -126,6 +126,29 @@ lis en los laterales del trono donde el Emperador tenía el águila:
 Lo que **no** puede variar nunca es la orla, la cartela, la posición de los
 numerales, el papel ni la saturación.
 
+### La luz se graba, no se ilumina
+
+Establecido en El Ermitaño, y **corrige la especificación anterior**, que
+prohibía los rayos de luz sin matizar.
+
+Lo prohibido era el resplandor digital: halos difuminados, destellos, brillo,
+partículas. Pero la radiación dibujada como **líneas finas que salen del foco**,
+en el mismo lenguaje de buril que el resto de la carta, es convención histórica
+del grabado y encaja perfectamente. El farol del Ermitaño lo hace y funciona.
+
+A partir de aquí obliga: la luz de La Estrella, La Luna, El Sol y El Juicio se
+resuelve así y no de otra manera. Nunca con degradado, nunca con transparencia.
+
+### El exterior tiene horizonte
+
+También de El Ermitaño. Las cartas de interior llevan enlosado con fuga; las de
+exterior llevan **línea de horizonte al fondo, terreno tramado y vegetación
+menor suelta** —matas, piedras—. Es un segundo escenario, tan fijo como el
+primero.
+
+Afecta a El Loco, El Ermitaño, La Estrella, La Luna, El Sol, El Juicio y La
+Muerte.
+
 ---
 
 ## La orla, al detalle
@@ -199,9 +222,13 @@ below a DOUBLE HORIZONTAL RULE whose lower line is greenish. The name is NOT
 enclosed in a box, panel, plaque or cartouche outline of any kind. There is no
 border around the name. Two rules above it, nothing else.
 
-STRICTLY EXCLUDE — Photorealism. Soft airbrushed shading. Glows, sparkles,
-light rays, particles. New-age or mystical fantasy aesthetics. Drop shadows.
-Signatures or watermarks.
+LIGHT — Any light source (lantern, sun, moon, star, halo) radiates as FINE
+ENGRAVED LINES emanating from the source, in the same burin language as the
+rest of the card. Never a soft glow, never a gradient, never transparency.
+
+STRICTLY EXCLUDE — Photorealism. Soft airbrushed shading. Soft glows, blur,
+sparkles, particles, lens effects. New-age or mystical fantasy aesthetics. Drop
+shadows. Signatures or watermarks.
 
 Match the reference image of THE EMPEROR exactly: same border, same corner
 leaves, same cartouche, same lettering, same line weight, same palette, same
@@ -238,6 +265,7 @@ Se apuntan aquí en cuanto aparecen. Una deriva que no se escribe vuelve.
 | Carta | Qué se fue | Resuelto |
 |---|---|---|
 | El Papa (V) | Metió el nombre en un recuadro y quitó la regla verdosa | Instrucción endurecida: la cartela no lleva caja, solo doble regla encima |
+| El Ermitaño (VIIII) | Rayos de luz en el farol, que la especificación prohibía | No era deriva: era mejor. Se corrige la regla, no la carta |
 
 ---
 
