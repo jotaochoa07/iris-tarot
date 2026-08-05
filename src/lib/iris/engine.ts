@@ -3,6 +3,7 @@ import { CARDS, requireCard } from "@/lib/knowledge/cards";
 import { buildReadout } from "@/lib/knowledge/readout";
 import { retrieveForSpread } from "@/lib/knowledge/retrieval";
 import { deckBlock } from "@/lib/knowledge/deck";
+import { majorRelations } from "@/lib/knowledge/relations";
 import {
   IRIS_VOICE,
   JSON_DISCIPLINE,
@@ -239,6 +240,7 @@ async function buildContext(input: SpreadInput): Promise<string> {
       : "La capa 2 está activa pero no ha devuelto pasajes relevantes para estas cartas. No atribuyas nada a una fuente por este motivo."
     : "La capa 2 (corpus privado) está desactivada. Solo dispones de la base estructurada. Ninguna afirmación puede llevar via='corpus-retrieval'.";
 
+  const relations = majorRelations(input.cards);
   const name = input.readerName?.trim();
 
   return `## A quién le hablas
@@ -270,6 +272,17 @@ ${input.positions.length ? input.positions.map((p) => `${p.order}. ${p.label}`).
 
 ## La baraja que tiene delante
 ${deckBlock()}
+
+## Relaciones entre Arcanos Mayores (calculadas — procedencia "structural")
+${
+  relations.length
+    ? relations.map((r) => `- ${r.text}`).join("\n") +
+      "\n\nEstas frases son HECHOS comprobables mirando las cartas, no lecturas. " +
+      "Puedes construir sobre ellas y puedes elegir cuáles usar, pero no puedes " +
+      "contradecirlas ni presentarlas como interpretación tuya. Si una te sirve, " +
+      "va con provenance \"structural\"."
+    : "Ninguna relación calculable: o no hay Arcanos Mayores en la tirada, o no comparten nada observable."
+}
 
 ## Base de conocimiento estructurada (capa 1)
 Escuela: Jodorowsky/Costa. Redacción original de IRIS, sin localizador
