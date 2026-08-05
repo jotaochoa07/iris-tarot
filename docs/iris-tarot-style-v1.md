@@ -112,6 +112,20 @@ imagen:
   girado. No es redundancia decorativa: el grado es la mitad de la lectura y la
   carta tiene que poder leerse desde cualquier lado de la mesa.
 
+### Lo que sí puede variar de carta a carta
+
+Establecido al comparar la maestra con La Emperatriz, que salió con flores de
+lis en los laterales del trono donde el Emperador tenía el águila:
+
+- **El ornamento del mobiliario.** Cada trono, cada columna, cada pedestal puede
+  llevar su propio motivo. Lo que no cambia es cómo está dibujado: mismo
+  contorno, misma trama, mismo oro.
+- **La longitud del cabello, el ropaje y las telas**, dentro de la paleta.
+- **El motivo del enlosado**, mientras conserve las líneas de fuga y la trama.
+
+Lo que **no** puede variar nunca es la orla, la cartela, la posición de los
+numerales, el papel ni la saturación.
+
 ---
 
 ## La orla, al detalle
@@ -189,6 +203,27 @@ Match the reference image of THE EMPEROR exactly: same border, same corner
 leaves, same cartouche, same lettering, same line weight, same palette, same
 paper, same level of hatching detail. Same world, same hand, same printing.
 ```
+
+---
+
+## Orden de producción
+
+**Resolver la ficha antes de generar.** Ocho de las veintidós llevan `verify:
+true` en `major-attributes.ts`: son direcciones de mirada, manos y objetos que
+cambian entre ediciones, y ahí no queremos afirmar de más. Generar una carta con
+la ficha en duda significa arriesgarse a rehacer la ilustración, no a corregir
+un texto.
+
+El orden sensato es: cerrar la ficha contra una baraja física → generar →
+revisar → congelar.
+
+Cartas con ficha cerrada, listas para generar cuando toque:
+
+`00 · 02 · 04 ✓ · 05 · 07 · 08 · 09 · 10 · 12 · 13 · 16 · 17 · 18 · 20 · 21`
+
+Cartas que hay que comprobar primero:
+
+`01 · 03 · 06 · 11 · 14 · 15 · 19`
 
 ---
 
