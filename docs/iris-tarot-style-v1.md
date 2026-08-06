@@ -262,10 +262,24 @@ Cartas que hay que comprobar primero:
 
 Se apuntan aquí en cuanto aparecen. Una deriva que no se escribe vuelve.
 
+Y conviene separarlas en dos clases, porque se arreglan en sitios distintos:
+
+- **De datos.** La ficha era ambigua o le faltaba algo. Se arregla en
+  `major-attributes.ts` o en `major-graph.ts`, y se arregla para siempre.
+- **De generación.** La ficha era correcta y el modelo no la siguió. No se
+  arregla escribiendo mejor: se corrige editando esa imagen, y si se repite,
+  se endurece el cuerpo común del prompt.
+
+**La cartela es la zona que más se mueve**: dos derivas de tres. Es la parte de
+la carta que no lleva dibujo, y parece que eso la vuelve negociable para el
+modelo. No lo es.
+
 | Carta | Qué se fue | Resuelto |
 |---|---|---|
 | El Papa (V) | Metió el nombre en un recuadro y quitó la regla verdosa | Instrucción endurecida: la cartela no lleva caja, solo doble regla encima |
 | El Ermitaño (VIIII) | Rayos de luz en el farol, que la especificación prohibía | No era deriva: era mejor. Se corrige la regla, no la carta |
+| El Loco (v2) | El bastón corto seguía clavado en el suelo y no en la mano | Fallo de generación, no de datos: la ficha lo decía dos veces. Se corrigió editando |
+| El Loco (v3) | La doble regla se fue debajo del nombre | Segunda deriva en la cartela. La instrucción pasa a describir el orden de arriba abajo |
 
 ---
 

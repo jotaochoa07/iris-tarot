@@ -464,13 +464,13 @@ function subject(a) {
 
   l.push(
     nombre
-      ? `The name at the foot reads exactly: ${nombre} — in serif capitals, directly below the double rule, with NO box or panel around it. Roman numeral at top centre and on both side edges reads exactly: ${a.numeral}.`
-      : `This card carries NO name at the foot — leave that space empty below the double rule. Roman numeral at top centre and on both side edges reads exactly: ${a.numeral}.`,
+      ? `FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: ${nombre}. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: ${a.numeral}.`
+      : `FOOT OF THE CARD: the double rule — a dark line with a greenish line just under it — and BELOW it nothing: this card carries NO name. The rule goes above the empty space, never below. Roman numeral at top centre and on both side edges reads exactly: ${a.numeral}.`,
   );
 
   if (a.numeral === "—") {
     l[l.length - 1] =
-      "This card carries NO roman numeral at all, in any position. The name at the foot reads exactly: EL LOCO — in serif capitals, directly below the double rule, with NO box or panel around it.";
+      "This card carries NO roman numeral at all, in any position. FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL LOCO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name.";
   }
 
   l.push(
