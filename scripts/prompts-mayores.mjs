@@ -194,6 +194,9 @@ const ES_EN = {
   "gorro con cascabeles": "a cap with bells",
   gotas: "falling droplets",
   guadaña: "a scythe",
+  "ninguno: la figura va descubierta": "NONE — the figure is bare-headed, no hood",
+  "un esqueleto descarnado y desnudo, sin ropa, sin manto y sin capucha, con las costillas y la pelvis a la vista":
+    "a BARE skeleton — completely naked bone, NO robe, NO cloak, NO hood, NO drapery of any kind; ribs, spine and pelvis all clearly visible",
   "hatillo colgando del bastón, por detrás de él":
     "a bundle hanging from the staff, BEHIND him",
   "un animal que le tira de la ropa por detrás, a la altura de las piernas":

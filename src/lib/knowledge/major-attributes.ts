@@ -557,12 +557,20 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     postura: "de pie",
     orientacion: "perfil",
     mirada: "izquierda",
-    tocado: null,
+    // Descubierto, y eso es la carta: sin capucha, sin hábito, sin manto. La
+    // Parca encapuchada es iconografía del norte de Europa, no marsellesa.
+    tocado: "ninguno: la figura va descubierta",
     manos: { derecha: "guadaña segando en horizontal, hacia un lado, no hacia abajo", izquierda: null },
     bajo_los_pies: "tierra negra de la que asoman cabezas, manos y pies",
     encima: null,
     detras: null,
-    simbolos: ["guadaña", "hueso", "cabezas coronadas", "tierra"],
+    simbolos: [
+      "un esqueleto descarnado y desnudo, sin ropa, sin manto y sin capucha, con las costillas y la pelvis a la vista",
+      "guadaña",
+      "hueso",
+      "cabezas coronadas",
+      "tierra",
+    ],
     observaciones: [
       "Es la única carta de la serie que no lleva nombre escrito.",
       "La guadaña siega hacia un lado, no hacia abajo.",

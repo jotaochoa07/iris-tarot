@@ -257,9 +257,10 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ## XIII · sin nombre
 ```
 SUBJECT — the unnamed thirteenth arcanum. A single figure, standing, in profile, looking toward the LEFT of the card.
+Headwear: NONE — the figure is bare-headed, no hood.
 In the figure's RIGHT hand: a scythe sweeping horizontally to one side, not downward.
 Below / at the feet: black earth with heads, hands and feet emerging from it.
-Must include: a scythe, a bone, crowned heads, earth.
+Must include: a BARE skeleton — completely naked bone, NO robe, NO cloak, NO hood, NO drapery of any kind; ribs, spine and pelvis all clearly visible, a scythe, a bone, crowned heads, earth.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the scythe —MOVES TOWARD→ one side, horizontally
   · the heads, hands and feet —EMERGES FROM→ the black earth

@@ -280,6 +280,7 @@ modelo. No lo es.
 | El Ermitaño (VIIII) | Rayos de luz en el farol, que la especificación prohibía | No era deriva: era mejor. Se corrige la regla, no la carta |
 | El Loco (v2) | El bastón corto seguía clavado en el suelo y no en la mano | Fallo de generación, no de datos: la ficha lo decía dos veces. Se corrigió editando |
 | El Loco (v3) | La doble regla se fue debajo del nombre | Segunda deriva en la cartela. La instrucción pasa a describir el orden de arriba abajo |
+| El XIII | Salió como Parca encapuchada y con hábito | De datos: la ficha nunca dijo que la figura fuera un esqueleto. En el Marsella va descubierto, sin ropa ni capucha |
 
 ---
 
