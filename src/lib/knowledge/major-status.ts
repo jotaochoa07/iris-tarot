@@ -27,6 +27,7 @@ export const APROBADAS: CardSlug[] = [
   "arcano-14", // Templanza
   "arcano-16", // La Torre
   "arcano-18", // La Luna
+  "arcano-21", // El Mundo
 ];
 
 /**
@@ -41,6 +42,7 @@ export const RETOQUES_PENDIENTES: Record<CardSlug, string> = {
   "arcano-14": "Numeral del canto derecho invertido: dice IIIIX.",
   "arcano-16": "Comprobar el numeral del canto derecho: puede estar invertido.",
   "arcano-18": "Comprobar el numeral del canto derecho: puede estar invertido.",
+  "arcano-21": "Numeral del canto derecho invertido: dice IXX.",
 };
 
 /** La referencia visual de toda la baraja. No se regenera nunca. */
