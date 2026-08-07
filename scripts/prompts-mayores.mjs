@@ -487,8 +487,8 @@ function subject(a) {
 
   l.push(
     nombre
-      ? `FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: ${nombre}. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: ${a.numeral}.`
-      : `FOOT OF THE CARD: the double rule — a dark line with a greenish line just under it — and BELOW it nothing: this card carries NO name. The rule goes above the empty space, never below. Roman numeral at top centre and on both side edges reads exactly: ${a.numeral}.`,
+      ? `FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: ${nombre}. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: ${a.numeral}. CRITICAL: the numeral on the RIGHT edge must read ${a.numeral} in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.`
+      : `FOOT OF THE CARD: the double rule — a dark line with a greenish line just under it — and BELOW it nothing: this card carries NO name. The rule goes above the empty space, never below. Roman numeral at top centre and on both side edges reads exactly: ${a.numeral}. CRITICAL: the numeral on the RIGHT edge must read ${a.numeral} in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.`,
   );
 
   if (a.numeral === "—") {

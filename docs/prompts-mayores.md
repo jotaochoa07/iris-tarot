@@ -44,7 +44,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the four suits —RESTS ON→ the table
   · the magician —HOLDS→ a wand held up
   · the magician —HOLDS→ a tiny object between two fingers
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL MAGO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: I.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL MAGO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: I. CRITICAL: the numeral on the RIGHT edge must read I in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -63,7 +63,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the book —RESTS ON→ her lap
   · the veil —BEHIND→ the popess
   · the veil —BETWEEN→ the two columns
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA PAPISA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: II.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA PAPISA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: II. CRITICAL: the numeral on the RIGHT edge must read II in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -81,7 +81,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the empress —HOLDS→ a sceptre with orb and cross
   · the sceptre —RESTS AGAINST→ her shoulder
   · the eagle shield —RESTS ON→ her lap
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA EMPERATRIZ. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: III.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA EMPERATRIZ. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: III. CRITICAL: the numeral on the RIGHT edge must read III in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -100,7 +100,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · his left hand —RESTS AGAINST→ the arm of the throne
   · his leg —CROSSES OVER→ the other leg, forming a number four
   · the eagle shield —RESTS ON→ the ground, at his feet
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL EMPERADOR. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: IIII.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL EMPERADOR. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: IIII. CRITICAL: the numeral on the RIGHT edge must read IIII in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -120,7 +120,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the two smaller figures —BACK TURNED TO→ the person looking at the card
   · the pope —HOLDS→ a crozier with three crossbars
   · the pope —BETWEEN→ two columns
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL PAPA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: V.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL PAPA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: V. CRITICAL: the numeral on the RIGHT edge must read V in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -142,7 +142,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the winged figure —ABOVE→ the three of them
   · the arrow —POINTS AT→ the scene, still not loosed from the bow
   · the central figure —TOUCHES→ the two figures flanking it
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL ENAMORADO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: VI.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL ENAMORADO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: VI. CRITICAL: the numeral on the RIGHT edge must read VI in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -162,7 +162,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the charioteer —ABOVE→ the chariot
   · the two horses —MOVES TOWARD→ different directions from each other
   · the canopy —ABOVE→ the charioteer
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL CARRO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: VII.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL CARRO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: VII. CRITICAL: the numeral on the RIGHT edge must read VII in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -179,7 +179,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · justice —HOLDS→ a straight, vertical sword
   · justice —HOLDS→ a pair of scales, hanging
   · the two pans of the scales —RESTS ON→ the same level as each other
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA JUSTICIA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: VIII.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA JUSTICIA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: VIII. CRITICAL: the numeral on the RIGHT edge must read VIII in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -199,7 +199,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the lantern —IN FRONT OF→ him, in the direction he is walking
   · the staff —TOUCHES→ the ground
   · the cloak —ENCIRCLES→ his whole body except face and hands
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL ERMITAÑO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: VIIII.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL ERMITAÑO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: VIIII. CRITICAL: the numeral on the RIGHT edge must read VIIII in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -217,7 +217,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · another creature —MOVES TOWARD→ downward, on the other side
   · the crowned creature —ABOVE→ the wheel, still and not holding on
   · the crank —EMERGES FROM→ the axle, sticking out of the wheel
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA RUEDA DE LA FORTUNA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: X.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA RUEDA DE LA FORTUNA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: X. CRITICAL: the numeral on the RIGHT edge must read X in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -236,7 +236,7 @@ Must include: a lion, a lemniscate-shaped hat.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the woman —TOUCHES→ the animal's jaws, with both hands
   · the animal —BELOW→ her
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA FUERZA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XI.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA FUERZA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XI. CRITICAL: the numeral on the RIGHT edge must read XI in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -258,7 +258,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the crossbeam —RESTS AGAINST→ two pruned trunks
   · his free leg —CROSSES OVER→ the other leg from behind, forming an upside-down number four
   · his hands —BEHIND→ his back, hidden from view
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL COLGADO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XII.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL COLGADO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XII. CRITICAL: the numeral on the RIGHT edge must read XII in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -275,7 +275,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the scythe —MOVES TOWARD→ one side, horizontally
   · the heads, hands and feet —EMERGES FROM→ the black earth
   · the figure —TOUCHES→ the same ground they emerge from
-FOOT OF THE CARD: the double rule — a dark line with a greenish line just under it — and BELOW it nothing: this card carries NO name. The rule goes above the empty space, never below. Roman numeral at top centre and on both side edges reads exactly: XIII.
+FOOT OF THE CARD: the double rule — a dark line with a greenish line just under it — and BELOW it nothing: this card carries NO name. The rule goes above the empty space, never below. Roman numeral at top centre and on both side edges reads exactly: XIII. CRITICAL: the numeral on the RIGHT edge must read XIII in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -295,7 +295,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the figure —POURS ONTO→ one jug, from the other
   · the liquid —MOVES TOWARD→ sideways, horizontally, NOT downward
   · the wings —EMERGES FROM→ its back
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: TEMPLANZA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XIIII.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: TEMPLANZA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XIIII. CRITICAL: the numeral on the RIGHT edge must read XIIII in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -316,7 +316,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the two smaller figures —TETHERED TO→ that pedestal, by the neck
   · the rope —ENCIRCLES→ their necks, loosely
   · the devil —LOOKS AT→ the person holding the card
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL DIABLO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XV.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL DIABLO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XV. CRITICAL: the numeral on the RIGHT edge must read XV in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -333,7 +333,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the crown of the tower —FALLS FROM→ the top of the building
   · the two figures —FALLS FROM→ the tower, in opposite directions
   · the tower —TOUCHES→ the ground, still standing
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA TORRE. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XVI.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA TORRE. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XVI. CRITICAL: the numeral on the RIGHT edge must read XVI in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -355,7 +355,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · her knee —TOUCHES→ the ground, at the water's edge
   · the largest star —ABOVE→ her
   · the bird —RESTS ON→ a bush in the background
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA ESTRELLA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XVII.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA ESTRELLA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XVII. CRITICAL: the numeral on the RIGHT edge must read XVII in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -373,7 +373,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the two animals —BETWEEN→ the two towers
   · the crayfish —BELOW→ the water of the pool
   · the droplets —FALLS FROM→ the moon
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA LUNA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XVIII.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA LUNA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XVIII. CRITICAL: the numeral on the RIGHT edge must read XVIII in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -395,7 +395,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the wall —BEHIND→ the two figures
   · the sun —LOOKS AT→ the two figures, from above
   · the droplets —FALLS FROM→ the sun
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL SOL. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XVIIII.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL SOL. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XVIIII. CRITICAL: the numeral on the RIGHT edge must read XVIIII in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -417,7 +417,7 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the other two figures —BETWEEN→ the ones flanking the emerging figure
   · the winged figure —ABOVE→ the three of them
   · the banner —HANGS FROM→ the trumpet
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL JUICIO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XX.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL JUICIO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XX. CRITICAL: the numeral on the RIGHT edge must read XX in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
 
@@ -436,6 +436,6 @@ SPATIAL RELATIONS — these are not optional details, they are what the card mea
   · the wreath —ENCIRCLES→ the central figure
   · the central figure —TOUCHES→ nothing at all: it is suspended in mid-air
   · the four creatures —LOOKS AT→ the central figure, from the corners
-FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL MUNDO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XXI.
+FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL MUNDO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XXI. CRITICAL: the numeral on the RIGHT edge must read XXI in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
