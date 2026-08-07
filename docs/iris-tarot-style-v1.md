@@ -284,6 +284,12 @@ bien casi siempre; el de la derecha puede salir invertido. Con `II`, `IIII`,
 travesaños, cuatro criaturas. No son textura: son datos, y el modelo los aproxima
 si nadie los verifica uno a uno.
 
+**Y para arreglarlo, no pidas cantidades: describe posiciones.** Dos ediciones
+seguidas pidiendo «seis muñones por tronco» salieron con ocho o nueve. La
+tercera decía «uno arriba, uno en medio, uno abajo» y salió exacta. Contar se le
+da mal; colocar, bien. Vale para las ocho estrellas de La Estrella, para las
+cuatro criaturas de El Mundo y para los tres travesaños de El Papa.
+
 | Carta | Qué se fue | Resuelto |
 |---|---|---|
 | El Papa (V) | Metió el nombre en un recuadro y quitó la regla verdosa | Instrucción endurecida: la cartela no lleva caja, solo doble regla encima |
