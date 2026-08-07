@@ -27,11 +27,17 @@ import type { CardSlug, SourceRef } from "@/lib/types";
  *
  * SOBRE LA VERIFICACIÓN
  *
- * Estos atributos están redactados desde el canon marsellés (linaje Conver /
- * Noblet). Los que llevan `verify: true` necesitan un vistazo a una baraja
- * física antes de tratarse como hecho: normalmente son direcciones de mirada o
- * detalles que cambian entre ediciones. Preferimos decir que dudamos a afirmar
- * de más.
+ * Los atributos se redactaron desde el canon marsellés (linaje Conver/Noblet) y
+ * siete cartas quedaron marcadas con `verify: true` porque su mirada, sus manos
+ * o sus objetos cambian entre ediciones. Preferimos decir que dudábamos a
+ * afirmar de más.
+ *
+ * Las siete están CERRADAS por inspección directa de la baraja física que hace
+ * de canon semántico. Ya no queda ninguna: los datos de este archivo no son
+ * inferencia de otras ediciones.
+ *
+ * Si alguna vez se añade una carta o se cambia una edición de referencia, el
+ * campo vuelve a servir. Marcar `verify: true` y no generar hasta cerrarla.
  */
 
 /* ---------------------------------------------------------------------------
@@ -82,7 +88,18 @@ export interface MajorAttributes {
   /* --- canónico: lo que la carta tiene ---------------------------------- */
   figuras: number;
   postura: Posture;
+  /** Cómo está puesto el CUERPO. */
   orientacion: Orientation;
+  /**
+   * Hacia dónde está girada la CABEZA.
+   *
+   * Separado de la mirada porque no son lo mismo, y confundirlos hizo que la
+   * pregunta que le hicimos a la baraja fuera irrespondible: en La Emperatriz
+   * la cabeza está casi de frente y los ojos van a la izquierda. Las dos cosas
+   * son ciertas a la vez, y solo una de ellas cabía en el campo antiguo.
+   */
+  cabeza: Gaze;
+  /** Hacia dónde van los OJOS. */
   mirada: Gaze;
   tocado: string | null;
   manos: Hands;
@@ -149,6 +166,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 2,
     postura: "caminando",
     orientacion: "perfil",
+    cabeza: "derecha",
     mirada: "derecha",
     tocado: "gorro con cascabeles",
     manos: {
@@ -184,11 +202,12 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 1,
     postura: "de pie",
     orientacion: "tres cuartos",
+    cabeza: "izquierda",
     mirada: "izquierda",
     tocado: "sombrero de ala ancha en forma de lemniscata",
     manos: {
-      derecha: "varita corta, en alto",
-      izquierda: "objeto pequeño, entre el pulgar y el índice",
+      derecha: "baja, delante del cuerpo y sobre la mesa, manipulando una ficha o pequeño objeto circular. NO es una segunda varita",
+      izquierda: "una varita corta levantada en diagonal",
     },
     bajo_los_pies: "suelo vegetal",
     encima: null,
@@ -204,9 +223,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
       jc("Comienzo y potencial: todo está disponible y nada se ha decidido."),
       iris("Tiene los cuatro palos delante, lo que en la baraja significa tenerlo todo y aún nada."),
     ],
-    verify: true,
-    verify_note:
-      "Confirmar hacia qué lado mira y en qué mano lleva la varita: cambia entre ediciones.",
+    verify: false,
   },
 
   "arcano-02": {
@@ -215,6 +232,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 1,
     postura: "sentado",
     orientacion: "frontal",
+    cabeza: "al frente",
     mirada: "al frente",
     tocado: "tiara de tres pisos",
     manos: {
@@ -250,11 +268,13 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 1,
     postura: "sentado",
     orientacion: "frontal",
+    // La cabeza apenas gira; lo inequívoco es hacia dónde van los ojos.
+    cabeza: "al frente",
     mirada: "izquierda",
     tocado: "corona",
     manos: {
-      derecha: "cetro rematado en globo y cruz, apoyado en el hombro",
-      izquierda: "escudo con águila, apoyado en el regazo",
+      derecha: "escudo con águila, apoyado contra el costado y el regazo",
+      izquierda: "cetro con globo y cruz, cruzando el torso en diagonal y elevándose",
     },
     bajo_los_pies: null,
     encima: null,
@@ -272,9 +292,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
         "Emperatriz y Emperador comparten corona, cetro y águila. Lo que cambia es el cuerpo: ella de frente y con el escudo en el regazo, él de perfil y con el escudo en el suelo. Cuando salen juntas, ahí está la lectura.",
       ),
     ],
-    verify: true,
-    verify_note:
-      "Confirmar la dirección de la mirada contra la baraja física: de frente o ligeramente a la izquierda.",
+    verify: false,
   },
 
   "arcano-04": {
@@ -283,6 +301,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 1,
     postura: "sentado",
     orientacion: "perfil",
+    cabeza: "izquierda",
     mirada: "izquierda",
     tocado: "corona",
     manos: {
@@ -315,6 +334,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 3,
     postura: "sentado",
     orientacion: "frontal",
+    cabeza: "al frente",
     mirada: "al frente",
     tocado: "tiara de tres pisos",
     manos: {
@@ -344,6 +364,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 4,
     postura: "de pie",
     orientacion: "frontal",
+    cabeza: "izquierda",
     mirada: "izquierda",
     tocado: "ninguno en la figura central; las dos que la flanquean sí llevan tocado",
     manos: {
@@ -353,7 +374,11 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     bajo_los_pies: "suelo vegetal",
     encima: "figura alada con arco tendido, dentro de un sol",
     detras: "nada al fondo: campo liso de la carta, sin arquitectura ni paisaje",
-    simbolos: ["sol", "flecha", "arco", "tres figuras humanas"],
+    simbolos: [
+      "tres figuras humanas abajo, la central entre las otras dos",
+      "un ser alado dentro del disco solar, arriba, apuntando hacia abajo con el arco",
+      "flecha",
+    ],
     observaciones: [
       "Una figura central entre otras dos, una a cada lado.",
       "La cabeza de la figura central está girada hacia un lado, pero el cuerpo sigue de frente.",
@@ -364,8 +389,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
       jc("Elección y vínculo: hay que decidir hacia dónde se orienta el deseo."),
       iris("Lo que decide la carta no es a quién toca, sino hacia dónde ha girado la cabeza."),
     ],
-    verify: true,
-    verify_note: "Confirmar hacia qué lado gira la cabeza de la figura central.",
+    verify: false,
   },
 
   "arcano-07": {
@@ -374,6 +398,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 1,
     postura: "de pie",
     orientacion: "frontal",
+    cabeza: "al frente",
     mirada: "al frente",
     tocado: "corona",
     manos: {
@@ -409,6 +434,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 1,
     postura: "sentado",
     orientacion: "frontal",
+    cabeza: "al frente",
     mirada: "al frente",
     tocado: "corona",
     manos: {
@@ -438,6 +464,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 1,
     postura: "caminando",
     orientacion: "perfil",
+    cabeza: "izquierda",
     mirada: "izquierda",
     tocado: "capucha",
     manos: {
@@ -467,6 +494,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 3,
     postura: "sin figura",
     orientacion: "n/a",
+    cabeza: "n/a",
     mirada: "n/a",
     tocado: null,
     manos: { derecha: null, izquierda: null },
@@ -493,7 +521,8 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 2,
     postura: "de pie",
     orientacion: "frontal",
-    mirada: "izquierda",
+    cabeza: "derecha",
+    mirada: "abajo",
     tocado: "sombrero de ala ancha en forma de lemniscata",
     manos: {
       derecha: "abriendo las fauces del animal",
@@ -502,7 +531,10 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     bajo_los_pies: "suelo vegetal",
     encima: null,
     detras: "nada al fondo: campo liso de la carta, sin arquitectura ni paisaje",
-    simbolos: ["león", "sombrero de lemniscata"],
+    simbolos: [
+      "un animal a su derecha, con la cabeza levantada hacia sus manos y orientada hacia la derecha de la carta",
+      "sombrero de lemniscata",
+    ],
     observaciones: [
       "Usa las dos manos para lo mismo, cosa rara en la serie.",
       "No hay tensión en el gesto: no sujeta, abre.",
@@ -513,8 +545,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
       jc("Fuerza sin violencia: se trata con lo instintivo, no se lo somete."),
       iris("Comparte sombrero con el arcano I. Cuando salen juntas, la repetición es un dato."),
     ],
-    verify: true,
-    verify_note: "Confirmar hacia dónde miran la figura y el animal.",
+    verify: false,
   },
 
   "arcano-12": {
@@ -523,6 +554,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 1,
     postura: "suspendido",
     orientacion: "frontal",
+    cabeza: "al frente",
     mirada: "al frente",
     tocado: "ninguno: cabeza descubierta y pelo suelto cayendo hacia abajo",
     manos: {
@@ -559,6 +591,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 1,
     postura: "de pie",
     orientacion: "perfil",
+    cabeza: "izquierda",
     mirada: "izquierda",
     // Descubierto, y eso es la carta: sin capucha, sin hábito, sin manto. La
     // Parca encapuchada es iconografía del norte de Europa, no marsellesa.
@@ -593,6 +626,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 1,
     postura: "de pie",
     orientacion: "frontal",
+    cabeza: "izquierda",
     mirada: "izquierda",
     tocado: "flor o disco sobre la frente",
     manos: {
@@ -613,8 +647,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
       jc("Circulación: algo pasa de un sitio a otro sin perderse."),
       iris("El trasvase horizontal es lo raro. Vertir cuesta menos hacia abajo."),
     ],
-    verify: true,
-    verify_note: "Confirmar en qué mano está la jarra que vierte.",
+    verify: false,
   },
 
   "arcano-15": {
@@ -623,16 +656,22 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 3,
     postura: "de pie",
     orientacion: "frontal",
+    cabeza: "al frente",
     mirada: "al frente",
     tocado: "astas",
     manos: {
-      derecha: "espada corta o antorcha, en alto",
-      izquierda: "apoyada, o alzada con la palma abierta",
+      derecha: "levantada, abierta y VACÍA, con la palma hacia el observador. No sostiene ninguna espada",
+      izquierda: "una antorcha encendida, sostenida en vertical",
     },
     bajo_los_pies: "pedestal al que están atadas dos figuras menores",
     encima: null,
     detras: "nada al fondo: campo liso de la carta, sin arquitectura ni paisaje",
-    simbolos: ["astas", "alas", "pedestal", "dos figuras atadas", "cuerdas"],
+    simbolos: [
+      "astas",
+      "alas",
+      "una antorcha encendida",
+      "dos figuras menores abajo, una a cada lado, atadas por una cuerda que pasa por el pedestal",
+    ],
     observaciones: [
       "Las dos figuras pequeñas llevan el cuello atado con una cuerda floja.",
       "La cuerda no está tensa y las manos de las dos figuras están libres.",
@@ -643,8 +682,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
       jc("Atadura y deseo: lo que sujeta con fuerza porque también atrae."),
       iris("La cuerda floja es la observación importante: podrían quitársela."),
     ],
-    verify: true,
-    verify_note: "Confirmar qué sostiene cada mano; varía bastante entre ediciones.",
+    verify: false,
   },
 
   "arcano-16": {
@@ -653,6 +691,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 2,
     postura: "sin figura",
     orientacion: "n/a",
+    cabeza: "n/a",
     mirada: "n/a",
     tocado: null,
     manos: { derecha: null, izquierda: null },
@@ -679,6 +718,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 1,
     postura: "de pie",
     orientacion: "tres cuartos",
+    cabeza: "abajo",
     mirada: "abajo",
     tocado: "ninguno: cabeza descubierta y pelo suelto",
     manos: {
@@ -710,6 +750,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 4,
     postura: "sin figura",
     orientacion: "n/a",
+    cabeza: "n/a",
     mirada: "n/a",
     tocado: null,
     manos: { derecha: null, izquierda: null },
@@ -736,6 +777,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 3,
     postura: "de pie",
     orientacion: "frontal",
+    cabeza: "al frente",
     mirada: "al frente",
     tocado: "ninguno: las dos figuras van con la cabeza descubierta",
     manos: { derecha: "tocando al otro", izquierda: "tocando al otro" },
@@ -744,7 +786,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     detras: "un muro bajo por el que se ve el fondo",
     simbolos: [
       "sol con rostro",
-      "dos figuras juntas que se tocan",
+      "dos niños del mismo tamaño, uno frente al otro, tocándose",
       "muro",
       "gotas",
     ],
@@ -758,8 +800,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
       jc("Claridad compartida: lo que se ve entre dos, sin sombra."),
       iris("Repite las gotas del XVIII. Las mismas gotas, otra luz."),
     ],
-    verify: true,
-    verify_note: "Confirmar si las dos figuras son iguales o una es mayor.",
+    verify: false,
   },
 
   "arcano-20": {
@@ -768,6 +809,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 4,
     postura: "de pie",
     orientacion: "frontal",
+    cabeza: "arriba",
     mirada: "arriba",
     tocado: "ninguno: las tres figuras humanas van con la cabeza descubierta",
     manos: { derecha: "alzadas", izquierda: "alzadas" },
@@ -794,6 +836,7 @@ export const MAJOR_ATTRIBUTES: Record<CardSlug, MajorAttributes> = {
     figuras: 5,
     postura: "de pie",
     orientacion: "frontal",
+    cabeza: "al frente",
     mirada: "al frente",
     tocado: "ninguno: va con la cabeza descubierta",
     manos: { derecha: "una varita", izquierda: "una varita" },

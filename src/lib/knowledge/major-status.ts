@@ -27,6 +27,7 @@ export const APROBADAS: CardSlug[] = [
   "arcano-14", // Templanza
   "arcano-16", // La Torre
   "arcano-18", // La Luna
+  "arcano-20", // El Juicio
   "arcano-21", // El Mundo
 ];
 

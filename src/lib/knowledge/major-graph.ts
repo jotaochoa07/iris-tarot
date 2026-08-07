@@ -88,8 +88,9 @@ export const MAJOR_GRAPH: Record<CardSlug, VisualRelation[]> = {
   "arcano-01": [
     { de: "el mago", verbo: "está_detrás_de", a: "una mesa" },
     { de: "los cuatro palos", verbo: "reposa_sobre", a: "la mesa" },
-    { de: "el mago", verbo: "sostiene", a: "una varita en alto" },
-    { de: "el mago", verbo: "sostiene", a: "un objeto diminuto entre dos dedos" },
+    { de: "su mano izquierda", verbo: "sostiene", a: "una varita levantada en diagonal" },
+    { de: "su mano derecha", verbo: "toca", a: "la mesa, baja y por delante del cuerpo" },
+    { de: "su mano derecha", verbo: "sostiene", a: "una ficha pequeña y redonda, no una segunda varita" },
   ],
 
   "arcano-02": [
@@ -100,9 +101,10 @@ export const MAJOR_GRAPH: Record<CardSlug, VisualRelation[]> = {
   ],
 
   "arcano-03": [
-    { de: "la emperatriz", verbo: "sostiene", a: "un cetro con globo y cruz" },
-    { de: "el cetro", verbo: "se_apoya_en", a: "su hombro" },
-    { de: "el escudo del águila", verbo: "reposa_sobre", a: "su regazo" },
+    { de: "su mano derecha", verbo: "sostiene", a: "el escudo del águila" },
+    { de: "el escudo del águila", verbo: "se_apoya_en", a: "su costado y su regazo" },
+    { de: "su mano izquierda", verbo: "sostiene", a: "un cetro con globo y cruz" },
+    { de: "el cetro", verbo: "atraviesa", a: "su torso en diagonal, elevándose hacia la derecha" },
   ],
 
   "arcano-04": [
@@ -123,7 +125,8 @@ export const MAJOR_GRAPH: Record<CardSlug, VisualRelation[]> = {
     { de: "la figura central", verbo: "está_entre", a: "las otras dos" },
     { de: "la figura alada", verbo: "está_encima_de", a: "las tres" },
     { de: "la flecha", verbo: "apunta_a", a: "la escena, sin haber salido aún del arco" },
-    { de: "la figura central", verbo: "toca", a: "las dos figuras que la flanquean" },
+    { de: "la figura de la izquierda", verbo: "toca", a: "el hombro de la figura central" },
+    { de: "la figura de la derecha", verbo: "toca", a: "el pecho de la figura central" },
   ],
 
   "arcano-07": [
@@ -155,7 +158,8 @@ export const MAJOR_GRAPH: Record<CardSlug, VisualRelation[]> = {
 
   "arcano-11": [
     { de: "la mujer", verbo: "toca", a: "las fauces del animal, con las dos manos" },
-    { de: "el animal", verbo: "está_debajo_de", a: "ella" },
+    { de: "el animal", verbo: "está_debajo_de", a: "ella, a su derecha" },
+    { de: "el animal", verbo: "mira_a", a: "sus manos, con la cabeza levantada" },
   ],
 
   "arcano-12": [
@@ -180,6 +184,8 @@ export const MAJOR_GRAPH: Record<CardSlug, VisualRelation[]> = {
 
   "arcano-15": [
     { de: "el diablo", verbo: "está_encima_de", a: "un pedestal" },
+    { de: "su mano derecha", verbo: "está_encima_de", a: "su hombro, abierta y vacía" },
+    { de: "su mano izquierda", verbo: "sostiene", a: "una antorcha encendida, en vertical" },
     { de: "las dos figuras menores", verbo: "está_atado_a", a: "ese pedestal, por el cuello" },
     { de: "la cuerda", verbo: "rodea", a: "sus cuellos, floja" },
     { de: "el diablo", verbo: "mira_a", a: "quien tiene la carta delante" },
@@ -207,7 +213,8 @@ export const MAJOR_GRAPH: Record<CardSlug, VisualRelation[]> = {
   ],
 
   "arcano-19": [
-    { de: "las dos figuras", verbo: "toca", a: "la una a la otra" },
+    { de: "el niño de la derecha", verbo: "toca", a: "el hombro del otro, pasándole el brazo" },
+    { de: "el niño de la izquierda", verbo: "toca", a: "el torso del otro" },
     { de: "el muro", verbo: "está_detrás_de", a: "las dos figuras" },
     { de: "el sol", verbo: "mira_a", a: "las dos figuras, desde arriba" },
     { de: "las gotas", verbo: "cae_de", a: "el sol" },

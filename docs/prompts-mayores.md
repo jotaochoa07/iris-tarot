@@ -9,7 +9,7 @@ sustituyendo su bloque SUBJECT.
 
 ## sin número · EL LOCO
 ```
-SUBJECT — EL LOCO. 2 figures. The main figure is walking, in profile, looking toward the RIGHT of the card.
+SUBJECT — EL LOCO. 2 figures. The main figure is walking, in profile, head turned toward the RIGHT of the card, eyes looking toward the RIGHT of the card.
 Headwear: a cap with bells.
 In the figure's RIGHT hand: a staff over the shoulder with a bundle hanging from it.
 In the figure's LEFT hand: a second, shorter stick HELD IN HIS HAND, its tip resting on the ground ahead of him.
@@ -30,20 +30,20 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ---
 
 ## I · EL MAGO
-> Comprobar antes de generar: Confirmar hacia qué lado mira y en qué mano lleva la varita: cambia entre ediciones.
 ```
-SUBJECT — EL MAGO. A single figure, standing, in three-quarter view, looking toward the LEFT of the card.
+SUBJECT — EL MAGO. A single figure, standing, in three-quarter view, head turned toward the LEFT of the card, eyes looking toward the LEFT of the card.
 Headwear: a wide brimmed hat shaped like a lemniscate.
-In the figure's RIGHT hand: a short wand held up.
-In the figure's LEFT hand: a tiny object held between thumb and forefinger.
+In the figure's RIGHT hand: held LOW, in front of the body and over the table, handling a small round token or counter. This hand does NOT hold a second wand.
+In the figure's LEFT hand: a short wand raised diagonally.
 Below / at the feet: ground with small plants.
 Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
 Must include: a table with three visible legs, a wand, a cup, a knife, coins.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the magician —BEHIND→ a table
   · the four suits —RESTS ON→ the table
-  · the magician —HOLDS→ a wand held up
-  · the magician —HOLDS→ a tiny object between two fingers
+  · his left hand —HOLDS→ a wand raised diagonally
+  · his right hand —TOUCHES→ the table, held low in front of his body
+  · his right hand —HOLDS→ a small round token — NOT a second wand
 FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL MAGO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: I. CRITICAL: the numeral on the RIGHT edge must read I in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
@@ -52,7 +52,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 
 ## II · LA PAPISA
 ```
-SUBJECT — LA PAPISA. A single figure, seated, facing the viewer, looking straight at the viewer.
+SUBJECT — LA PAPISA. A single figure, seated, facing the viewer, head turned straight at the viewer, eyes looking straight at the viewer.
 Headwear: a three-tiered tiara.
 In the figure's RIGHT hand: holding the right edge of the book.
 In the figure's LEFT hand: holding the left edge of the same book.
@@ -70,17 +70,17 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ---
 
 ## III · LA EMPERATRIZ
-> Comprobar antes de generar: Confirmar la dirección de la mirada contra la baraja física: de frente o ligeramente a la izquierda.
 ```
-SUBJECT — LA EMPERATRIZ. A single figure, seated, facing the viewer, looking toward the LEFT of the card.
+SUBJECT — LA EMPERATRIZ. A single figure, seated, facing the viewer, head turned straight at the viewer, eyes looking toward the LEFT of the card.
 Headwear: a crown.
-In the figure's RIGHT hand: a long sceptre topped with an orb and cross, resting against her shoulder.
-In the figure's LEFT hand: a shield bearing a black eagle, resting on her lap.
+In the figure's RIGHT hand: a shield bearing an eagle, resting against her side and her lap.
+In the figure's LEFT hand: a sceptre with orb and cross, crossing her torso diagonally and rising.
 Must include: a sceptre, an eagle, a crown, a cubic throne, a chain collar.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
-  · the empress —HOLDS→ a sceptre with orb and cross
-  · the sceptre —RESTS AGAINST→ her shoulder
-  · the eagle shield —RESTS ON→ her lap
+  · his right hand —HOLDS→ the eagle shield
+  · the eagle shield —RESTS AGAINST→ her side and her lap
+  · his left hand —HOLDS→ a sceptre with orb and cross
+  · the sceptre —CROSSES OVER→ her torso diagonally, rising toward the right of the card
 FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA EMPERATRIZ. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: III. CRITICAL: the numeral on the RIGHT edge must read III in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
@@ -89,7 +89,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 
 ## IIII · EL EMPERADOR
 ```
-SUBJECT — EL EMPERADOR. A single figure, seated, in profile, looking toward the LEFT of the card.
+SUBJECT — EL EMPERADOR. A single figure, seated, in profile, head turned toward the LEFT of the card, eyes looking toward the LEFT of the card.
 Headwear: a crown.
 In the figure's RIGHT hand: a long sceptre topped with an orb and cross, held upright.
 In the figure's LEFT hand: resting on the arm of the throne.
@@ -108,7 +108,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 
 ## V · EL PAPA
 ```
-SUBJECT — EL PAPA. 3 figures. The main figure is seated, facing the viewer, looking straight at the viewer.
+SUBJECT — EL PAPA. 3 figures. The main figure is seated, facing the viewer, head turned straight at the viewer, eyes looking straight at the viewer.
 Headwear: a three-tiered tiara.
 In the figure's RIGHT hand: raised, two fingers extended, holding nothing.
 In the figure's LEFT hand: a crozier with three crossbars.
@@ -127,21 +127,21 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ---
 
 ## VI · EL ENAMORADO
-> Comprobar antes de generar: Confirmar hacia qué lado gira la cabeza de la figura central.
 ```
-SUBJECT — EL ENAMORADO. 4 figures. The main figure is standing, facing the viewer, looking toward the LEFT of the card.
+SUBJECT — EL ENAMORADO. 4 figures. The main figure is standing, facing the viewer, head turned toward the LEFT of the card, eyes looking toward the LEFT of the card.
 Headwear: NONE on the central figure; the two flanking figures do wear headdresses.
 In the figure's RIGHT hand: touching one of the figures.
 In the figure's LEFT hand: touching the other figure.
 Below / at the feet: ground with small plants.
 Above: a winged figure inside a sun, drawing a bow, arrow not yet loosed.
 Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
-Must include: a sun, an arrow, a bow, three human figures.
+Must include: three human figures below, the central one between the other two, a winged figure inside the sun disc above, aiming its bow downward, an arrow.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the central figure —BETWEEN→ the other two
   · the winged figure —ABOVE→ the three of them
   · the arrow —POINTS AT→ the scene, still not loosed from the bow
-  · the central figure —TOUCHES→ the two figures flanking it
+  · the figure on the LEFT —TOUCHES→ the central figure's shoulder
+  · the figure on the RIGHT —TOUCHES→ the central figure's chest
 FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: EL ENAMORADO. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: VI. CRITICAL: the numeral on the RIGHT edge must read VI in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
@@ -150,7 +150,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 
 ## VII · EL CARRO
 ```
-SUBJECT — EL CARRO. A single figure, standing, facing the viewer, looking straight at the viewer.
+SUBJECT — EL CARRO. A single figure, standing, facing the viewer, head turned straight at the viewer, eyes looking straight at the viewer.
 Headwear: a crown.
 In the figure's RIGHT hand: a sceptre.
 In the figure's LEFT hand: empty, resting on the edge of the chariot.
@@ -170,7 +170,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 
 ## VIII · LA JUSTICIA
 ```
-SUBJECT — LA JUSTICIA. A single figure, seated, facing the viewer, looking straight at the viewer.
+SUBJECT — LA JUSTICIA. A single figure, seated, facing the viewer, head turned straight at the viewer, eyes looking straight at the viewer.
 Headwear: a crown.
 In the figure's RIGHT hand: a sword held straight up, vertical.
 In the figure's LEFT hand: a two-pan balance scale, level.
@@ -187,7 +187,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 
 ## VIIII · EL ERMITAÑO
 ```
-SUBJECT — EL ERMITAÑO. A single figure, walking, in profile, looking toward the LEFT of the card.
+SUBJECT — EL ERMITAÑO. A single figure, walking, in profile, head turned toward the LEFT of the card, eyes looking toward the LEFT of the card.
 Headwear: a hood.
 In the figure's RIGHT hand: a lit lantern held up and forward.
 In the figure's LEFT hand: a long staff touching the ground.
@@ -224,18 +224,18 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ---
 
 ## XI · LA FUERZA
-> Comprobar antes de generar: Confirmar hacia dónde miran la figura y el animal.
 ```
-SUBJECT — LA FUERZA. 2 figures. The main figure is standing, facing the viewer, looking toward the LEFT of the card.
+SUBJECT — LA FUERZA. 2 figures. The main figure is standing, facing the viewer, head turned toward the RIGHT of the card, eyes looking downward.
 Headwear: a wide brimmed hat shaped like a lemniscate.
 In the figure's RIGHT hand: opening the animal's jaws with bare hands, without strain.
 In the figure's LEFT hand: opening the animal's jaws with bare hands, without strain.
 Below / at the feet: ground with small plants.
 Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
-Must include: a lion, a lemniscate-shaped hat.
+Must include: an animal on her right, its head raised toward her hands and turned toward the RIGHT of the card, a lemniscate-shaped hat.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the woman —TOUCHES→ the animal's jaws, with both hands
-  · the animal —BELOW→ her
+  · the animal —BELOW→ her, on her right
+  · the animal —LOOKS AT→ her hands, with its head raised
 FOOT OF THE CARD, in this exact order from top to bottom: (1) the double rule — a dark line with a greenish line just under it; (2) BELOW that rule, the name in serif capitals reading exactly: LA FUERZA. The rule goes ABOVE the name, never below it. No box, panel or outline around the name. Roman numeral at top centre and on both side edges reads exactly: XI. CRITICAL: the numeral on the RIGHT edge must read XI in the same left-to-right order as the one on the left edge, only rotated the opposite way. It must NOT be mirrored or reversed.
 Match the reference image of THE EMPEROR exactly: same border, same corner leaves, same cartouche, same lettering, same line weight, same palette, same paper, same level of hatching detail. Same world, same hand, same printing.
 ```
@@ -244,7 +244,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 
 ## XII · EL COLGADO
 ```
-SUBJECT — EL COLGADO. A single figure, hanging upside down, facing the viewer, looking straight at the viewer.
+SUBJECT — EL COLGADO. A single figure, hanging upside down, facing the viewer, head turned straight at the viewer, eyes looking straight at the viewer.
 Headwear: NONE — bare-headed, hair hanging loose downward.
 In the figure's RIGHT hand: hidden behind the back.
 In the figure's LEFT hand: hidden behind the back.
@@ -266,7 +266,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 
 ## XIII · sin nombre
 ```
-SUBJECT — the unnamed thirteenth arcanum. A single figure, standing, in profile, looking toward the LEFT of the card.
+SUBJECT — the unnamed thirteenth arcanum. A single figure, standing, in profile, head turned toward the LEFT of the card, eyes looking toward the LEFT of the card.
 Headwear: NONE — the figure is bare-headed, no hood.
 In the figure's RIGHT hand: a scythe sweeping horizontally to one side, not downward.
 Below / at the feet: black earth with heads, hands and feet emerging from it.
@@ -282,9 +282,8 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ---
 
 ## XIIII · TEMPLANZA
-> Comprobar antes de generar: Confirmar en qué mano está la jarra que vierte.
 ```
-SUBJECT — TEMPLANZA. A single figure, standing, facing the viewer, looking toward the LEFT of the card.
+SUBJECT — TEMPLANZA. A single figure, standing, facing the viewer, head turned toward the LEFT of the card, eyes looking toward the LEFT of the card.
 Headwear: a flower or disc on the forehead.
 In the figure's RIGHT hand: a jug pouring.
 In the figure's LEFT hand: a jug receiving the flow.
@@ -302,17 +301,18 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ---
 
 ## XV · EL DIABLO
-> Comprobar antes de generar: Confirmar qué sostiene cada mano; varía bastante entre ediciones.
 ```
-SUBJECT — EL DIABLO. 3 figures. The main figure is standing, facing the viewer, looking straight at the viewer.
+SUBJECT — EL DIABLO. 3 figures. The main figure is standing, facing the viewer, head turned straight at the viewer, eyes looking straight at the viewer.
 Headwear: horns.
-In the figure's RIGHT hand: a short sword held up.
-In the figure's LEFT hand: raised with the palm open.
+In the figure's RIGHT hand: raised, open and EMPTY, palm toward the viewer. It holds NO sword.
+In the figure's LEFT hand: a lit torch, held vertically.
 Below / at the feet: a pedestal with two smaller figures tethered to it.
 Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
-Must include: horns, wings, a pedestal, two smaller figures loosely tethered by the neck, hands free, ropes.
+Must include: horns, wings, a lit torch, two smaller figures below, one on each side, tethered by a rope that passes through the pedestal.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the devil —ABOVE→ a pedestal
+  · his right hand —ABOVE→ shoulder height, open and EMPTY, palm showing
+  · his left hand —HOLDS→ a lit torch, held vertically
   · the two smaller figures —TETHERED TO→ that pedestal, by the neck
   · the rope —ENCIRCLES→ their necks, loosely
   · the devil —LOOKS AT→ the person holding the card
@@ -341,7 +341,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 
 ## XVII · LA ESTRELLA
 ```
-SUBJECT — LA ESTRELLA. A single figure, standing, in three-quarter view, looking downward.
+SUBJECT — LA ESTRELLA. A single figure, standing, in three-quarter view, head turned downward, eyes looking downward.
 Headwear: NONE — bare-headed, hair loose.
 In the figure's RIGHT hand: a jug pouring onto the water.
 In the figure's LEFT hand: a jug pouring onto the earth.
@@ -380,18 +380,18 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ---
 
 ## XVIIII · EL SOL
-> Comprobar antes de generar: Confirmar si las dos figuras son iguales o una es mayor.
 ```
-SUBJECT — EL SOL. 3 figures. The main figure is standing, facing the viewer, looking straight at the viewer.
+SUBJECT — EL SOL. 3 figures. The main figure is standing, facing the viewer, head turned straight at the viewer, eyes looking straight at the viewer.
 Headwear: NONE — both figures are bare-headed.
 In the figure's RIGHT hand: touching the other figure.
 In the figure's LEFT hand: touching the other figure.
 Below / at the feet: ground, in front of a low wall.
 Above: a sun with a face, looking down, shedding droplets.
 Behind the figure: a low wall with the background visible above it.
-Must include: a sun with a face, two figures standing together, touching, a low wall, falling droplets.
+Must include: a sun with a face, two children of the SAME size, facing one another and touching, a low wall, falling droplets.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
-  · the two figures —TOUCHES→ one another
+  · the child on the RIGHT —TOUCHES→ the other child's shoulder, arm around it
+  · the child on the LEFT —TOUCHES→ the other child's torso
   · the wall —BEHIND→ the two figures
   · the sun —LOOKS AT→ the two figures, from above
   · the droplets —FALLS FROM→ the sun
@@ -403,7 +403,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 
 ## XX · EL JUICIO
 ```
-SUBJECT — EL JUICIO. 4 figures. The main figure is standing, facing the viewer, looking upward.
+SUBJECT — EL JUICIO. 4 figures. The main figure is standing, facing the viewer, head turned upward, eyes looking upward.
 Headwear: NONE — all three human figures are bare-headed.
 In the figure's RIGHT hand: both raised.
 In the figure's LEFT hand: both raised.
@@ -425,7 +425,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 
 ## XXI · EL MUNDO
 ```
-SUBJECT — EL MUNDO. 5 figures. The main figure is standing, facing the viewer, looking straight at the viewer.
+SUBJECT — EL MUNDO. 5 figures. The main figure is standing, facing the viewer, head turned straight at the viewer, eyes looking straight at the viewer.
 Headwear: NONE — bare-headed.
 In the figure's RIGHT hand: a wand.
 In the figure's LEFT hand: a wand.

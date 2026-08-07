@@ -443,6 +443,48 @@ const GRAFO_ES_EN = {
   "sus manos": "his hands",
   "los dos platos": "the two pans of the scales",
   "una mesa": "a table",
+  "baja, delante del cuerpo y sobre la mesa, manipulando una ficha o pequeño objeto circular. NO es una segunda varita":
+    "held LOW, in front of the body and over the table, handling a small round token or counter. This hand does NOT hold a second wand",
+  "una varita corta levantada en diagonal": "a short wand raised diagonally",
+  "escudo con águila, apoyado contra el costado y el regazo":
+    "a shield bearing an eagle, resting against her side and her lap",
+  "cetro con globo y cruz, cruzando el torso en diagonal y elevándose":
+    "a sceptre with orb and cross, crossing her torso diagonally and rising",
+  "levantada, abierta y VACÍA, con la palma hacia el observador. No sostiene ninguna espada":
+    "raised, open and EMPTY, palm toward the viewer. It holds NO sword",
+  "una antorcha encendida, sostenida en vertical": "a lit torch, held vertically",
+  "tres figuras humanas abajo, la central entre las otras dos":
+    "three human figures below, the central one between the other two",
+  "un ser alado dentro del disco solar, arriba, apuntando hacia abajo con el arco":
+    "a winged figure inside the sun disc above, aiming its bow downward",
+  "un animal a su derecha, con la cabeza levantada hacia sus manos y orientada hacia la derecha de la carta":
+    "an animal on her right, its head raised toward her hands and turned toward the RIGHT of the card",
+  "dos niños del mismo tamaño, uno frente al otro, tocándose":
+    "two children of the SAME size, facing one another and touching",
+  "una antorcha encendida": "a lit torch",
+  "dos figuras menores abajo, una a cada lado, atadas por una cuerda que pasa por el pedestal":
+    "two smaller figures below, one on each side, tethered by a rope that passes through the pedestal",
+  "su mano derecha": "his right hand",
+  "una varita levantada en diagonal": "a wand raised diagonally",
+  "la mesa, baja y por delante del cuerpo": "the table, held low in front of his body",
+  "una ficha pequeña y redonda, no una segunda varita":
+    "a small round token — NOT a second wand",
+  "el escudo del águila": "the eagle shield",
+  "su costado y su regazo": "her side and her lap",
+  "su torso en diagonal, elevándose hacia la derecha":
+    "her torso diagonally, rising toward the right of the card",
+  "la figura de la izquierda": "the figure on the LEFT",
+  "la figura de la derecha": "the figure on the RIGHT",
+  "el hombro de la figura central": "the central figure's shoulder",
+  "el pecho de la figura central": "the central figure's chest",
+  "ella, a su derecha": "her, on her right",
+  "sus manos, con la cabeza levantada": "her hands, with its head raised",
+  "su hombro, abierta y vacía": "shoulder height, open and EMPTY, palm showing",
+  "una antorcha encendida, en vertical": "a lit torch, held vertically",
+  "el niño de la derecha": "the child on the RIGHT",
+  "el niño de la izquierda": "the child on the LEFT",
+  "el hombro del otro, pasándole el brazo": "the other child's shoulder, arm around it",
+  "el torso del otro": "the other child's torso",
   "su mano izquierda": "his left hand",
   "su pierna": "his leg",
   "su pierna libre": "his free leg",
@@ -463,7 +505,7 @@ function subject(a) {
     `SUBJECT — ${nombre || "the unnamed thirteenth arcanum"}. ` +
       (a.postura === "sin figura"
         ? "No human figure."
-        : `${a.figuras > 1 ? `${a.figuras} figures. The main figure is ` : "A single figure, "}${t(a.postura)}, ${t(a.orientacion)}, looking ${t(a.mirada)}.`),
+        : `${a.figuras > 1 ? `${a.figuras} figures. The main figure is ` : "A single figure, "}${t(a.postura)}, ${t(a.orientacion)}, head turned ${t(a.cabeza)}, eyes looking ${t(a.mirada)}.`),
   );
 
   if (a.tocado) l.push(`Headwear: ${t(a.tocado)}.`);
