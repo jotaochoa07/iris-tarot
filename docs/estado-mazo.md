@@ -2,7 +2,7 @@
 
 > Generado por `node scripts/estado.mjs`. No editar a mano.
 
-**11 de 22** Arcanos Mayores aprobados.
+**12 de 22** Arcanos Mayores aprobados.
 Los 56 Menores se generan en SVG y están completos.
 
 ## Aprobadas
@@ -20,16 +20,18 @@ Los 56 Menores se generan en SVG y están completos.
 | X | La Rueda de la Fortuna | arcano-10 |
 | XII | El Colgado | arcano-12 |
 | XIII | (sin nombre) | arcano-13 |
+| XVI | La Torre | arcano-16 |
 
 ### Con retoque pendiente
 
 - **El Papa** — Quitar el recuadro que rodea el nombre y devolver la regla verdosa.
+- **El Carro** — Comprobar el numeral del canto derecho: puede estar invertido.
+- **La Torre** — Comprobar el numeral del canto derecho: puede estar invertido.
 
-## Ficha cerrada, listas para generar (5)
+## Ficha cerrada, listas para generar (4)
 
 | nº | carta | archivo |
 |---|---|---|
-| XVI | La Torre | arcano-16 |
 | XVII | La Estrella | arcano-17 |
 | XVIII | La Luna | arcano-18 |
 | XX | El Juicio | arcano-20 |

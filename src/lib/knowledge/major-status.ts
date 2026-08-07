@@ -24,6 +24,7 @@ export const APROBADAS: CardSlug[] = [
   "arcano-10", // La Rueda de la Fortuna
   "arcano-12", // El Colgado — v4, seis muñones por tronco y numerales corregidos
   "arcano-13", // El XIII — v2, esqueleto descubierto
+  "arcano-16", // La Torre
 ];
 
 /**
@@ -34,6 +35,8 @@ export const APROBADAS: CardSlug[] = [
  */
 export const RETOQUES_PENDIENTES: Record<CardSlug, string> = {
   "arcano-05": "Quitar el recuadro que rodea el nombre y devolver la regla verdosa.",
+  "arcano-07": "Comprobar el numeral del canto derecho: puede estar invertido.",
+  "arcano-16": "Comprobar el numeral del canto derecho: puede estar invertido.",
 };
 
 /** La referencia visual de toda la baraja. No se regenera nunca. */
