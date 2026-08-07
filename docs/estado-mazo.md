@@ -2,7 +2,7 @@
 
 > Generado por `node scripts/estado.mjs`. No editar a mano.
 
-**13 de 22** Arcanos Mayores aprobados.
+**14 de 22** Arcanos Mayores aprobados.
 Los 56 Menores se generan en SVG y están completos.
 
 ## Aprobadas
@@ -20,6 +20,7 @@ Los 56 Menores se generan en SVG y están completos.
 | X | La Rueda de la Fortuna | arcano-10 |
 | XII | El Colgado | arcano-12 |
 | XIII | (sin nombre) | arcano-13 |
+| XIIII | Templanza | arcano-14 |
 | XVI | La Torre | arcano-16 |
 | XVIII | La Luna | arcano-18 |
 
@@ -27,6 +28,7 @@ Los 56 Menores se generan en SVG y están completos.
 
 - **El Papa** — Quitar el recuadro que rodea el nombre y devolver la regla verdosa.
 - **El Carro** — Comprobar el numeral del canto derecho: puede estar invertido.
+- **Templanza** — Numeral del canto derecho invertido: dice IIIIX.
 - **La Torre** — Comprobar el numeral del canto derecho: puede estar invertido.
 - **La Luna** — Comprobar el numeral del canto derecho: puede estar invertido.
 
@@ -38,7 +40,7 @@ Los 56 Menores se generan en SVG y están completos.
 | XX | El Juicio | arcano-20 |
 | XXI | El Mundo | arcano-21 |
 
-## Ficha por verificar contra una baraja física (6)
+## Ficha por verificar contra una baraja física (5)
 
 No se generan hasta cerrarlas: rehacer una ilustración cuesta más que
 comprobar un dato.
@@ -48,6 +50,5 @@ comprobar un dato.
 | I | El Mago | Confirmar hacia qué lado mira y en qué mano lleva la varita: cambia entre ediciones. |
 | VI | El Enamorado | Confirmar hacia qué lado gira la cabeza de la figura central. |
 | XI | La Fuerza | Confirmar hacia dónde miran la figura y el animal. |
-| XIIII | Templanza | Confirmar en qué mano está la jarra que vierte. |
 | XV | El Diablo | Confirmar qué sostiene cada mano; varía bastante entre ediciones. |
 | XVIIII | El Sol | Confirmar si las dos figuras son iguales o una es mayor. |
