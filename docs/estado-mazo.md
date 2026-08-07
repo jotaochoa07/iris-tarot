@@ -2,7 +2,7 @@
 
 > Generado por `node scripts/estado.mjs`. No editar a mano.
 
-**9 de 22** Arcanos Mayores aprobados.
+**11 de 22** Arcanos Mayores aprobados.
 Los 56 Menores se generan en SVG y están completos.
 
 ## Aprobadas
@@ -14,8 +14,10 @@ Los 56 Menores se generan en SVG y están completos.
 | III | La Emperatriz | arcano-03 |
 | IIII | El Emperador | arcano-04 |
 | V | El Papa | arcano-05 |
+| VII | El Carro | arcano-07 |
 | VIII | La Justicia | arcano-08 |
 | VIIII | El Ermitaño | arcano-09 |
+| X | La Rueda de la Fortuna | arcano-10 |
 | XII | El Colgado | arcano-12 |
 | XIII | (sin nombre) | arcano-13 |
 
@@ -23,12 +25,10 @@ Los 56 Menores se generan en SVG y están completos.
 
 - **El Papa** — Quitar el recuadro que rodea el nombre y devolver la regla verdosa.
 
-## Ficha cerrada, listas para generar (7)
+## Ficha cerrada, listas para generar (5)
 
 | nº | carta | archivo |
 |---|---|---|
-| VII | El Carro | arcano-07 |
-| X | La Rueda de la Fortuna | arcano-10 |
 | XVI | La Torre | arcano-16 |
 | XVII | La Estrella | arcano-17 |
 | XVIII | La Luna | arcano-18 |
