@@ -2,7 +2,7 @@
 
 > Generado por `node scripts/estado.mjs`. No editar a mano.
 
-**16 de 22** Arcanos Mayores aprobados.
+**17 de 22** Arcanos Mayores aprobados.
 Los 56 Menores se generan en SVG y están completos.
 
 ## Aprobadas
@@ -10,6 +10,7 @@ Los 56 Menores se generan en SVG y están completos.
 | nº | carta | archivo |
 |---|---|---|
 | sin nº | El Loco | arcano-00 |
+| I | El Mago | arcano-01 |
 | II | La Papisa | arcano-02 |
 | III | La Emperatriz | arcano-03 |
 | IIII | El Emperador | arcano-04 |
@@ -28,6 +29,7 @@ Los 56 Menores se generan en SVG y están completos.
 
 ### Con retoque pendiente
 
+- **El Mago** — Bajar la saturación del verde de las calzas y las mangas.
 - **El Papa** — Quitar el recuadro que rodea el nombre y devolver la regla verdosa.
 - **El Carro** — Comprobar el numeral del canto derecho: puede estar invertido.
 - **Templanza** — Numeral del canto derecho invertido: dice IIIIX.
@@ -35,21 +37,20 @@ Los 56 Menores se generan en SVG y están completos.
 - **La Luna** — Comprobar el numeral del canto derecho: puede estar invertido.
 - **El Mundo** — Numeral del canto derecho invertido: dice IXX.
 
-## Ficha cerrada, listas para generar (1)
+## Ficha cerrada, listas para generar (5)
 
 | nº | carta | archivo |
 |---|---|---|
+| VI | El Enamorado | arcano-06 |
+| XI | La Fuerza | arcano-11 |
+| XV | El Diablo | arcano-15 |
 | XVII | La Estrella | arcano-17 |
+| XVIIII | El Sol | arcano-19 |
 
-## Ficha por verificar contra una baraja física (5)
+## Ficha por verificar contra una baraja física (0)
 
 No se generan hasta cerrarlas: rehacer una ilustración cuesta más que
 comprobar un dato.
 
 | nº | carta | qué comprobar |
 |---|---|---|
-| I | El Mago | Confirmar hacia qué lado mira y en qué mano lleva la varita: cambia entre ediciones. |
-| VI | El Enamorado | Confirmar hacia qué lado gira la cabeza de la figura central. |
-| XI | La Fuerza | Confirmar hacia dónde miran la figura y el animal. |
-| XV | El Diablo | Confirmar qué sostiene cada mano; varía bastante entre ediciones. |
-| XVIIII | El Sol | Confirmar si las dos figuras son iguales o una es mayor. |

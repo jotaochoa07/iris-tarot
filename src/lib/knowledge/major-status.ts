@@ -14,6 +14,7 @@ import type { CardSlug } from "@/lib/types";
 /** Ilustración generada, revisada y aceptada. */
 export const APROBADAS: CardSlug[] = [
   "arcano-00", // El Loco — v3, con el bastón en la mano
+  "arcano-01", // El Mago — v2, en el estilo de la casa
   "arcano-02", // La Papisa — v2, un solo libro y el velo al fondo
   "arcano-03", // La Emperatriz
   "arcano-04", // El Emperador — la MAESTRA, congelada
@@ -38,6 +39,7 @@ export const APROBADAS: CardSlug[] = [
  * pendiente sigue siendo aprobada, pero el archivo final no es el que hay.
  */
 export const RETOQUES_PENDIENTES: Record<CardSlug, string> = {
+  "arcano-01": "Bajar la saturación del verde de las calzas y las mangas.",
   "arcano-05": "Quitar el recuadro que rodea el nombre y devolver la regla verdosa.",
   "arcano-07": "Comprobar el numeral del canto derecho: puede estar invertido.",
   "arcano-14": "Numeral del canto derecho invertido: dice IIIIX.",
