@@ -2,7 +2,7 @@
 
 > Generado por `node scripts/estado.mjs`. No editar a mano.
 
-**17 de 22** Arcanos Mayores aprobados.
+**18 de 22** Arcanos Mayores aprobados.
 Los 56 Menores se generan en SVG y están completos.
 
 ## Aprobadas
@@ -15,6 +15,7 @@ Los 56 Menores se generan en SVG y están completos.
 | III | La Emperatriz | arcano-03 |
 | IIII | El Emperador | arcano-04 |
 | V | El Papa | arcano-05 |
+| VI | El Enamorado | arcano-06 |
 | VII | El Carro | arcano-07 |
 | VIII | La Justicia | arcano-08 |
 | VIIII | El Ermitaño | arcano-09 |
@@ -37,11 +38,10 @@ Los 56 Menores se generan en SVG y están completos.
 - **La Luna** — Comprobar el numeral del canto derecho: puede estar invertido.
 - **El Mundo** — Numeral del canto derecho invertido: dice IXX.
 
-## Ficha cerrada, listas para generar (5)
+## Ficha cerrada, listas para generar (4)
 
 | nº | carta | archivo |
 |---|---|---|
-| VI | El Enamorado | arcano-06 |
 | XI | La Fuerza | arcano-11 |
 | XV | El Diablo | arcano-15 |
 | XVII | La Estrella | arcano-17 |

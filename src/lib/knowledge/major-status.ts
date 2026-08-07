@@ -19,6 +19,7 @@ export const APROBADAS: CardSlug[] = [
   "arcano-03", // La Emperatriz
   "arcano-04", // El Emperador — la MAESTRA, congelada
   "arcano-05", // El Papa — pendiente la edición de la cartela
+  "arcano-06", // El Enamorado
   "arcano-07", // El Carro
   "arcano-08", // La Justicia
   "arcano-09", // El Ermitaño
