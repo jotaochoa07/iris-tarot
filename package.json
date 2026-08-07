@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test \"src/**/*.test.ts\""
+    "test": "tsx --test \"src/**/*.test.ts\"",
+    "estado": "node scripts/estado.mjs",
+    "prompts": "node scripts/prompts-mayores.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.68.0",
