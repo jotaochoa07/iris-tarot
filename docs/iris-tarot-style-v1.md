@@ -270,9 +270,19 @@ Y conviene separarlas en dos clases, porque se arreglan en sitios distintos:
   arregla escribiendo mejor: se corrige editando esa imagen, y si se repite,
   se endurece el cuerpo común del prompt.
 
-**La cartela es la zona que más se mueve**: dos derivas de tres. Es la parte de
-la carta que no lleva dibujo, y parece que eso la vuelve negociable para el
-modelo. No lo es.
+**La cartela es la zona que más se mueve**: dos derivas de las primeras tres. Es
+la parte de la carta que no lleva dibujo, y parece que eso la vuelve negociable
+para el modelo. No lo es. Desde que la instrucción describe el orden de arriba
+abajo, no ha vuelto a fallar.
+
+**Los numerales de los cantos hay que leerlos los dos.** El de la izquierda sale
+bien casi siempre; el de la derecha puede salir invertido. Con `II`, `IIII`,
+`V`, `X` o `XIII` no se nota porque son capicúas o casi. Con `XII` sí: sale
+«IIX». Léelos los dos, siempre.
+
+**Lo que la ficha cuenta, se cuenta.** Doce muñones, ocho estrellas, tres
+travesaños, cuatro criaturas. No son textura: son datos, y el modelo los aproxima
+si nadie los verifica uno a uno.
 
 | Carta | Qué se fue | Resuelto |
 |---|---|---|
@@ -281,6 +291,8 @@ modelo. No lo es.
 | El Loco (v2) | El bastón corto seguía clavado en el suelo y no en la mano | Fallo de generación, no de datos: la ficha lo decía dos veces. Se corrigió editando |
 | El Loco (v3) | La doble regla se fue debajo del nombre | Segunda deriva en la cartela. La instrucción pasa a describir el orden de arriba abajo |
 | El XIII | Salió como Parca encapuchada y con hábito | De datos: la ficha nunca dijo que la figura fuera un esqueleto. En el Marsella va descubierto, sin ropa ni capucha |
+| El Colgado (XII) | El numeral del canto derecho salió invertido: «IIX» | De generación. Hasta ahora los numerales de los cantos eran capicúas o casi, y el fallo no se veía |
+| El Colgado (XII) | Más de seis muñones por tronco | De generación. Los números que la ficha cuenta se revisan contando, no mirando |
 
 ---
 
