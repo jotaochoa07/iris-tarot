@@ -37,6 +37,7 @@ Headwear: a wide brimmed hat shaped like a lemniscate.
 In the figure's RIGHT hand: a short wand held up.
 In the figure's LEFT hand: a tiny object held between thumb and forefinger.
 Below / at the feet: ground with small plants.
+Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
 Must include: a table with three visible legs, a wand, a cup, a knife, coins.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the magician —BEHIND→ a table
@@ -129,10 +130,12 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 > Comprobar antes de generar: Confirmar hacia qué lado gira la cabeza de la figura central.
 ```
 SUBJECT — EL ENAMORADO. 4 figures. The main figure is standing, facing the viewer, looking toward the LEFT of the card.
+Headwear: NONE on the central figure; the two flanking figures do wear headdresses.
 In the figure's RIGHT hand: touching one of the figures.
 In the figure's LEFT hand: touching the other figure.
 Below / at the feet: ground with small plants.
 Above: a winged figure inside a sun, drawing a bow, arrow not yet loosed.
+Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
 Must include: a sun, an arrow, a bow, three human figures.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the central figure —BETWEEN→ the other two
@@ -150,8 +153,10 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 SUBJECT — EL CARRO. A single figure, standing, facing the viewer, looking straight at the viewer.
 Headwear: a crown.
 In the figure's RIGHT hand: a sceptre.
+In the figure's LEFT hand: empty, resting on the edge of the chariot.
 Below / at the feet: a chariot drawn by two horses facing opposite ways, with no reins.
 Above: a canopy held up by four columns.
+Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
 Must include: a chariot, two horses, each facing a different way, a canopy, a sceptre, a crown.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the charioteer —ABOVE→ the chariot
@@ -205,6 +210,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 SUBJECT — LA RUEDA DE LA FORTUNA. No human figure.
 Below / at the feet: an axle on two supports.
 Above: a crowned creature seated on top of the wheel, not gripping it.
+Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
 Must include: a wheel, a crank handle, three creatures, one rising, one falling, one still.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · one creature —MOVES TOWARD→ upward, on one side of the wheel
@@ -225,6 +231,7 @@ Headwear: a wide brimmed hat shaped like a lemniscate.
 In the figure's RIGHT hand: opening the animal's jaws with bare hands, without strain.
 In the figure's LEFT hand: opening the animal's jaws with bare hands, without strain.
 Below / at the feet: ground with small plants.
+Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
 Must include: a lion, a lemniscate-shaped hat.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the woman —TOUCHES→ the animal's jaws, with both hands
@@ -238,9 +245,12 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ## XII · EL COLGADO
 ```
 SUBJECT — EL COLGADO. A single figure, hanging upside down, facing the viewer, looking straight at the viewer.
+Headwear: NONE — bare-headed, hair hanging loose downward.
 In the figure's RIGHT hand: hidden behind the back.
 In the figure's LEFT hand: hidden behind the back.
+Below / at the feet: NOTHING — he hangs in the air, there is no ground beneath his head.
 Above: a crossbeam he hangs from, held by two pruned trunks.
+Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
 Must include: a gallows, a rope, two pruned tree trunks, twelve pruned branch stumps, six on each trunk, the free leg crossed behind the other, forming an upside-down number four.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the hanged man —HANGS FROM→ one foot, head downward
@@ -279,6 +289,7 @@ Headwear: a flower or disc on the forehead.
 In the figure's RIGHT hand: a jug pouring.
 In the figure's LEFT hand: a jug receiving the flow.
 Below / at the feet: ground.
+Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
 Must include: two jugs, wings, a flower on the forehead.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the figure —POURS ONTO→ one jug, from the other
@@ -298,6 +309,7 @@ Headwear: horns.
 In the figure's RIGHT hand: a short sword held up.
 In the figure's LEFT hand: raised with the palm open.
 Below / at the feet: a pedestal with two smaller figures tethered to it.
+Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
 Must include: horns, wings, a pedestal, two smaller figures loosely tethered by the neck, hands free, ropes.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the devil —ABOVE→ a pedestal
@@ -315,6 +327,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 SUBJECT — LA TORRE. No human figure.
 Below / at the feet: ground, with two figures falling toward it.
 Above: the tower's crown, broken loose and falling.
+Behind the figure: NOTHING — a plain empty field, no architecture, no landscape, no backdrop.
 Must include: a tower, still standing, a crown, a rain of coloured dots, two figures falling in opposite directions.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the crown of the tower —FALLS FROM→ the top of the building
@@ -329,10 +342,12 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ## XVII · LA ESTRELLA
 ```
 SUBJECT — LA ESTRELLA. A single figure, standing, in three-quarter view, looking downward.
+Headwear: NONE — bare-headed, hair loose.
 In the figure's RIGHT hand: a jug pouring onto the water.
 In the figure's LEFT hand: a jug pouring onto the earth.
 Below / at the feet: one knee on the ground at the water's edge.
 Above: one large star and seven smaller ones.
+Behind the figure: the horizon line, with the bush and the bird.
 Must include: eight stars, one large and seven smaller, two jugs, a bird perched on a bush, water.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the woman —POURS ONTO→ the water, from one jug
@@ -368,6 +383,7 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 > Comprobar antes de generar: Confirmar si las dos figuras son iguales o una es mayor.
 ```
 SUBJECT — EL SOL. 3 figures. The main figure is standing, facing the viewer, looking straight at the viewer.
+Headwear: NONE — both figures are bare-headed.
 In the figure's RIGHT hand: touching the other figure.
 In the figure's LEFT hand: touching the other figure.
 Below / at the feet: ground, in front of a low wall.
@@ -388,10 +404,12 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ## XX · EL JUICIO
 ```
 SUBJECT — EL JUICIO. 4 figures. The main figure is standing, facing the viewer, looking upward.
+Headwear: NONE — all three human figures are bare-headed.
 In the figure's RIGHT hand: both raised.
 In the figure's LEFT hand: both raised.
 Below / at the feet: opened earth, a figure rising out of it, seen from behind.
 Above: a winged figure in a halo blowing a trumpet.
+Behind the figure: the horizon line.
 Must include: a trumpet, wings, a banner, three human figures.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:
   · the central figure —EMERGES FROM→ the opened earth
@@ -408,8 +426,10 @@ Match the reference image of THE EMPEROR exactly: same border, same corner leave
 ## XXI · EL MUNDO
 ```
 SUBJECT — EL MUNDO. 5 figures. The main figure is standing, facing the viewer, looking straight at the viewer.
+Headwear: NONE — bare-headed.
 In the figure's RIGHT hand: a wand.
 In the figure's LEFT hand: a wand.
+Below / at the feet: NOTHING — the figure is suspended inside the wreath, touching no ground.
 Behind the figure: nothing — the figure floats inside the wreath.
 Must include: an oval wreath of leaves, four different creatures, one in each corner, all facing inward, a veil, wands.
 SPATIAL RELATIONS — these are not optional details, they are what the card means. Every one of them must be visible in the drawing:

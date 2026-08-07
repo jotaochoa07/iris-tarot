@@ -194,6 +194,26 @@ const ES_EN = {
   "gorro con cascabeles": "a cap with bells",
   gotas: "falling droplets",
   guadaña: "a scythe",
+  "nada al fondo: campo liso de la carta, sin arquitectura ni paisaje":
+    "NOTHING — a plain empty field, no architecture, no landscape, no backdrop",
+  "ninguno: va con la cabeza descubierta": "NONE — bare-headed",
+  "ninguno: cabeza descubierta y pelo suelto cayendo hacia abajo":
+    "NONE — bare-headed, hair hanging loose downward",
+  "ninguno: cabeza descubierta y pelo suelto": "NONE — bare-headed, hair loose",
+  "ninguno: las dos figuras van con la cabeza descubierta":
+    "NONE — both figures are bare-headed",
+  "ninguno: las tres figuras humanas van con la cabeza descubierta":
+    "NONE — all three human figures are bare-headed",
+  "ninguno en la figura central; las dos que la flanquean sí llevan tocado":
+    "NONE on the central figure; the two flanking figures do wear headdresses",
+  "vacía, apoyada en el borde del carro": "empty, resting on the edge of the chariot",
+  "nada: cuelga en el aire, y bajo su cabeza no hay suelo":
+    "NOTHING — he hangs in the air, there is no ground beneath his head",
+  "nada: la figura está suspendida dentro de la corona vegetal":
+    "NOTHING — the figure is suspended inside the wreath, touching no ground",
+  "la línea del horizonte, con el arbusto y el ave":
+    "the horizon line, with the bush and the bird",
+  "la línea del horizonte": "the horizon line",
   "ninguno: la figura va descubierta": "NONE — the figure is bare-headed, no hood",
   "un esqueleto descarnado y desnudo, sin ropa, sin manto y sin capucha, con las costillas y la pelvis a la vista":
     "a BARE skeleton — completely naked bone, NO robe, NO cloak, NO hood, NO drapery of any kind; ribs, spine and pelvis all clearly visible",
