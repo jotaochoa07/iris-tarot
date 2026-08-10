@@ -2,7 +2,7 @@
 
 > Generado por `node scripts/estado.mjs`. No editar a mano.
 
-**20 de 22** Arcanos Mayores aprobados.
+**21 de 22** Arcanos Mayores aprobados.
 Los 56 Menores se generan en SVG y están completos.
 
 ## Aprobadas
@@ -26,6 +26,7 @@ Los 56 Menores se generan en SVG y están completos.
 | XIIII | Templanza | arcano-14 |
 | XV | El Diablo | arcano-15 |
 | XVI | La Torre | arcano-16 |
+| XVII | La Estrella | arcano-17 |
 | XVIII | La Luna | arcano-18 |
 | XX | El Juicio | arcano-20 |
 | XXI | El Mundo | arcano-21 |
@@ -38,14 +39,14 @@ Los 56 Menores se generan en SVG y están completos.
 - **La Fuerza** — Los DOS numerales laterales dicen IX en vez de XI.
 - **Templanza** — Numeral del canto derecho invertido: dice IIIIX.
 - **La Torre** — Comprobar el numeral del canto derecho: puede estar invertido.
+- **La Estrella** — Numeral del canto derecho invertido: dice IIVX.
 - **La Luna** — Comprobar el numeral del canto derecho: puede estar invertido.
 - **El Mundo** — Numeral del canto derecho invertido: dice IXX.
 
-## Ficha cerrada, listas para generar (2)
+## Ficha cerrada, listas para generar (1)
 
 | nº | carta | archivo |
 |---|---|---|
-| XVII | La Estrella | arcano-17 |
 | XVIIII | El Sol | arcano-19 |
 
 ## Ficha por verificar contra una baraja física (0)

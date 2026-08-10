@@ -30,6 +30,7 @@ export const APROBADAS: CardSlug[] = [
   "arcano-14", // Templanza
   "arcano-15", // El Diablo
   "arcano-16", // La Torre
+  "arcano-17", // La Estrella
   "arcano-18", // La Luna
   "arcano-20", // El Juicio
   "arcano-21", // El Mundo
@@ -48,6 +49,7 @@ export const RETOQUES_PENDIENTES: Record<CardSlug, string> = {
   "arcano-11": "Los DOS numerales laterales dicen IX en vez de XI.",
   "arcano-14": "Numeral del canto derecho invertido: dice IIIIX.",
   "arcano-16": "Comprobar el numeral del canto derecho: puede estar invertido.",
+  "arcano-17": "Numeral del canto derecho invertido: dice IIVX.",
   "arcano-18": "Comprobar el numeral del canto derecho: puede estar invertido.",
   "arcano-21": "Numeral del canto derecho invertido: dice IXX.",
 };
