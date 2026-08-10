@@ -5,7 +5,7 @@
   "description": "IRIS — Entre las cartas y tú. Mentor personal para aprender a leer el Tarot de Marsella.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/preparar-cartas.mjs && next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test \"src/**/*.test.ts\"",

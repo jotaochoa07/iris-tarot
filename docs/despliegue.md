@@ -5,20 +5,11 @@ verdad; el resto se puede asumir a sabiendas.
 
 ---
 
-## 1. El build nunca se ha verificado
+## 1. ~~El build nunca se ha verificado~~ — HECHO
 
-`npm run typecheck` pasa, pero **eso no es lo mismo que `npm run build`**. Next
-hace en el build cosas que el compilador no mira: fronteras entre servidor y
-cliente, prerenderizado de páginas estáticas, imports que solo fallan al
-empaquetar. Desde que empezaron los cambios grandes solo se ha comprobado el
-typecheck.
-
-```powershell
-cd D:\jota-os\Iris-tarot
-npm run build
-```
-
-Si esto no pasa en local, no va a pasar en Vercel. Es lo primero.
+`npm run build` pasa limpio: diez rutas, TypeScript en verde, Turbopack sin
+avisos. Repetirlo después de cada tanda de cambios grandes; el typecheck solo
+no basta.
 
 ---
 
@@ -47,16 +38,21 @@ Supabase Auth acepta a cualquiera que ponga un correo. Una vez dentro, cada
 tirada dispara una llamada de visión y otra de lectura con presupuesto de 6.000
 tokens. No hay límite por usuario ni por día.
 
-Alguien que descubra la URL puede quemarte la clave en una tarde. Antes de que
-sea pública, una de estas:
+**Ya está implementada la lista blanca.** `IRIS_ALLOWED_EMAILS` en las
+variables de entorno, con los correos separados por comas:
 
-- Lista blanca de correos en el `proxy.ts`, comprobando `user.email`.
-- Desactivar el registro en Supabase (Authentication → Providers → Email →
-  «Allow new users to sign up» en off) y crear tú las cuentas.
-- Un contador de tiradas por usuario y día en la base de datos.
+```
+IRIS_ALLOWED_EMAILS=lab.agentejota@gmail.com,otro@correo.com
+```
 
-La primera son diez líneas y resuelve el caso real, que eres tú y quizá dos
-personas más.
+Vacía o sin definir no filtra nada, así que en local todo sigue igual. Una
+sesión válida que no esté en la lista se cierra y vuelve a `/entrar` con un
+aviso.
+
+Como cinturón adicional, se puede desactivar el registro en Supabase
+(Authentication → Providers → Email → «Allow new users to sign up» en off) y
+crear tú las cuentas. Con la lista blanca puesta no hace falta, pero evita que
+se acumulen usuarios fantasma.
 
 ---
 
@@ -73,14 +69,18 @@ Compruébalo contra tu plan antes de subir.
 
 ## 5. Las 22 ilustraciones no van a estar en producción
 
-`public/cards/` está en el `.gitignore`, así que Vercel desplegará sin ellas y
-los Arcanos Mayores se verán con el marcador SVG. Hay que decidir:
+**Resuelto, a falta de que copies los archivos.** `npm run build` ejecuta antes
+`scripts/preparar-cartas.mjs`, que copia `IMG_Baraja/*.png` a `public/cards/`.
 
-- **Commitear `IMG_Baraja/` y copiar de ahí a `public/cards/` en el build.**
-  Son ilustraciones originales tuyas: puedes versionarlas sin problema.
-- O subirlas a Supabase Storage y servirlas desde ahí.
+`IMG_Baraja/` sí está versionada —son ilustraciones originales tuyas—, así que
+Vercel las tendrá en el checkout. `public/cards/` sigue ignorada, que es lo que
+protege las fotografías de la baraja física.
 
-La primera es más simple y no añade infraestructura.
+El script **no sobrescribe** lo que ya exista: si alguien puso su propia foto de
+una carta, su foto manda.
+
+Ahora mismo `IMG_Baraja/` está vacía y el script avisa: «Faltan 22
+ilustraciones». En cuanto las copies con sus nombres, el problema desaparece.
 
 ---
 
@@ -97,6 +97,7 @@ IRIS_MODEL_READING
 IRIS_MODEL_VISION
 NEXT_PUBLIC_SITE_URL=https://tu-dominio.vercel.app
 IRIS_CORPUS_RAG_ENABLED=false
+IRIS_ALLOWED_EMAILS=tu@correo.com
 ```
 
 **No subas `SUPABASE_SERVICE_ROLE_KEY`.** Ninguna ruta de la aplicación la usa:
@@ -132,13 +133,8 @@ propio en Authentication → Emails.
 
 ## 9. Páginas que no deberían ser públicas
 
-- **`/diagnostico`** enseña qué modelos tienes configurados, a qué URL apuntan
-  las llamadas y si las claves están puestas. Útil en local, información de más
-  en producción.
-- **`/tipografia`** es un banco de pruebas y ya cumplió su función.
-
-Las dos se pueden dejar detrás de `process.env.NODE_ENV === "development"` con
-un `notFound()`.
+**Hecho.** `/diagnostico` y `/tipografia` devuelven 404 cuando
+`NODE_ENV === "production"`. Siguen funcionando en local, que es donde sirven.
 
 ---
 

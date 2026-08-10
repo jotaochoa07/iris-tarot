@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import { requireSession } from "@/lib/auth";
 import { ANTHROPIC_BASE_URL } from "@/lib/iris/anthropic";
@@ -22,7 +23,19 @@ type Check = {
 const PIXEL =
   "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==";
 
+/**
+ * Solo en desarrollo.
+ *
+ * Enseña qué modelos hay configurados, a qué URL apuntan las llamadas y si
+ * las claves están puestas. Útil en local, información de más en producción.
+ */
+function soloEnDesarrollo() {
+  if (process.env.NODE_ENV === "production") notFound();
+}
+
 export default async function DiagnosticoPage() {
+  soloEnDesarrollo();
+
   await requireSession();
 
   const checks: Check[] = [];

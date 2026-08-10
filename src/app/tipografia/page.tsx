@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import { Rule, Screen, SectionTitle } from "@/components/ui";
 import Link from "next/link";
 import { TypeLab } from "./TypeLab";
@@ -12,7 +13,19 @@ export const metadata = { title: "Tipografía — IRIS" };
  * Cuando la decisión esté tomada, esta página y sus fuentes salen del proyecto
  * y la elegida se carga con next/font como las demás.
  */
+/**
+ * Solo en desarrollo.
+ *
+ * Banco de pruebas tipográfico. Cumplió su función y se conserva como
+ * referencia, pero no tiene por qué ser público.
+ */
+function soloEnDesarrollo() {
+  if (process.env.NODE_ENV === "production") notFound();
+}
+
 export default function TipografiaPage() {
+  soloEnDesarrollo();
+
   return (
     <>
       {/* Solo esta página carga las candidatas. Al resto de la app no le pesa. */}

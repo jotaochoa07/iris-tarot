@@ -1,11 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { Button, Display, Screen } from "@/components/ui";
 
 export default function EntrarPage() {
   const [email, setEmail] = useState("");
+  // El proxy redirige aquí con ?error=sin-acceso cuando la cuenta no está en la
+  // lista blanca. Se lee del navegador para no convertir la página en dinámica.
+  const [denegado, setDenegado] = useState(false);
+  useEffect(() => {
+    setDenegado(new URLSearchParams(window.location.search).get("error") === "sin-acceso");
+  }, []);
   const [state, setState] = useState<"idle" | "sending" | "sent" | "error">(
     "idle",
   );
@@ -42,6 +48,14 @@ export default function EntrarPage() {
           envío un enlace de acceso.
         </p>
       </div>
+
+      {denegado && (
+        <div className="rise d-1 mt-8 border-l-2 border-marseille-red pl-4">
+          <p className="text-[0.9375rem] leading-relaxed text-ink-700">
+            Esa cuenta no tiene acceso a esta instalación de IRIS.
+          </p>
+        </div>
+      )}
 
       {state === "sent" ? (
         <div className="rise d-1 mt-10">
