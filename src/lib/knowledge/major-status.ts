@@ -28,6 +28,7 @@ export const APROBADAS: CardSlug[] = [
   "arcano-12", // El Colgado — v4, seis muñones por tronco y numerales corregidos
   "arcano-13", // El XIII — v2, esqueleto descubierto
   "arcano-14", // Templanza
+  "arcano-15", // El Diablo
   "arcano-16", // La Torre
   "arcano-18", // La Luna
   "arcano-20", // El Juicio
