@@ -2,7 +2,7 @@
 
 > Generado por `node scripts/estado.mjs`. No editar a mano.
 
-**21 de 22** Arcanos Mayores aprobados.
+**22 de 22** Arcanos Mayores aprobados.
 Los 56 Menores se generan en SVG y están completos.
 
 ## Aprobadas
@@ -28,6 +28,7 @@ Los 56 Menores se generan en SVG y están completos.
 | XVI | La Torre | arcano-16 |
 | XVII | La Estrella | arcano-17 |
 | XVIII | La Luna | arcano-18 |
+| XVIIII | El Sol | arcano-19 |
 | XX | El Juicio | arcano-20 |
 | XXI | El Mundo | arcano-21 |
 
@@ -41,13 +42,13 @@ Los 56 Menores se generan en SVG y están completos.
 - **La Torre** — Comprobar el numeral del canto derecho: puede estar invertido.
 - **La Estrella** — Numeral del canto derecho invertido: dice IIVX.
 - **La Luna** — Comprobar el numeral del canto derecho: puede estar invertido.
+- **El Sol** — Los DOS numerales laterales están mal escritos: deben decir XVIIII.
 - **El Mundo** — Numeral del canto derecho invertido: dice IXX.
 
-## Ficha cerrada, listas para generar (1)
+## Ficha cerrada, listas para generar (0)
 
 | nº | carta | archivo |
 |---|---|---|
-| XVIIII | El Sol | arcano-19 |
 
 ## Ficha por verificar contra una baraja física (0)
 
