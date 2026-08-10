@@ -24,6 +24,7 @@ export const APROBADAS: CardSlug[] = [
   "arcano-08", // La Justicia
   "arcano-09", // El Ermitaño
   "arcano-10", // La Rueda de la Fortuna
+  "arcano-11", // La Fuerza
   "arcano-12", // El Colgado — v4, seis muñones por tronco y numerales corregidos
   "arcano-13", // El XIII — v2, esqueleto descubierto
   "arcano-14", // Templanza
@@ -43,6 +44,7 @@ export const RETOQUES_PENDIENTES: Record<CardSlug, string> = {
   "arcano-01": "Bajar la saturación del verde de las calzas y las mangas.",
   "arcano-05": "Quitar el recuadro que rodea el nombre y devolver la regla verdosa.",
   "arcano-07": "Comprobar el numeral del canto derecho: puede estar invertido.",
+  "arcano-11": "Los DOS numerales laterales dicen IX en vez de XI.",
   "arcano-14": "Numeral del canto derecho invertido: dice IIIIX.",
   "arcano-16": "Comprobar el numeral del canto derecho: puede estar invertido.",
   "arcano-18": "Comprobar el numeral del canto derecho: puede estar invertido.",
