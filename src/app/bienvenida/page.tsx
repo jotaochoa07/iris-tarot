@@ -24,7 +24,14 @@ export default async function BienvenidaPage({
   return (
     <Screen className="flex min-h-dvh flex-col justify-center">
       <div className="rise">
-        <p className="eyebrow mb-6">IRIS</p>
+        <div className="mb-6 flex items-center gap-3">
+          <img
+            src="/icon.jpg"
+            alt="IRIS Logo"
+            className="h-9 w-9 rounded-full object-cover shadow-sm ring-1 ring-ochre-800/30"
+          />
+          <p className="eyebrow">IRIS</p>
+        </div>
         <Display className="text-[2.25rem] leading-[1.08]">
           Antes de las
           <br />

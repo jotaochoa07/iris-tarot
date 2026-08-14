@@ -28,10 +28,26 @@ export const metadata: Metadata = {
   title: "IRIS — Entre las cartas y tú",
   description:
     "Mentor personal para aprender a leer el Tarot de Marsella. IRIS no predice: traduce.",
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/icon.jpg" },
+      { url: "/icon.jpg", sizes: "192x192", type: "image/jpeg" },
+      { url: "/icon.jpg", sizes: "512x512", type: "image/jpeg" },
+    ],
+    apple: [
+      { url: "/apple-icon.jpg", sizes: "180x180", type: "image/jpeg" },
+    ],
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "IRIS Tarot",
+  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f3ede2",
+  themeColor: "#0f0e13",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,

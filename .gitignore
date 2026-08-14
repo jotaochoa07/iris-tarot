@@ -18,3 +18,7 @@ next-env.d.ts
 /corpus/*
 !/corpus/.gitkeep
 !/corpus/README.md
+*.rar
+IMG_Baraja/
+baraja-jota/
+

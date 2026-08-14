@@ -43,8 +43,15 @@ export default async function Home() {
 
   return (
     <Screen>
-      <header className="flex items-baseline justify-between">
-        <p className="eyebrow">IRIS</p>
+      <header className="flex items-center justify-between">
+        <div className="flex items-center gap-2.5">
+          <img
+            src="/icon.jpg"
+            alt="IRIS Logo"
+            className="h-7 w-7 rounded-full object-cover shadow-sm ring-1 ring-ochre-800/30"
+          />
+          <p className="eyebrow">IRIS</p>
+        </div>
         <Link href="/diario" className="eyebrow hover:text-ink-700">
           Diario
         </Link>
