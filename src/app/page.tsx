@@ -43,21 +43,23 @@ export default async function Home() {
 
   return (
     <Screen>
-      <header className="flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
+      <header className="relative flex flex-col items-center pt-4 pb-2">
+        <div className="absolute right-0 top-4">
+          <Link href="/diario" className="eyebrow hover:text-ink-700">
+            Diario
+          </Link>
+        </div>
+        <div className="flex flex-col items-center text-center">
           <img
             src="/icon.jpg"
             alt="IRIS Logo"
-            className="h-7 w-7 rounded-full object-cover shadow-sm ring-1 ring-ochre-800/30"
+            className="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover shadow-lg ring-2 ring-ochre-800/35 transition-transform hover:scale-105"
           />
-          <p className="eyebrow">IRIS</p>
+          <p className="eyebrow mt-3 tracking-[0.25em]">IRIS</p>
         </div>
-        <Link href="/diario" className="eyebrow hover:text-ink-700">
-          Diario
-        </Link>
       </header>
 
-      <div className="rise mt-20">
+      <div className="rise mt-10">
         {identity.name && (
           <Link
             href="/bienvenida?cambiar=1"

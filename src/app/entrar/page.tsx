@@ -38,7 +38,14 @@ export default function EntrarPage() {
   return (
     <Screen className="flex min-h-dvh flex-col justify-center">
       <div className="rise">
-        <p className="eyebrow mb-6">IRIS</p>
+        <div className="mb-8 flex flex-col items-center justify-center text-center">
+          <img
+            src="/icon.jpg"
+            alt="IRIS Logo"
+            className="h-20 w-20 md:h-24 md:w-24 rounded-full object-cover shadow-lg ring-2 ring-ochre-800/35"
+          />
+          <p className="eyebrow mt-3 tracking-[0.25em]">IRIS</p>
+        </div>
         <Display className="text-[2.25rem] leading-[1.08]">
           Entre las cartas
           <br />y tú.
