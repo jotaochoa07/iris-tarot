@@ -44,52 +44,31 @@ derecha y, si hay varias filas, de arriba abajo.
 Catálogo de identificadores válidos (usa EXACTAMENTE estos slugs):
 ${SLUG_INDEX}
 
-Reglas:
+CARACTERÍSTICAS CLAVE DE LA BARAJA HABITUAL (EDICIÓN MANUAL DEL TAROT / ADIVINATORIO):
+Esta baraja contiene títulos y textos explícitos impresos en cada carta o junto a ella:
+1. ARCANOS MENORES: Tienen el título explícito impreso arriba o al lado en mayúsculas rojas/negras. Por ejemplo:
+   - Copas: "I COPAS", "II COPAS", "III COPAS", "IIII COPAS", "V COPAS", "VI COPAS", "VII COPAS", "VIII COPAS", "VIIII COPAS", "X COPAS"
+   - Espadas: "I ESPADAS", "II ESPADAS", "III ESPADAS", "IIII ESPADAS", "V ESPADAS", "VI ESPADAS", "VII ESPADAS", "VIII ESPADAS", "VIIII ESPADAS", "X ESPADAS"
+   - Bastos: "I BASTOS", "II BASTOS", "III BASTOS", "IIII BASTOS", "V BASTOS", "VI BASTOS", "VII BASTOS", "VIII BASTOS", "IX BASTOS", "X BASTOS"
+   - Oros: "I OROS", "II OROS", "III OROS", "IIII OROS", "V OROS", "VI OROS", "VII OROS", "VIII OROS", "IX OROS", "X OROS"
+   - Figuras: "LE VALET DE COUPES", "CAVALIER DE COUPES", "LA REINE DE COUPES", "LE ROI DE COUPES", "LE VALET D'ÉPÉES", "LE CAVALIER D'ÉPÉES", "LA REINE D'ÉPÉES", "LE ROI D'ÉPÉES", "LE VALET DE DENIERS", "LE CAVALIER DE DENIERS", "LA REINE DE DENIERS", "LE ROI DE DENIERS", "LE VALET DE BÂTONS", "LE CAVALIER DE BÂTONS", "LA REYNE DE BÂTONS", "LE ROI DE BATONS".
+2. ARCANOS MAYORES: Tienen el numeral romano arriba ("I", "II", "III", "IIII", "V", "VI", "VII", "VIII", "VIIII", "X", "XI", "XII", "XIII", "XIIII", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI", "LE MAT") y el nombre impreso ("EL MAGO", "LA PAPESSE", "L'IMPÉRATRICE", "EL EMPERADOR", "EL SUMO SACERDOTE", "LES AMOUREUX", "LE CHARIOT", "LA JUSTICE", "L'ERMITE", "LA ROUE DE FORTUNE", "LA FORCE", "LE PENDU", "LA MAISON DIEU", "L'ÉTOILE", "LA LUNE", "LE SOLEIL", "LE JUGEMENT", "LE MONDE", "LE MAT").
+3. BLOQUES DE TEXTO EN ROJO: Llevan encabezados impresos que dicen "ADIVINACIÓN NORMAL:" y "ADIVINACIÓN INVERTIDA:".
+4. REGLA PRINCIPAL: LEE PRIMERO EL TEXTO Y EL TÍTULO IMPRESO. Si el texto o numeral ("I COPAS", "VII ESPADAS", "VIII OROS", "EL MAGO") es visible en la foto, identifica la carta DIRECTAMENTE por ese texto impreso con confianza alta. No intentes contar piezas visuales cuando el título o numeral está escrito.
 
-1. EL NUMERAL IMPRESO MANDA. Muchas ediciones imprimen el número romano de la
-   carta (I, II, III, IIII, V, VI, VII, VIII, VIIII, X). Búscalo SIEMPRE antes
-   de contar nada, y búscalo en los cuatro bordes:
-   - arriba y abajo, en horizontal;
-   - en los laterales izquierdo y derecho, GIRADO 90 GRADOS. Es el sitio más
-     frecuente y el más fácil de pasar por alto. Muchas ediciones lo repiten a
-     ambos lados, pequeño y en el mismo tono que la orla.
-   Si lo lees, ese es el número: no lo contradigas contando signos, y la
-   confianza es alta. Contar es solo el método de reserva.
+Reglas adicionales:
+
+1. EL NUMERAL Y TÍTULO IMPRESO MANDAN. Si lees "I COPAS", "VII ESPADAS", "VIII OROS", o el número romano I a XXI, ese es el resultado. No lo contradigas contando signos.
 
 2. PARIDAD: el eje recto decide. En Espadas y Bastos, una pieza RECTA que
    atraviesa la composición por el centro aparece únicamente en los números
-   IMPARES. Es una regla dura de la baraja:
-   - Hay espada o bastón recto vertical en el centro → el número es IMPAR
-     (I, III, V, VII, VIIII). Nunca puede ser par.
-   - No hay eje recto, solo piezas curvas o cruzadas → el número es PAR
-     (II, IIII, VI, VIII, X).
-   Comprueba esta coherencia antes de responder. Si tu recuento da un número
-   par pero ves eje recto, tu recuento está mal.
+   IMPARES (I, III, V, VII, VIIII). En números pares (II, IIII, VI, VIII, X) no hay eje recto.
 
-3. Método de reserva, si no hay numeral legible: cuenta las piezas CURVAS
-   completas —no cada mitad de un arco— y suma una si hay eje recto. Cuatro
-   curvas más un eje recto son cinco: un V, no un VIII.
+3. ORIENTACIÓN. Ver texto en rojo de "ADIVINACIÓN INVERTIDA" en la parte inferior NO significa que la carta esté invertida — es así como está impresa. Decide la orientación solo por la figura o el sentido del dibujo. Ante la duda, "upright".
 
-4. ORIENTACIÓN. Muchas ediciones imprimen texto en los DOS extremos de la
-   carta: el significado al derecho arriba y el invertido abajo, cabeza abajo.
-   Ver texto invertido en la parte inferior NO significa que la carta esté
-   invertida — es así como está impresa. Decide la orientación solo por la
-   figura o la composición del dibujo. Ante la duda, "upright".
+4. Si dudas entre dos cartas, pon la más probable en "slug" y la otra en "alternative_slug".
 
-5. La confianza es información de producto, no un defecto. Si una carta no se
-   ve bien, baja la confianza y explica por qué en "reasoning".
-
-6. Si dudas entre dos cartas, pon la más probable en "slug" y la otra en
-   "alternative_slug". Si no dudas, "alternative_slug" es null.
-
-7. Si en la imagen no hay ninguna carta reconocible, devuelve "cards": [] y
-   explícalo en "overall_note".
-
-8. Nunca inventes una carta para rellenar. Es preferible devolver menos cartas.
-
-9. Las palabras impresas en algunas ediciones ("conquista", "derrota",
-   "riqueza") son una capa editorial de esa baraja. Úsalas como pista de
-   identificación si ayudan, jamás como significado.
+5. Si en la imagen no hay ninguna carta reconocible, devuelve "cards": [] y explícalo en "overall_note".
 
 ${JSON_DISCIPLINE}
 
